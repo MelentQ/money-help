@@ -1,0 +1,24 @@
+:root {
+  --max-container-width: 140rem;
+  --content-padding: 6rem;
+  --primary-color: #13b17c;
+  --text-color: black;
+}
+
+// Цвета из макета
+$dark: #232735;
+$blue: #5DD6DE;
+$light-blue: #6AEDF5;
+$light-yellow: #FCFFA3;
+$yellow: #FCEC60;
+$deep-yellow: #FCD960;
+$orange: #FBB400;
+$white: #FFFFFF;
+
+
+$minWidth: 375;
+$maxWidth: 1680; // Ширина макета
+$base-transition-time: 0.3s;
+$base-transition-easing: ease;
+
+$overlay-color: rgba(0, 0, 0, 0.5);

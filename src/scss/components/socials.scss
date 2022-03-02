@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  &__item {
+    
+  }
+
+  &__item-link {
+
+    &:hover svg {
+      fill: var(--primary-color);
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      transition: fill $base-transition-time $base-transition-easing;
+    }
+  }
+}
