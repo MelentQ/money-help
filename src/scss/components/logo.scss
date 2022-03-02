@@ -1,9 +1,18 @@
 .logo {
   display: inline-flex;
 
+  transition: opacity $btt $bte;
+
+  &:hover {
+    opacity: 0.75;
+  }
+  &:focus-visible {
+    opacity: 0.75;
+  }
+
   img {
-    width: 4rem;
-    height: 4rem;
+    width: 20rem;
+    height: auto;
 
     object-fit: contain;
   }

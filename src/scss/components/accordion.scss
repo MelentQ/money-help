@@ -28,14 +28,14 @@
   }
 
   &__btn-label {
-    transition: color $base-transition-time $base-transition-easing;
+    transition: color $btt $bte;
   }
 
   &__btn-icon {
     width: 12px;
     height: 7px;
 
-    transition: transform $base-transition-time $base-transition-easing, fill $base-transition-time $base-transition-easing;
+    transition: transform $btt $bte, fill $btt $bte;
   }
 
   &__content-container {

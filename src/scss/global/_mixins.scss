@@ -228,5 +228,5 @@
 
 // Стандартная плавность
 @mixin base-transition($target) {
-    transition: $target $base-transition-time $base-transition-easing;
+    transition: $target $btt $bte;
 }

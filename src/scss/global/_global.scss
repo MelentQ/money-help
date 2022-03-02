@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+*:focus {
+    outline: none;
+}
+
 html {
     box-sizing: border-box;
     font-size: 10px;
@@ -114,6 +118,7 @@ button {
 }
 
 a {
+    user-select: none;
     background-color: transparent;
     text-decoration: none;
     transition: color 0.2s;
@@ -136,7 +141,7 @@ svg {
 
     user-select: none;
     fill: currentColor;
-    transition: fill 0.2s;
+    transition: fill $btt $bte;
 }
 
 img {

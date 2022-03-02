@@ -1,0 +1,26 @@
+.button {
+  padding: 1.1rem 1.5rem;
+  border: 0.1rem solid $orange;
+
+  border-radius: 0.8rem;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $orange;
+
+  transition: color $btt $bte, background-color $btt $bte;
+
+  &:hover {
+    color: $orange;
+    background-color: rgba(0,0,0,0);
+  }
+
+  &:focus-visible {
+    color: $orange;
+    background-color: rgba(0,0,0,0);
+  }
+}

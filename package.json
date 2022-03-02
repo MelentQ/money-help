@@ -1,11 +1,11 @@
 {
-  "name": "handlebars-boilerplate",
-  "version": "4.0.0",
-  "description": "Modern boilerplate with Gulp and Webpack",
+  "name": "money-help",
+  "version": "1.0.0",
+  "description": "Money Help",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MelentQ/handlebars-boilerplate.git"
+    "url": "git+https://github.com/MelentQ/money-help.git"
   },
   "main": "main.js",
   "scripts": {

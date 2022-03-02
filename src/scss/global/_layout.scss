@@ -81,7 +81,7 @@
 
     a {
         color: var(--primary-color);
-        transition: opacity $base-transition-time $base-transition-easing;
+        transition: opacity $btt $bte;
 
         &:hover {
             opacity: 0.75;

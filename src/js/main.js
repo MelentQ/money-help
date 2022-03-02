@@ -16,6 +16,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import editableTextContainer from './custom/editableTextContainer';
+import { setMainTopPadding } from './custom/fixes';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // custom
 
     editableTextContainer();
+    setMainTopPadding();
 });
 
 document.addEventListener('lazyloaded', () => {
