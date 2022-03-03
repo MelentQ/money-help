@@ -1,0 +1,10 @@
+<nav class="footer__menu">
+    <a class="footer__menu-link footer__menu-link--section" href="{{data.section.link}}">{{data.section.name}}</a>
+    <ul class="footer__menu-list">
+      {{#each data.subsections}}
+        <li>
+            <a class="footer__menu-link" href="{{this.link}}">{{this.name}}</a>
+        </li>
+      {{/each}}
+    </ul>
+</nav>

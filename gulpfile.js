@@ -64,7 +64,7 @@ gulp.task('handlebars', function() {
         .pipe(
             data(function() {
                 try {
-                    const data = JSON.parse(fs.readFileSync('./src/pages/data/default.json'));
+                    const data = JSON.parse(fs.readFileSync('./src/pages/data/_default.json'));
                     return data;
                 } catch (err) {
                     return null;

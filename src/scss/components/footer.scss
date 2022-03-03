@@ -1,0 +1,265 @@
+.footer {
+  background-color: $dark;
+  color: $white;
+
+  .button {
+    @include breakpoint(laptop) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2.4rem;
+    padding: 3.6rem 0;
+
+    @include breakpoint(laptop) {
+      padding: 3.2rem 0 2rem;
+    }
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__phone-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  &__phone {
+    font-size: 2.4rem;
+    line-height: 1;
+    font-weight: 500;
+
+    @include breakpoint(laptop) {
+      font-size: 1.8rem;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus-visible {
+      color: $orange;
+    }
+  }
+
+  &__phone-label {
+    color: $grey;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 400;
+
+    @include breakpoint(laptop) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+
+    padding-top: 4.8rem;
+    padding-bottom: 8rem;
+    border-top: 0.1rem solid $dark-grey;
+
+    @include breakpoint(laptop) {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+      row-gap: 3.2rem;
+    }
+  }
+
+  // menu
+
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.4rem;
+
+    @include breakpoint(laptop) {
+      gap: 1.2rem;
+    }
+  }
+  
+  &__menu-link {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 400;
+
+    @include breakpoint(laptop) {
+      font-size: 1.3rem;
+    }
+    @include breakpoint(tablet) {
+      letter-spacing: -0.01em;
+    }
+
+    &--section {
+      display: block;
+      margin-bottom: 2.4rem;
+
+      font-weight: 600;
+
+      @include breakpoint(laptop) {
+        margin-bottom: 1.6rem;
+      }
+
+      &:link,
+      &:visited {
+        color: $grey;
+      }
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus-visible {
+      color: $orange;
+    }
+  }
+
+  &__contacts {
+    @include breakpoint(tablet) {
+      grid-column: span 2;
+    }
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 3.8rem;
+
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 2.5rem;
+      font-size: 1.5rem;
+    }
+
+    &:link,
+      &:visited {
+        color: $white;
+      }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus-visible {
+      color: $orange;
+    }
+  }
+
+  &__contacts-label {
+    display: block;
+    margin-bottom: 1.8rem;
+
+    color: $grey;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__order-block {
+    @include breakpoint(tablet) {
+      grid-column: span 2;
+    }
+  }
+
+  &__order-label {
+    display: block;
+    margin-bottom: 1.6rem;
+
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 1.1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    padding: 4rem 0;
+    border-top: 0.1rem solid $dark-grey;
+
+    color: $light-grey;
+
+    @include breakpoint(laptop) {
+      padding: 2.4rem 0;
+    }
+  }
+
+  &__copyright-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+
+    padding: 3.8rem 0;
+    border-top: 0.1rem solid $dark-grey;
+
+    color: $grey;
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 400;
+
+    @include breakpoint(laptop) {
+      padding: 2.4rem 0 3.2rem;
+      font-size: 1.3rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__made-by {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 14.3rem;
+      height: 1.2rem;
+    }
+
+    &:hover {
+      color: $orange;
+      svg {
+        fill: $orange;
+      }
+    }
+
+    &:focus-visible {
+      color: $orange;
+      svg {
+        fill: $orange;
+      }
+    }
+  }
+}

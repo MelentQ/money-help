@@ -1,7 +1,34 @@
-<footer class="page-footer">
+<footer class="footer">
     <div class="container">
-        <h2>
-            Footer
-        </h2>
+        <div class="footer__top">
+            {{>logo}}
+            <div class="footer__phone-block">
+                <a class="footer__phone" href="tel:88003015697" title="Позвонить">8 800 301 56 97</a>
+                <span class="footer__phone-label">Для звонков по России</span>
+            </div>
+        </div>
+        <div class="footer__links">
+            {{>footer__menu data=menu1}}
+            {{>footer__menu data=menu2}}
+            <div class="footer__contacts">
+                <a class="footer__email" href="mailto:moneyhelp@yandex.ru" title="Написать на почту">moneyhelp@yandex.ru</a>
+                <span class="footer__contacts-label">Следите за нами в соц.сетях</span>
+                {{>socials}}
+            </div>
+            <div class="footer__order-block">
+                <span class="footer__order-label">Заявка за 3 минуты</span>
+                <button class="button" type="button" data-hystmodal="#order">Отправить заявку</button>
+            </div>
+        </div>
+        <div class="editable-text-container footer__text">
+            {{>text/footer__text}}
+        </div>
+        <div class="footer__copyright-block">
+            <span class="footer__copyright">© «Money Help» 2022</span>
+            <a class="footer__made-by" href="https://aquilamedia.ru/" target="_blank">
+                <span class="footer__made-by-label">Создание сайта</span>
+                <svg><use xlink:href="#copyright"></svg>
+            </a>
+        </div>
     </div>
 </footer>

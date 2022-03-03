@@ -2,23 +2,48 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9;
 
   width: 100%;
   padding: 2.2rem 0;
 
   border-bottom: 0.1rem solid #E9E9E9;
+  background-color: $white;
+
+  @include breakpoint(tablet) {
+    padding: 1.8rem 0;
+  }
+
+  .logo {
+    @include breakpoint(small-tablet) {
+      position: absolute;
+      left: 0;
+    }
+  }
 
   &__inner {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     gap: 1rem;
+
+    @include breakpoint(small-tablet) {
+      position: relative;
+
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2.6rem;
+    }
   }
 
   &__group {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @include breakpoint(small-tablet) {
+      display: contents;
+    }
 
     & > * {
       flex-shrink: 0;
@@ -39,6 +64,15 @@
     line-height: 1;
     font-weight: 400;
     text-decoration: underline;
+
+    @include breakpoint(desktop) {
+      margin-left: 3.2rem;
+      margin-right: 3.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
 
     &:link,
     &:visited {
@@ -122,10 +156,21 @@
       height: 2.2rem;
 
       fill: $dark;
+
+      @include breakpoint(laptop) {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
     }
   }
 
   &__link--calculator {
+    margin-top: 0.3rem;
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+
     svg {
       fill: $blue;
     }
@@ -135,10 +180,19 @@
     font-size: 1.6rem;
     line-height: 1;
     font-weight: 500;
+
+    @include breakpoint(laptop) {
+      display: none;
+    }
   }
 
   &__link--whatsapp {
+    margin-top: 0.3rem;
     margin-left: 3.2rem;
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
 
     svg {
       fill: #43D854;
@@ -152,5 +206,33 @@
     font-weight: 600;
     font-size: 2rem;
     line-height: 1.2;
+
+    @include breakpoint(desktop) {
+      margin-left: 3.2rem;
+      margin-right: 3.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      order: -1;
+
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    svg {
+      display: none;
+
+      fill: $orange;
+
+      @include breakpoint(laptop) {
+        display: block;
+      }
+    }
+  }
+
+  &__order-button {
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 }

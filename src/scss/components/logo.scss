@@ -15,5 +15,9 @@
     height: auto;
 
     object-fit: contain;
+
+    @include breakpoint(desktop) {
+      width: 14.8rem;
+    }
   }
 }

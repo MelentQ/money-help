@@ -6,7 +6,9 @@
   @include clamp(22, 42);
 }
 %fs-h3 {
-  @include clamp(20, 32);
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
 }
 %fs-h4 {
   @include clamp(20, 24);

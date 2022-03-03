@@ -1,23 +1,32 @@
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 4.2rem;
 
-  &__item {
-    
+  @include breakpoint(laptop) {
+    gap: 3.5rem;
   }
 
   &__item-link {
 
     &:hover svg {
-      fill: var(--primary-color);
+      fill: $orange;
+    }
+
+    &:focus-visible svg {
+      fill: $orange;
     }
 
     svg {
-      width: 2rem;
-      height: 2rem;
+      width: 3.6rem;
+      height: 3.6rem;
 
-      transition: fill $btt $bte;
+      fill: $white;
+
+      @include breakpoint(laptop) {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
     }
   }
 }

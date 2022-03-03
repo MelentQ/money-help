@@ -1,3 +1,55 @@
 {
-  "title": "Новая страница"
+  "title": "Новая страница",
+  "socials": [
+    {
+      "name": "instagram",
+      "icon": "#instagram",
+      "link": "#"
+    },
+    {
+      "name": "vk",
+      "icon": "#vk",
+      "link": "#"
+    }
+  ],
+  "menu1": {
+    "section": {
+      "name": "Займы",
+      "link": "#"
+    },
+    "subsections": [
+      {
+        "name": "Займы для бизнеса",
+        "link": "#"
+      },
+      {
+        "name": "Под залог недвижимости",
+        "link": "#"
+      },
+      {
+        "name": "Под залог ПТС",
+        "link": "#"
+      }
+    ]
+  },
+  "menu2": {
+    "section": {
+      "name": "О компании",
+      "link": "#"
+    },
+    "subsections": [
+      {
+        "name": "Документы",
+        "link": "#"
+      },
+      {
+        "name": "Вопросы и ответы",
+        "link": "#"
+      },
+      {
+        "name": "Контакты",
+        "link": "#"
+      }
+    ]
+  }
 }

@@ -2,7 +2,17 @@
   --max-container-width: 145rem;
   --content-padding: 11.5rem;
   --primary-color: #FBB400;
-  --text-color: $dark;
+  --text-color: #232735;
+
+  @media only screen and (max-width: (1400px)) {
+    --content-padding: 6rem;
+  }
+  @media only screen and (max-width: (1024px)) {
+    --content-padding: 3.2rem;
+  }
+  @media only screen and (max-width: (640px)) {
+    --content-padding: 2.4rem;
+  }
 }
 
 // Цвета из макета
@@ -14,6 +24,11 @@ $yellow: #FCEC60;
 $deep-yellow: #FCD960;
 $orange: #FBB400;
 $white: #FFFFFF;
+
+// Безымянные цвета
+$grey: #A0B4B6;
+$dark-grey: #494D5A;
+$light-grey: #A0B4B6;
 
 
 $minWidth: 375;

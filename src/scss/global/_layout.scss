@@ -22,31 +22,15 @@
     flex-direction: column;
 }
 
-.section {
-    padding: 4rem 0;
-
-    &:first-of-type {
-        padding-top: 8rem;
-    }
-
-    &:last-of-type {
-        padding-bottom: 8rem;
-    }
-}
-
-.section-title {
-    @extend %fs-h2;
-    line-height: 1.2;
-    margin-bottom: 1em;
-}
-
 .editable-text-container {
-    @extend %fs-t2;
+    font-size: 1.6rem;
     line-height: 1.2;
+
+    @include breakpoint(tablet) {
+        font-size: 1.3rem;
+    }
 
     h1, h2, h3, h4, h5, h6 {
-        margin-bottom: 1em;
-
         line-height: 1.5;
         font-weight: 700;
     }
@@ -75,50 +59,39 @@
         @extend %fs-t1;
     }
 
-    p {
-        margin-bottom: 1em;
-    }
-
     a {
-        color: var(--primary-color);
-        transition: opacity $btt $bte;
+        text-decoration: underline;
 
         &:hover {
-            opacity: 0.75;
+            color: $orange;
+        }
+        &:focus-visible {
+            color: $orange;
         }
     }
 
     b {
-        color: var(--primary-color);
         text-transform: uppercase;
     }
 
     hr {
-        height: 2px;
+        height: 0.1rem;
         margin: 1em 0;
 
         border: none;
-        background-color: var(--text-color);
+        background-color: $dark-grey;
     }
 
     img, svg {
         max-width: 100%;
         height: auto;
-        padding: 2em 0;
     }
 
     ol, ul {
-        padding: 2em 0;
-
         li {
             position: relative;
-        
-            margin-bottom: 1em;
+
             margin-left: 2rem;
-        
-            &:last-of-type {
-                margin-bottom: 0;
-            }
 
             &::before {
                 position: absolute;
@@ -204,7 +177,6 @@
     }
 
     & .js-table-wrapper {
-        margin: 2em 0;
         padding-bottom: 5px;
 
         overflow-x: auto;
