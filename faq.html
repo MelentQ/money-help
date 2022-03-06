@@ -20,7 +20,7 @@
         <meta property="og:locale" content="ru_RU">
         <link rel="stylesheet" href="css/styles.min.css">
         <link rel="stylesheet" href="assets/backend/backend.css">
-        <title>Контакты</title>
+        <title>Вопросы и ответы</title>
     </head>
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -208,63 +208,177 @@
                             <a class="breadcrumbs__link" href="./index.html">Главная</a>
                         </li>
                         <li class="breadcrumbs__link-wrapper">
-                            <a class="breadcrumbs__link" href="./contacts.html">Контакты</a>
+                            <a class="breadcrumbs__link" href="./faq.html">Вопросы и ответы</a>
                         </li>
                     </ul>
                 </div>
                 <div class="container">
-                    <h1 class="page-title">Контакты</h1>
+                    <h1 class="page-title">Вопросы и ответы</h1>
                 </div>
                 <div class="sections-24">
-                    <section class="contacts-list">
+                    <section class="faq-tabs js-init-tabs">
                         <div class="container">
-                            <ul class="contacts-list__list">
-                                <li class="contacts-list__item">
-                                    <a class="contacts-list__link" href="tel:88003015697">
-                                        <img class="lazyload contacts-list__link-icon" src="img/content-icons/contacts-icon-1.svg" alt="icon">
-                                        <div class="contacts-list__link-text">
-                                            <span class="contacts-list__link-name">8 800 301 56 97</span>
-                                            <span class="contacts-list__link-label">Для звонков по России</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="contacts-list__item">
-                                    <a class="contacts-list__link" href="mailto:moneyhelp@yandex.ru">
-                                        <img class="lazyload contacts-list__link-icon" src="img/content-icons/contacts-icon-2.svg" alt="icon">
-                                        <div class="contacts-list__link-text">
-                                            <span class="contacts-list__link-name">moneyhelp@yandex.ru</span>
-                                            <span class="contacts-list__link-label">Для официальных писем</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="contacts-list__item">
-                                    <a class="contacts-list__link" href="mailto:moneyhelp@yandex.ru">
-                                        <img class="lazyload contacts-list__link-icon" src="img/content-icons/contacts-icon-2.svg" alt="icon">
-                                        <div class="contacts-list__link-text">
-                                            <span class="contacts-list__link-name">moneyhelp@yandex.ru</span>
-                                            <span class="contacts-list__link-label">Электронный адрес для предложений сотрудничества</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="contacts-list__item">
-                                    <a class="contacts-list__link" data-hystmodal="#map" href="javascript:void(0);">
-                                        <img class="lazyload contacts-list__link-icon" src="img/content-icons/contacts-icon-3.svg" alt="icon">
-                                        <div class="contacts-list__link-text">
-                                            <span class="contacts-list__link-name">Пр-кт Мира, 7/20</span>
-                                            <span class="contacts-list__link-label">Смотреть офис на карте</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="contacts-list__item">
-                                    <a class="contacts-list__link" href="https://api.whatsapp.com/send?phone&#x3D;88005512208">
-                                        <img class="lazyload contacts-list__link-icon" src="img/content-icons/contacts-icon-4.svg" alt="icon">
-                                        <div class="contacts-list__link-text">
-                                            <span class="contacts-list__link-name">WhatsApp чат</span>
-                                            <span class="contacts-list__link-label">Мы на связи 24/7</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="faq-tabs__inner">
+                                <ul class="faq-tabs__nav">
+                                    <li>
+                                        <button class="faq-tabs__button js-tab-btn active" type="button">
+                                            <span class="faq-tabs__button-label">Условия займа</span>
+                                            <svg>
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="faq-tabs__button js-tab-btn" type="button">
+                                            <span class="faq-tabs__button-label">Требования к авто</span>
+                                            <svg>
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="faq-tabs__button js-tab-btn" type="button">
+                                            <span class="faq-tabs__button-label">Выдача займов</span>
+                                            <svg>
+                                                <use xlink:href="#arrow-right"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <ul class="faq-tabs__bodies">
+                                    <li class="faq-tabs__body-wrapper js-tab-body active">
+                                        <ul class="faq-tabs__body">
+                                            <li>
+                                                <div class="faq-item js-accordion active" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Какие требования к заемщику?</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content">
+                                                        <div class="editable-text-container faq-item__content-inner">Граждане РФ, от 20 до 65 лет.
+                                                            <br>Местонахождение в регионе работы сервиса для возможности личной встречи (работаем в 350 крупнейших городах России)
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="faq-item js-accordion" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Можно ли получить займ по генеральной доверенности?</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                        <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="faq-item js-accordion" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Можно ли взять заём на короткий срок?</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                        <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="faq-item js-accordion" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Заберут ли транспортное средство, если будет допущена просрочка?</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                        <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="faq-tabs__body-wrapper js-tab-body">
+                                        <ul class="faq-tabs__body">
+                                            <li>
+                                                <div class="faq-item js-accordion" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Требования к авто 1</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                        <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="faq-item js-accordion" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Требования к авто 2</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                        <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="faq-tabs__body-wrapper js-tab-body">
+                                        <ul class="faq-tabs__body">
+                                            <li>
+                                                <div class="faq-item js-accordion" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Выдача займов 1</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                        <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="faq-item js-accordion" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Выдача займов 2</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                        <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="faq-item js-accordion" data-close-other>
+                                                    <button class="faq-item__btn js-accordion-btn">
+                                                        <span class="faq-item__btn-label">Выдача займов 3</span>
+                                                        <svg>
+                                                            <use xlink:href="#accordion-icon"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                        <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </section>
                     <section class="form-order">
