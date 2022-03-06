@@ -2,7 +2,7 @@
 import './build-in/lazyload';
 import detectTouch from './build-in/detectTouch';
 import setScrollbarWidth from './build-in/setScrollbarWidth';
-// import validation from './build-in/validation';
+import validation from './build-in/validation';
 // import customSelects from './build-in/customSelects';
 import masks from './build-in/masks';
 // import fileUpload from './build-in/fileUpload';
@@ -18,6 +18,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import editableTextContainer from './custom/editableTextContainer';
 import { setMainTopPadding } from './custom/fixes';
 import initModals from './custom/initModals';
+import toggleMenu from './custom/toggleMenu';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // polyfills();
     detectTouch();
     setScrollbarWidth();
-    // validation();
+    validation();
     // customSelects();
     masks();
     // fileUpload();
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     editableTextContainer();
     setMainTopPadding();
     initModals();
+    toggleMenu();
 });
 
 document.addEventListener('lazyloaded', () => {

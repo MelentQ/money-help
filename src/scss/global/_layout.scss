@@ -20,6 +20,42 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    padding-top: calc(var(--content-top-padding) + var(--js-header-height));
+}
+
+.page-title {
+    margin-bottom: 3.5rem;
+
+    font-size: 5.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 2.6rem;
+
+        font-size: 3.2rem;
+    }
+    @include breakpoint(mobile) {
+        margin-bottom: 2.6rem;
+
+        font-size: 2.4rem;
+    }
+}
+
+.sections-24 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10rem;
+
+    padding-bottom: 10rem;
+
+    @include breakpoint(tablet) {
+        gap: 5rem;
+        padding-bottom: 5rem;
+    }
 }
 
 .editable-text-container {

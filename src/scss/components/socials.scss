@@ -8,6 +8,7 @@
   }
 
   &__item-link {
+    display: block;
 
     &:hover svg {
       fill: $orange;
@@ -21,7 +22,7 @@
       width: 3.6rem;
       height: 3.6rem;
 
-      fill: $white;
+      fill: currentColor;
 
       @include breakpoint(laptop) {
         width: 2.2rem;

@@ -1,0 +1,17 @@
+<section class="contacts-list">
+    <div class="container">
+      <ul class="contacts-list__list">
+        {{#each contacts}}
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" {{#if this.modal}}data-hystmodal={{this.link}}{{/if}} href="{{#if this.modal}}javascript:void(0);{{else}}{{this.link}}{{/if}}">
+            <img class="lazyload contacts-list__link-icon" src="{{this.icon}}" alt="icon">
+            <div class="contacts-list__link-text">
+              <span class="contacts-list__link-name">{{this.name}}</span>
+              <span class="contacts-list__link-label">{{this.label}}</span>
+            </div>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>

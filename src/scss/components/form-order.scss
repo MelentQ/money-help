@@ -1,0 +1,134 @@
+.form-order {
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 50rem auto;
+    gap: 6rem;
+
+    padding: 9rem 9rem 9rem 16rem;
+
+    background: #E9FDFE;
+    border-radius: 3rem;
+
+    @include breakpoint(desktop) {
+      padding: 8rem;
+    }
+    @include breakpoint(tablet) {
+      padding: 4rem;
+    }
+    @include breakpoint(mobile) {
+      padding: 2.4rem;
+    }
+    @include breakpoint(small-mobile) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  &__content-block {
+    position: relative;
+    z-index: 2;
+
+    max-width: 50rem;
+
+    @include breakpoint(tablet) {
+      max-width: 32rem;
+    }
+    @include breakpoint(small-mobile) {
+      max-width: unset;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 2.4rem;
+
+    font-size: 5.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+    }
+    @include breakpoint(mobile) {
+      max-width: 24rem;
+      
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 5.4rem;
+
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.2rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__image-block {
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint(small-mobile) {
+      height: 24rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+    width: auto;
+    height: auto;
+
+    max-width: unset;
+    max-height: 100%;
+
+    object-fit: contain;
+
+    @include breakpoint(small-mobile) {
+      transform: translate(50%, -50%);
+      right: 50%;
+    }
+  }
+
+  &__form {
+    transition: opacity $btt $bte, visibility $btt $bte;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    &.opened {
+      opacity: 1;
+      visibility: visible;
+
+      transition: opacity $btt $btt $bte, visibility $btt $btt $bte;
+    }
+  }
+}

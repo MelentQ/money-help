@@ -1,4 +1,8 @@
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   padding: 1.1rem 1.5rem;
   border: 0.1rem solid $orange;
 
@@ -14,6 +18,10 @@
 
   transition: color $btt $bte, background-color $btt $bte;
 
+  &--large {
+    padding: 1.5rem 3.4rem;
+  }
+
   &:hover {
     color: $orange;
     background-color: rgba(0,0,0,0);
@@ -22,5 +30,215 @@
   &:focus-visible {
     color: $orange;
     background-color: rgba(0,0,0,0);
+  }
+}
+
+.black-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 7rem;
+
+  border-radius: 0.8rem;
+
+  background-color: $dark;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
+
+  transition: background-color $btt $bte, opacity $btt $bte;
+
+  @include breakpoint(tablet) {
+    min-height: 6rem;
+  }
+
+  &:hover {
+    background-color: $orange;
+  }
+
+  &:focus-visible {
+    background-color: $orange;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+
+    &:hover {
+      background-color: $dark;
+    }
+
+    &:focus-visible {
+      background-color: $dark;
+    }
+  }
+}
+
+.blue-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 7rem;
+  width: fit-content;
+  min-height: 6.2rem;
+
+  border-radius: 0.8rem;
+  border: 0.1rem solid $blue;
+
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
+
+  transition: color $btt $bte, border-color $btt $bte;
+
+  &:link,
+  &:visited {
+    color: $blue;
+  }
+
+  &:hover {
+    border-color: $orange;
+    color: $orange;
+  }
+
+  &:focus-visible {
+    border-color: $orange;
+    color: $orange;
+  }
+}
+
+.checkbox-container {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+  padding-left: 3rem;
+
+  cursor: pointer;
+  user-select: none;
+
+  &.parsley-error .checkmark {
+    border-color: $error;
+  }
+
+  input {
+    position: absolute;
+    
+    height: 0;
+    width: 0;
+
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .checkmark:after {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:focus ~ .checkmark {
+      outline: 0.2rem dotted $orange;
+      outline-offset: 0.2rem;
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 2rem;
+    width: 2rem;
+
+    background-color: $transparent;
+    border: 0.2rem solid $dark;
+    border-radius: 0.2rem;
+
+    transition: background-color $btt $bte, border-color $btt $bte;
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      left: 0.5rem;
+      top: 0.2rem;
+      transform: rotate(45deg);
+
+      display: block;
+      width: 0.6rem;
+      height: 1rem;
+
+      border: solid $dark;
+      border-width: 0 0.2rem 0.2rem 0;
+      border-radius: 0.1rem;
+
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility $btt $bte, opacity $btt $bte;
+    }
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  row-gap: 0.6rem;
+
+  color: $light-grey;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+
+  &__link-wrapper {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 0.6rem;
+      height: 0.1rem;
+
+      background-color: $light-grey;
+    }
+
+    &:last-of-type {
+      pointer-events: none;
+      
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    &:hover {
+      color: $orange;
+    }
+    &:focus-visible {
+      color: $orange;
+    }
   }
 }

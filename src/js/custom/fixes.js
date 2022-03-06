@@ -3,12 +3,12 @@ function setMainTopPadding() {
   const main = document.querySelector('.page-main');
 
   if (main && header) {
-    main.style.paddingTop = `${header.clientHeight}px`;
+    document.documentElement.style.setProperty('--js-header-height', `${header.clientHeight}px`);
 
     window.addEventListener(
       'resize',
       () => {
-        main.style.paddingTop = `${header.clientHeight}px`;
+        document.documentElement.style.setProperty('--js-header-height', `${header.clientHeight}px`);
       },
       {
         passive: true

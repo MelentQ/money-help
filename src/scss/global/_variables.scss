@@ -1,6 +1,7 @@
 :root {
   --max-container-width: 145rem;
   --content-padding: 11.5rem;
+  --content-top-padding: 8rem;
   --primary-color: #FBB400;
   --text-color: #232735;
 
@@ -8,9 +9,11 @@
     --content-padding: 6rem;
   }
   @media only screen and (max-width: (1024px)) {
+    --content-top-padding: 6rem;
     --content-padding: 3.2rem;
   }
   @media only screen and (max-width: (640px)) {
+    --content-top-padding: 2rem;
     --content-padding: 2.4rem;
   }
 }
@@ -29,7 +32,8 @@ $white: #FFFFFF;
 $grey: #A0B4B6;
 $dark-grey: #494D5A;
 $light-grey: #A0B4B6;
-
+$transparent: rgba(0,0,0,0);
+$error: #DB4444;
 
 $minWidth: 375;
 $maxWidth: 1680; // Ширина макета

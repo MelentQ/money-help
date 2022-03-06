@@ -1,0 +1,159 @@
+.contacts-list {
+
+  padding-top: 4.2rem;
+
+  @include breakpoint(small-tablet) {
+    padding-top: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+    row-gap: 12rem;
+
+    @include breakpoint(laptop) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 4rem;
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      row-gap: 2.4rem;
+      column-gap: 2.4rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:nth-child(5n + 1)::after {
+      top: -3.8rem;
+      left: -4rem;
+
+      width: 15.6rem;
+      height: 14rem;
+
+      background-image: url('../img/content-icons/contacts-1.svg');
+    }
+    &:nth-child(5n + 2)::after {
+      top: -2.1rem;
+      left: -3.4rem;
+
+      width: 15.3rem;
+      height: 10.7rem;
+
+      background-image: url('../img/content-icons/contacts-2.svg');
+    }
+    &:nth-child(5n + 3)::after {
+      top: -2.1rem;
+      left: -3.4rem;
+
+      width: 15.3rem;
+      height: 10.7rem;
+
+      background-image: url('../img/content-icons/contacts-3.svg');
+    }
+    &:nth-child(5n + 4)::after {
+      top: -2.3rem;
+      left: -2rem;
+
+      width: 17rem;
+      height: 10.5rem;
+
+      background-image: url('../img/content-icons/contacts-4.svg');
+    }
+    &:nth-child(5n + 5)::after {
+      top: -2.6rem;
+      left: -3.8rem;
+
+      width: 16.4rem;
+      height: 11.6rem;
+
+      background-image: url('../img/content-icons/contacts-5.svg');
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    &[data-hystmodal] {
+      .contacts-list__link-label {
+        color: $blue;
+      }
+    }
+
+    &:hover {
+      .contacts-list__link-name {
+        color: $orange;
+      }
+      .contacts-list__link-label {
+        color: $orange;
+      }
+    }
+
+    &:focus-visible {
+      .contacts-list__link-name {
+        color: $orange;
+      }
+      .contacts-list__link-label {
+        color: $orange;
+      }
+    }
+  }
+
+  &__link-icon {
+    flex-shrink: 0;
+
+    width: 3.8rem;
+    height: 3.8rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 0.2rem;
+    }
+  }
+
+  &__link-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  &__link-name {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+
+    transition: color $btt $bte;
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
+  }
+
+  &__link-label {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $light-grey;
+
+    transition: color $btt $bte;
+
+    @include breakpoint(tablet) {
+      font-size: 1.3rem;
+    }
+  }
+}

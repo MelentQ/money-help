@@ -1,0 +1,50 @@
+{
+  "title": "Контакты",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Контакты",
+      "link": "./contacts.html"
+    }
+  ],
+  "contacts": [
+    {
+      "icon": "img/content-icons/contacts-icon-1.svg",
+      "name": "8 800 301 56 97",
+      "link": "tel:88003015697",
+      "label": "Для звонков по России",
+      "modal": false
+    },
+    {
+      "icon": "img/content-icons/contacts-icon-2.svg",
+      "name": "moneyhelp@yandex.ru",
+      "link": "mailto:moneyhelp@yandex.ru",
+      "label": "Для официальных писем",
+      "modal": false
+    },
+    {
+      "icon": "img/content-icons/contacts-icon-2.svg",
+      "name": "moneyhelp@yandex.ru",
+      "link": "mailto:moneyhelp@yandex.ru",
+      "label": "Электронный адрес для предложений сотрудничества",
+      "modal": false
+    },
+    {
+      "icon": "img/content-icons/contacts-icon-3.svg",
+      "name": "Пр-кт Мира, 7/20",
+      "link": "#map",
+      "label": "Смотреть офис на карте",
+      "modal": true
+    },
+    {
+      "icon": "img/content-icons/contacts-icon-4.svg",
+      "name": "WhatsApp чат",
+      "link": "https://api.whatsapp.com/send?phone=88005512208",
+      "label": "Мы на связи 24/7",
+      "modal": false
+    }
+  ]
+}

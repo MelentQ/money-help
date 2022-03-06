@@ -25,9 +25,9 @@ module.exports = {
     usedExports: true,
   },
   mode: 'development',
-  // externals: {
-  //   jquery: 'jQuery'
-  // },
+  externals: {
+    jquery: 'jQuery'
+  },
   plugins: [
     new MomentLocalesPlugin({
       localesToKeep: ['es-us', 'ru']

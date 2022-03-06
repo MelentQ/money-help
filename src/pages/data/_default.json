@@ -1,5 +1,15 @@
 {
   "title": "Новая страница",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Страница",
+      "link": "#"
+    }
+  ],
   "socials": [
     {
       "name": "instagram",
