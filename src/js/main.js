@@ -9,8 +9,10 @@ import masks from './build-in/masks';
 import anchorLinks from './build-in/anchorLinks';
 // import mediaPlayer from './build-in/mediaPlayer';
 // import datepicker from './build-in/datepicker';
-// import accordions from './build-in/accordions';
+import accordions from './build-in/accordions';
 // import modals from './build-in/modals';
+
+import { Fancybox} from "@fancyapps/ui";
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -19,6 +21,7 @@ import editableTextContainer from './custom/editableTextContainer';
 import { setMainTopPadding } from './custom/fixes';
 import initModals from './custom/initModals';
 import toggleMenu from './custom/toggleMenu';
+import tabs from './custom/tabs';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     masks();
     // fileUpload();
     anchorLinks();
-    // accordions();
+    accordions();
     // mediaPlayer();
     // modals();
     // datepicker();
@@ -42,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setMainTopPadding();
     initModals();
     toggleMenu();
+    tabs();
 });
 
 document.addEventListener('lazyloaded', () => {

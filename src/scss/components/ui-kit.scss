@@ -242,3 +242,15 @@
     }
   }
 }
+
+.text {
+  &__inner {
+    max-width: 108rem;
+    
+    font-size: 2.4rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+    }
+  }
+}

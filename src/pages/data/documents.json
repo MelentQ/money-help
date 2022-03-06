@@ -1,0 +1,113 @@
+{
+  "title": "Документы",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Документы",
+      "link": "./documents.html"
+    }
+  ],
+  "documents": [
+    {
+      "id": "1",
+      "title": "ООО МФК \"ЦФР ВИ\"",
+      "documents": [
+        {
+          "image": "img/content/docs/doc-1.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-2.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-3.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-1.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-2.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-3.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-1.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-2.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-3.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-3.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Дополнительная информация",
+      "documents": [
+        {
+          "image": "img/content/docs/doc-1.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-2.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-3.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-1.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-2.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Информация о праве потребителей",
+      "documents": [
+        {
+          "image": "img/content/docs/doc-1.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-2.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-3.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-1.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        },
+        {
+          "image": "img/content/docs/doc-2.jpg",
+          "name": "Свидетельство МФО в реестре Центрального Банка РФ"
+        }
+      ]
+    }
+  ]
+}

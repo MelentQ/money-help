@@ -1,0 +1,14 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+{{>breadcrumbs}}
+{{>page-title}}
+
+<div class="sections-24">
+  {{#each documents}}
+    {{>documents data=this}}
+  {{/each}}
+</div>
+
+{{/content}}
+{{/extend}}

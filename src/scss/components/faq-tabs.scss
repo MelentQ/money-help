@@ -1,0 +1,122 @@
+.faq-tabs {
+  &__inner {
+    display: grid;
+    grid-template-columns: 32rem auto;
+    gap: 4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 2.4rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 3.2rem;
+
+    @include noScrollbar;
+
+    & > * {
+      flex-shrink: 0;
+    }
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      gap: 2rem;
+
+      margin: 0 calc(-1 * var(--content-padding));
+      padding: 0 var(--content-padding);
+
+      overflow: auto;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.6rem;
+
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #9397A3;
+    text-align: left;
+
+    transition: color $btt $bte, background-color $btt $bte, border-color $btt $bte;
+
+    @include breakpoint(tablet) {
+      padding: 0.7rem 3rem 1rem;
+      border: 0.2rem solid $dark;
+      border-radius: 6rem;
+
+      font-size: 1.6rem;
+      color: $dark;
+    }
+
+    &.active {
+      color: $blue;
+
+      @include breakpoint(tablet) {
+        color: $white;
+        background-color: $blue;
+        border-color: $blue;
+      }
+
+      svg {
+        opacity: 1;
+      }
+    }
+
+    svg {
+      margin-top: 0.6rem;
+      width: 2.5rem;
+      height: 2.5rem;
+
+      stroke: $blue;
+
+      opacity: 0;
+
+      transition: opacity $btt $bte;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__bodies {
+    position: relative;
+  }
+
+  &__body-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity $btt $bte, visibility $btt $bte;
+
+    &.active {
+      position: static;
+
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1.6rem;
+  }
+}

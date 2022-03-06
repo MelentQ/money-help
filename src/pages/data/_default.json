@@ -45,20 +45,20 @@
   "menu2": {
     "section": {
       "name": "О компании",
-      "link": "#"
+      "link": "./about.html"
     },
     "subsections": [
       {
         "name": "Документы",
-        "link": "#"
+        "link": "./documents.html"
       },
       {
         "name": "Вопросы и ответы",
-        "link": "#"
+        "link": "./faq.html"
       },
       {
         "name": "Контакты",
-        "link": "#"
+        "link": "./contacts.html"
       }
     ]
   }

@@ -1,0 +1,68 @@
+{
+  "title": "Вопросы и ответы",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Вопросы и ответы",
+      "link": "./faq.html"
+    }
+  ],
+  "faqTabs": [
+    {
+      "active": "true",
+      "name": "Условия займа",
+      "questions": [
+        {
+          "active": "true",
+          "q": "Какие требования к заемщику?",
+          "a": "Граждане РФ, от 20 до 65 лет. <br> Местонахождение в регионе работы сервиса для возможности личной встречи (работаем в 350 крупнейших городах России)"
+        },
+        {
+          "q": "Можно ли получить займ по генеральной доверенности?",
+          "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+        },
+        {
+          "q": "Можно ли взять заём на короткий срок?",
+          "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+        },
+        {
+          "q": "Заберут ли транспортное средство, если будет допущена просрочка?",
+          "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+        }
+      ]
+    },
+    {
+      "name": "Требования к авто",
+      "questions": [
+        {
+          "q": "Требования к авто 1",
+          "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+        },
+        {
+          "q": "Требования к авто 2",
+          "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+        }
+      ]
+    },
+    {
+      "name": "Выдача займов",
+      "questions": [
+        {
+          "q": "Выдача займов 1",
+          "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+        },
+        {
+          "q": "Выдача займов 2",
+          "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+        },
+        {
+          "q": "Выдача займов 3",
+          "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+        }
+      ]
+    }
+  ]
+}

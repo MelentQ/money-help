@@ -1,0 +1,23 @@
+<section class="documents">
+  <div class="container">
+    <div class="documents__inner">
+      <h2 class="documents__title">{{data.title}}</h2>
+      <ul class="documents__list">
+        {{#each data.documents}}
+        <li class="documents__list-item">
+          <a class="documents__item"
+            href="img/content/docs/gramota.jpg"
+            data-fancybox="gallery-{{../this.id}}"
+            data-caption="{{this.name}}"
+          >
+            <div class="documents__item-image-wrapper">
+              <img class="lazyload documents__item-image" src="{{this.image}}" alt="{{this.name}}">
+            </div>
+            <span class="documents__item-name">{{this.name}}</span>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

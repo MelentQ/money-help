@@ -207,6 +207,9 @@
     @include breakpoint(laptop) {
       padding: 2.4rem 0;
     }
+    @include breakpoint(tablet) {
+      font-size: 1.3rem;
+    }
   }
 
   &__copyright-block {

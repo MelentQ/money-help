@@ -63,36 +63,72 @@
     line-height: 1.2;
 
     @include breakpoint(tablet) {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        line-height: 1.5;
+        line-height: 1.2;
         font-weight: 700;
     }
 
     h1 {
-        @extend %fs-h1;
+        font-size: 7.4rem;
+        @include breakpoint(tablet) {
+            font-size: 3.6rem;
+        }
+        @include breakpoint(mobile) {
+            font-size: 2.4rem;
+        }
     }
 
     h2 {
-        @extend %fs-h2;
+        font-size: 5.4rem;
+        @include breakpoint(tablet) {
+            font-size: 3.2rem;
+        }
+        @include breakpoint(mobile) {
+            font-size: 2.4rem;
+        }
     }
 
     h3 {
-        @extend %fs-h3;
+        font-size: 3rem;
+        @include breakpoint(tablet) {
+            font-size: 2.6rem;
+        }
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+        }
     }
 
     h4 {
-        @extend %fs-h4;
+        font-size: 2.4rem;
+        @include breakpoint(tablet) {
+            font-size: 2rem;
+        }
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
     }
 
     h5 {
-        @extend %fs-h5;
+        font-size: 2rem;
+        @include breakpoint(tablet) {
+            font-size: 1.8rem;
+        }
+        @include breakpoint(mobile) {
+            font-size: 1.4rem;
+        }
     }
 
     h6 {
-        @extend %fs-t1;
+        font-size: 1.6rem;
+        @include breakpoint(tablet) {
+            font-size: 1.5rem;
+        }
+        @include breakpoint(mobile) {
+            font-size: 1.3rem;
+        }
     }
 
     a {
@@ -124,6 +160,16 @@
     }
 
     ol, ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 3rem;
+
+        @include breakpoint(tablet) {
+            gap: 1.6rem;
+        }
+
         li {
             position: relative;
 
@@ -131,7 +177,7 @@
 
             &::before {
                 position: absolute;
-                right: calc(100% + 4px);
+                right: calc(100% + 1rem);
             }
         }
     }
@@ -147,7 +193,7 @@
 
                 top: 0;
 
-                color: var(--primary-color);
+                color: $blue;
             }
         }
     }
@@ -157,13 +203,13 @@
             &::before {
                 content: '';
 
-                top: 3px;
+                top: 0.5em;
 
-                width: 1rem;
-                height: 1rem;
+                width: 0.5rem;
+                height: 0.5rem;
 
                 border-radius: 50%;
-                background-color: var(--primary-color);
+                background-color: $blue;
             }
         }
     }
@@ -176,7 +222,7 @@
         th, td {
             padding: 1em;
 
-            border: solid 1px var(--primary-color);
+            border: solid 1px $blue;
         }
 
         th {
@@ -184,7 +230,7 @@
             text-transform: uppercase;
             text-align: center;
 
-            background-color: var(--primary-color);
+            background-color: $blue;
             opacity: 0.25;
         }
     }
@@ -208,7 +254,7 @@
             height: 100%;
             width: 4px;
 
-            background-color: var(--primary-color);
+            background-color: $blue;
         }
     }
 

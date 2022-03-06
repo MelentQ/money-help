@@ -10,7 +10,7 @@ active - CSS-класс, который навешивается на откры
 Пример:
 <div class="js-accordion" data-close-other>
     <button class="js-accordion-btn">Открыть</button>
-    <div class="js-accordion-content">
+    <div class="js-accordion-content" style="height: 0;">
         Скрытый текст
     </div>
 </div>

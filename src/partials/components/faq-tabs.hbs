@@ -1,0 +1,29 @@
+<section class="faq-tabs js-init-tabs">
+  <div class="container">
+    <div class="faq-tabs__inner">
+      <ul class="faq-tabs__nav">
+        {{#each faqTabs}}
+          <li>
+            <button class="faq-tabs__button js-tab-btn {{#if this.active}}active{{/if}}" type="button">
+              <span class="faq-tabs__button-label">{{this.name}}</span>
+              <svg><use xlink:href="#arrow-right"></svg>
+            </button>
+          </li>
+        {{/each}}
+      </ul>
+      <ul class="faq-tabs__bodies">
+        {{#each faqTabs}}
+          <li class="faq-tabs__body-wrapper js-tab-body {{#if this.active}}active{{/if}}">
+            <ul class="faq-tabs__body">
+              {{#each this.questions}}
+              <li>
+                {{>faq-item data=this}}
+              </li>
+              {{/each}}
+            </ul>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

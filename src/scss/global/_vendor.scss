@@ -4,6 +4,7 @@
 // @import '../../node_modules/plyr/dist/plyr';
 // todo: решить баг с plyr.css "Error: -7px and -2 are incompatible."
 @import '../libs/hystmodal.scss';
+@import "../../../node_modules/@fancyapps/ui/dist/fancybox";
 
 .swiper-slide {
     box-sizing: border-box;
@@ -28,4 +29,12 @@
 .hystmodal__window {
     width: unset;
     margin: 0;
+}
+
+.fancybox__button--zoom,
+.fancybox__button--slideshow,
+.fancybox__button--fullscreen,
+.fancybox__button--thumbs,
+.fancybox__thumbs {
+    display: none;
 }

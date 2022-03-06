@@ -1,0 +1,11 @@
+<div class="faq-item js-accordion {{#if data.active}}active{{/if}}" data-close-other>
+    <button class="faq-item__btn js-accordion-btn">
+      <span class="faq-item__btn-label">{{data.q}}</span>
+      <svg><use xlink:href="#accordion-icon"></svg>
+    </button>
+    <div class="faq-item__content js-accordion-content" {{#if data.active}}{{else}}style="height: 0;"{{/if}}>
+      <div class="editable-text-container faq-item__content-inner">
+        {{{data.a}}}
+      </div>
+    </div>
+</div>
