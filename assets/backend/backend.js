@@ -22,11 +22,40 @@ function formSubmitHandler() {
         method: "POST"
       })
         .then(response => {
+          const messagesParent = form.closest('.js-form-message-in-content');
+
           if (response.ok) {
-            form.reset();
-            window.modalApi.open('#success');
+            if (messagesParent) {
+              const successMessage = messagesParent.querySelector('.js-form-success');
+              const formBlock = messagesParent.querySelector('.js-form-block');
+
+              successMessage.classList.add('opened');
+              formBlock.classList.add('hidden');
+              form.reset();
+
+              setTimeout(() => {
+                successMessage.classList.remove('opened');
+                formBlock.classList.remove('hidden');
+              }, 5000);
+            } else {
+              window.modalApi.open('#success');
+              form.reset();
+            }
           } else {
-            window.modalApi.open('#error');
+            if (messagesParent) {
+              const errorMessage = messagesParent.querySelector('.js-form-error');
+              const formBlock = messagesParent.querySelector('.js-form-block');
+
+              errorMessage.classList.add('opened');
+              formBlock.classList.add('hidden');
+
+              setTimeout(() => {
+                errorMessage.classList.remove('opened');
+                formBlock.classList.remove('hidden');
+              }, 10000);
+            } else {
+              window.modalApi.open('#error');
+            }
           }
         })
         .catch((err) => {
