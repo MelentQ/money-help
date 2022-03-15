@@ -20,6 +20,9 @@
         <meta property="og:locale" content="ru_RU">
         <link rel="stylesheet" href="css/styles.min.css">
         <link rel="stylesheet" href="assets/backend/backend.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Вопросы и ответы</title>
     </head>
     <body class="no-touch" ontouchstart="">
@@ -77,95 +80,6 @@
             </svg>
         </div>
         <div class="page-content">
-            <div class="menu">
-                <div class="container">
-                    <div class="menu__inner">
-                        <div class="menu__top">
-                            <a class="logo" href="./index.html" title="На главную">
-                                <img class="lazyload" src="img/logo.svg" alt="Logo">
-                            </a>
-                            <button class="menu__close js-close-menu" type="button" title="Закрыть">
-                                <svg>
-                                    <use xlink:href="#close"></use>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="menu__content">
-                            <nav class="menu__links">
-                                <ul class="menu__links-list menu__links-list--accent">
-                                    <li>
-                                        <a class="menu__link" href="#">Займы для бизнеса</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu__link" href="#">Под залог недвижимости</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu__link" href="#">Под залог ПТС</a>
-                                    </li>
-                                </ul>
-                                <ul class="menu__links-list">
-                                    <li>
-                                        <a class="menu__link" href="./documents.html">Документы</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu__link" href="./faq.html">Вопросы и ответы</a>
-                                    </li>
-                                    <li>
-                                        <a class="menu__link" href="./contacts.html">Контакты</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="menu__group">
-                                <div class="menu__links-group">
-                                    <a class="menu__icon-link menu__icon-link--calculator" href="./calculator.html" title="Открыть калькулятор">
-                                        <svg>
-                                            <use xlink:href="#calculator"></use>
-                                        </svg>
-                                        <span>Калькулятор</span>
-                                    </a>
-                                    <a class="menu__icon-link menu__icon-link--whatsapp" href="https://api.whatsapp.com/send?phone=88005512208" title="WhatsApp">
-                                        <svg>
-                                            <use xlink:href="#whatsapp"></use>
-                                        </svg>
-                                        <span>WhatsApp чат</span>
-                                        <span class="menu__icon-link-label">Мы на связи 24/7</span>
-                                    </a>
-                                </div>
-                                <div class="menu__socials">
-                                    <span class="menu__socials-label">Следите за нами в соц.сетях</span>
-                                    <ul class="socials">
-                                        <li class="socials__item">
-                                            <a class="socials__item-link" href="#" title="instagram" target="_blank">
-                                                <svg>
-                                                    <use xlink:href="#instagram"></use>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="socials__item">
-                                            <a class="socials__item-link" href="#" title="vk" target="_blank">
-                                                <svg>
-                                                    <use xlink:href="#vk"></use>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="menu__group">
-                                <a class="menu__icon-link" href="tel:88005512208" title="Позвонить">
-                                    <span>8 800 551 22 08</span>
-                                    <span class="menu__link-label">Для звонков по России</span>
-                                </a>
-                                <a class="menu__icon-link" href="mailto:moneyhelp@yandex.ru" title="Написать на почту">
-                                    <span>moneyhelp@yandex.ru</span>
-                                    <span class="menu__link-label">Для электронных писем</span>
-                                </a>
-                                <button class="button button--large menu__order-button" type="button" data-hystmodal="#order">Заказать звонок</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <header class="header">
                 <div class="container">
@@ -180,7 +94,7 @@
                                 </svg>
                                 <span class="header__selected-city">Москва</span>
                             </button>
-                            <button class="header__open-menu js-open-menu" type="button" title="Меню">
+                            <button class="header__open-menu" type="button" data-hystmodal="#menu" title="Меню">
                                 <svg>
                                     <use xlink:href="#burger"></use>
                                 </svg>
@@ -229,8 +143,8 @@
                     <section class="faq-tabs js-init-tabs">
                         <div class="container">
                             <div class="faq-tabs__inner">
-                                <ul class="faq-tabs__nav">
-                                    <li>
+                                <ul class="faq-tabs__nav js-init-horizontal-scroll">
+                                    <li class="js-tab-btn-wrapper">
                                         <button class="faq-tabs__button js-tab-btn active" type="button">
                                             <span class="faq-tabs__button-label">Условия займа</span>
                                             <svg>
@@ -238,7 +152,7 @@
                                             </svg>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li class="js-tab-btn-wrapper">
                                         <button class="faq-tabs__button js-tab-btn" type="button">
                                             <span class="faq-tabs__button-label">Требования к авто</span>
                                             <svg>
@@ -246,7 +160,7 @@
                                             </svg>
                                         </button>
                                     </li>
-                                    <li>
+                                    <li class="js-tab-btn-wrapper">
                                         <button class="faq-tabs__button js-tab-btn" type="button">
                                             <span class="faq-tabs__button-label">Выдача займов</span>
                                             <svg>
@@ -396,8 +310,10 @@
                             <div class="form-order__inner">
                                 <div class="form-order__content-block js-form-message-in-content">
                                     <div class="form-order__form js-form-block">
-                                        <h2 class="form-order__title">Нужно как можно быстрее?</h2>
-                                        <p class="form-order__subtitle">Оставьте сотовый номер телефона, чтобы получить бесплатную консультацию</p>
+                                        <h2 class="form-order__title">Остались
+                                            <br>вопросы?
+                                        </h2>
+                                        <p class="form-order__subtitle">Задайте их нашим менеджерам по телефону. Перезвоним вам в течении 5 минут</p>
                                         <form class="form js-handle-form" action="#" name="form-order" data-need-validation>
                                             <label class="form__input-wrapper js-validator-wrapper">
                                                 <span class="form__input-placeholder">Номер телефона</span>
@@ -493,7 +409,6 @@
                             </ul>
                         </div>
                         <div class="footer__order-block">
-                            <span class="footer__order-label">Заявка за 3 минуты</span>
                             <button class="button" type="button" data-hystmodal="#order">Отправить заявку</button>
                         </div>
                     </div>
@@ -537,6 +452,99 @@
                     </div>
                 </div>
             </footer>
+            <div class="hystmodal menu" id="menu" aria-hidden="true">
+                <div class="hystmodal__wrap menu__wrapper">
+                    <div class="hystmodal__window menu__window" role="dialog" aria-modal="true">
+                        <div class="container">
+                            <div class="menu__inner">
+                                <div class="menu__top">
+                                    <a class="logo" href="./index.html" title="На главную">
+                                        <img class="lazyload" src="img/logo.svg" alt="Logo">
+                                    </a>
+                                    <button class="menu__close" data-hystclose type="button" title="Закрыть">
+                                        <svg>
+                                            <use xlink:href="#close"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="menu__content">
+                                    <nav class="menu__links">
+                                        <ul class="menu__links-list menu__links-list--accent">
+                                            <li>
+                                                <a class="menu__link" href="#">Займы для бизнеса</a>
+                                            </li>
+                                            <li>
+                                                <a class="menu__link" href="#">Под залог недвижимости</a>
+                                            </li>
+                                            <li>
+                                                <a class="menu__link" href="#">Под залог ПТС</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="menu__links-list">
+                                            <li>
+                                                <a class="menu__link" href="./documents.html">Документы</a>
+                                            </li>
+                                            <li>
+                                                <a class="menu__link" href="./faq.html">Вопросы и ответы</a>
+                                            </li>
+                                            <li>
+                                                <a class="menu__link" href="./contacts.html">Контакты</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="menu__group">
+                                        <div class="menu__links-group">
+                                            <a class="menu__icon-link menu__icon-link--calculator" href="./calculator.html" title="Открыть калькулятор">
+                                                <svg>
+                                                    <use xlink:href="#calculator"></use>
+                                                </svg>
+                                                <span>Калькулятор</span>
+                                            </a>
+                                            <a class="menu__icon-link menu__icon-link--whatsapp" href="https://api.whatsapp.com/send?phone=88005512208" title="WhatsApp">
+                                                <svg>
+                                                    <use xlink:href="#whatsapp"></use>
+                                                </svg>
+                                                <span>WhatsApp чат</span>
+                                                <span class="menu__icon-link-label">Мы на связи 24/7</span>
+                                            </a>
+                                        </div>
+                                        <div class="menu__socials">
+                                            <span class="menu__socials-label">Следите за нами в соц.сетях</span>
+                                            <ul class="socials">
+                                                <li class="socials__item">
+                                                    <a class="socials__item-link" href="#" title="instagram" target="_blank">
+                                                        <svg>
+                                                            <use xlink:href="#instagram"></use>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li class="socials__item">
+                                                    <a class="socials__item-link" href="#" title="vk" target="_blank">
+                                                        <svg>
+                                                            <use xlink:href="#vk"></use>
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="menu__group">
+                                        <a class="menu__icon-link" href="tel:88005512208" title="Позвонить">
+                                            <span>8 800 551 22 08</span>
+                                            <span class="menu__link-label">Для звонков по России</span>
+                                        </a>
+                                        <a class="menu__icon-link" href="mailto:moneyhelp@yandex.ru" title="Написать на почту">
+                                            <span>moneyhelp@yandex.ru</span>
+                                            <span class="menu__link-label">Для электронных писем</span>
+                                        </a>
+                                        <button class="button button--large menu__order-button" type="button" data-hystmodal="#order">Заказать звонок</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="hystmodal modal" id="city" aria-hidden="true">
                 <div class="hystmodal__wrap modal__wrapper">
                     <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
