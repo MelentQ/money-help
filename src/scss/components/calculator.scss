@@ -1,0 +1,289 @@
+.calculator {
+
+  hr {
+    height: 0.1rem;
+    margin: 2rem 0;
+
+    border: none;
+    border-radius: 1rem;
+    background-color: #E0E0E0;
+  }
+
+  &__inner {
+    padding: 5rem 8.4rem 8.4rem;
+    background-color: #F9F9F9;
+    border-radius: 3rem;
+
+    @include breakpoint(desktop) {
+      padding: 4rem 6rem 6rem;
+    }
+    @include breakpoint(tablet) {
+      padding: 3rem 4rem 4rem;
+    }
+    @include breakpoint(small-tablet) {
+      padding: 1.6rem 2.5rem 2.5rem;
+    }
+  }
+
+  &__form {
+  }
+
+  &__result-title-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+
+    .tip {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+
+    font-size: 4.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+
+  // Range
+  // ******
+
+  &__range-block {
+  }
+
+  &__range-block-group {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__caption {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.4rem;
+
+    border-bottom: 0.1rem solid $blue;
+  }
+
+  &__input {
+    font-size: 3.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $blue;
+  }
+
+  &__input-label {
+    font-size: 3.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $blue;
+  }
+
+  &__range {
+    margin: 2rem 0 1rem;
+  }
+
+  &__range-label {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #9397A3;
+  }
+
+  &__text-value {
+    font-size: 3.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $blue;
+  }
+
+  // ******
+  // Result
+
+  &__result-caption {
+    display: block;
+    margin-top: 4rem;
+    margin-bottom: 2.6rem;
+  }
+
+  &__result-block {
+    padding: 3rem 4.7rem 4.7rem;
+
+    background: $white;
+    border-radius: 1.7rem;
+
+    &:nth-child(2n+1) {
+      box-shadow: 0px 4px 114px -40px rgba(0, 98, 214, 0.34);
+
+      .calculator__result-feature {
+        color: $blue;
+        background-color: rgba(#6AEDF5, 0.15);
+      }
+    }
+
+    &:nth-child(2n+2) {
+      box-shadow: 0px 4px 134px -40px rgba(208, 115, 29, 0.3);
+
+      .calculator__result-feature {
+        color: $orange;
+        background-color: rgba($orange, 0.15);
+      }
+    }
+  }
+
+  &__result-title {
+    display: block;
+    margin-bottom: 1.2rem;
+
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__result-feature {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+    width: fit-content;
+    margin-bottom: 3rem;
+    padding: 0.6rem 1rem;
+    border-radius: 7px;
+
+    font-size: 1.5;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__result-items {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    gap: 1rem;
+
+    margin-bottom: 4rem;
+  }
+
+  &__result-item {
+    flex-shrink: 0;
+  }
+
+  &__result-label {
+    display: block;
+    margin-bottom: 0.5rem;
+
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #9397A3;
+  }
+
+  &__result-value {
+    display: block;
+    width: max-content;
+
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &__button {
+    min-height: 6.2rem;
+    width: 100%;
+
+    &.blue-btn {
+      color: $blue;
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+        border-color: $blue;
+      }
+    }
+  }
+}
+
+.calculator {
+  .noUi-connect {
+    background-color: $blue;
+  }
+  .noUi-horizontal {
+    height: 1.2rem;
+
+    cursor: pointer;
+  }
+
+  .noUi-target {
+    border-radius: 7rem;
+    background-color: #E4E4E4;
+    border: none;
+    box-shadow: none;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    width: 3.5rem;
+    height: 3.5rem;
+    right: -1.7rem;
+    top: -1.1rem;
+  }
+
+  .noUi-handle {
+    border-radius: 50%;
+    border: 0.2rem solid #7EECF3;
+    background-color: $blue;
+    box-shadow: none;
+
+    cursor: pointer;
+  }
+
+  .noUi-handle::before {
+    content: none;
+  }
+
+  .noUi-handle::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 1.8rem;
+    height: 1.8rem;
+
+    border-radius: 50%;
+
+    background-color: white;
+  }
+
+  .noUi-touch-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

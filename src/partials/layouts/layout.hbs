@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="css/styles.min.css" />
     <link rel="stylesheet" href="assets/backend/backend.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <title>
         {{ title }}
     </title>
@@ -36,7 +40,6 @@
     </div>
 
     <div class="page-content">
-        {{> menu}}
         {{> header }}
         <main class="page-main">
             {{#block "main"}}
@@ -44,8 +47,10 @@
             {{/block}}
         </main>
         {{> footer }}
+        {{> modals/menu id="menu"}}
         {{> modals/city id="city"}}
         {{> modals/order id="order"}}
+        {{> modals/calculator id="calc"}}
         {{> modals/success id="success"}}
         {{> modals/error id="error"}}
         {{> modals/map id="map"}}

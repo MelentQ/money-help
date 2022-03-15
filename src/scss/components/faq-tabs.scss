@@ -1,4 +1,13 @@
 .faq-tabs {
+  padding-top: 6rem;
+
+  @include breakpoint(laptop) {
+    padding-top: 2rem;
+  }
+  @include breakpoint(tablet) {
+    padding-top: 0;
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: 32rem auto;

@@ -1,0 +1,110 @@
+<section class="calculator js-init-calculator" data-name="{{data.name}}">
+  <div class="container">
+    <div class="calculator__inner">
+      <form class="calculator__form" action="#" name="calculator">
+        <h2 class="calculator__title">{{data.title}}</h2>
+        <div class="calculator__cols">
+          <div class="calculator__range-block js-range-slider-container" id="sum-range" data-start="400000" data-min="80000" data-max="1000000" data-step="10000">
+            <div class="calculator__range-block-group">
+              <span class="calculator__caption">Сумма займа</span>
+              <div class="calculator__input-wrapper">
+                <input class="calculator__input js-range-input" type="text" name="sum" value="">
+                <span class="calculator__input-label">₽</span>
+              </div>
+            </div>
+            <div class="calculator__range js-range-elem"></div>
+            <div class="calculator__range-block-group">
+              <span class="calculator__range-label js-min-label"></span>
+              <span class="calculator__range-label js-max-label"></span>
+            </div>
+          </div>
+
+          <div class="calculator__range-block js-range-slider-container" id="month-range" data-start="6" data-min="2" data-max="12" data-step="1">
+            <input class="js-range-input" type="hidden" name="month">
+            <div class="calculator__range-block-group">
+              <span class="calculator__caption">Срок займа</span>
+              <span class="calculator__text-value js-range-value"></span>
+            </div>
+            <div class="calculator__range js-range-elem"></div>
+            <div class="calculator__range-block-group">
+              <span class="calculator__range-label js-min-label"></span>
+              <span class="calculator__range-label js-max-label"></span>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="calculator__result-caption">
+          <span class="calculator__caption">Тип платежа</span>
+        </div>
+        <div class="calculator__cols">
+          <div class="calculator__result-block">
+            <div class="calculator__result-title-block">
+              <span class="calculator__result-title">Дифференцированный</span>
+              {{>tip}}
+            </div>
+            <div class="calculator__result-feature">
+              <svg><use xlink:href="#time-five"></svg>
+              <span>Оплата долга в конце</span>
+            </div>
+            <div class="calculator__result-items">
+              <div class="calculator__result-item">
+                <span class="calculator__result-label">Ставка</span>
+                <span class="calculator__result-value js-diff-rate-value"></span>
+              </div>
+              <div class="calculator__result-item">
+                <span class="calculator__result-label">Ежемесячный платеж</span>
+                <span class="calculator__result-value js-diff-payment-value"></span>
+              </div>
+            </div>
+            <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
+          </div>
+          <div class="calculator__result-block">
+            <div class="calculator__result-title-block">
+              <span class="calculator__result-title">Аннуитетный</span>
+              {{>tip}}
+            </div>
+            <div class="calculator__result-feature">
+              <svg><use xlink:href="#coins"></svg>
+              <span>Меньше сумма переплаты</span>
+            </div>
+            <div class="calculator__result-items">
+              <div class="calculator__result-item">
+                <span class="calculator__result-label">Ставка</span>
+                <span class="calculator__result-value js-ann-rate-value"></span>
+              </div>
+              <div class="calculator__result-item">
+                <span class="calculator__result-label">Ежемесячный платеж</span>
+                <span class="calculator__result-value js-ann-payment-value"></span>
+              </div>
+            </div>
+            <button class="button calculator__button js-submit-button" id="ann" type="button">Оставить заявку</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  // sum - сумма займа
+  // month - срок займа
+  // функция должна возвращать число
+  function calculate(sum, month) {
+
+    const rate = month;
+    const payment = (1 + rate / 100) * sum / month;
+
+    return {
+      diff: {
+        rate: Math.round((rate)*10)/10,
+        payment: Math.round(payment)
+      },
+      ann: {
+        rate: Math.round((rate * 1.1)*10)/10,
+        payment: Math.round(payment * 1.1)
+      }
+    };
+  }
+</script>

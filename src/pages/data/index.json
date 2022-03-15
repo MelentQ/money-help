@@ -1,3 +1,41 @@
 {
-    "title": "Главная страница"
+    "title": "Главная страница",
+    "intro-sections": [
+        {
+            "name": "Займ под залог ПТС",
+            "link": "#",
+            "image": "img/content-icons/intro-section-1.svg"
+        },
+        {
+            "name": "Под залог недвижимости",
+            "link": "#",
+            "image": "img/content-icons/intro-section-2.svg"
+        },
+        {
+            "name": "Займ юридическим лицам",
+            "link": "#",
+            "image": "img/content-icons/intro-section-3.svg"
+        }
+    ],
+    "introBenefits": [
+        {
+            "image": "img/content-icons/intro-benefit-1.svg",
+            "title": "Есть лицензия ЦБ",
+            "subtitle": "Мы установили минимальную процентную ставку на займы от 4% в месяц"
+        },
+        {
+            "image": "img/content-icons/intro-benefit-2.svg",
+            "title": "Работаем по РФ онлайн",
+            "subtitle": "95% вопросов решаются при первом обращении"
+        },
+        {
+            "image": "img/content-icons/intro-benefit-3.svg",
+            "title": "Даем лучшие условия",
+            "subtitle": "Мы установили минимальную процентную ставку на займы от 4% в месяц"
+        }
+    ],
+    "indexCalc": {
+        "title": "Калькулятор займа под ПТС",
+        "name": "ПТС"
+    }
 }

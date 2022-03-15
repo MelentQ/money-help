@@ -20,8 +20,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import editableTextContainer from './custom/editableTextContainer';
 import { setMainTopPadding } from './custom/fixes';
 import initModals from './custom/initModals';
-import toggleMenu from './custom/toggleMenu';
 import tabs from './custom/tabs';
+import calculator from './custom/calculator';
+import horizontalTabs from './custom/horizontalTabs';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,8 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
     editableTextContainer();
     setMainTopPadding();
     initModals();
-    toggleMenu();
     tabs();
+    calculator();
+    horizontalTabs();
 });
 
 document.addEventListener('lazyloaded', () => {

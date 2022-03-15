@@ -1,0 +1,18 @@
+<section class="intro-benefits">
+  <div class="container">
+    <div class="intro-benefits__inner">
+      <h2 class="intro-benefits__title">Автозайм — это внимательное обслуживание</h2>
+      <ul class="intro-benefits__list">
+        {{#each introBenefits}}
+          <li class="intro-benefits__item">
+            <img class="intro-benefits__item-image lazyload" src="{{this.image}}" alt="{{this.title}}">
+            <div class="intro-benefits__text">
+              <h3 class="intro-benefits__item-title">{{this.title}}</h3>
+              <p class="intro-benefits__subtitle">{{this.subtitle}}</p>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

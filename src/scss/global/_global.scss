@@ -141,13 +141,6 @@ a {
     }
 }
 
-a:where(:not[class]) {
-    &:link,
-    &:visited {
-        color: var(--primary-color);
-    }
-}
-
 svg {
     flex-shrink: 0;
     display: block;

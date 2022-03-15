@@ -184,19 +184,19 @@
     }
   }
 
-  &__order-label {
-    display: block;
-    margin-bottom: 1.6rem;
+  // &__order-label {
+  //   display: block;
+  //   margin-bottom: 1.6rem;
 
-    font-size: 2rem;
-    line-height: 1.2;
-    font-weight: 600;
+  //   font-size: 2rem;
+  //   line-height: 1.2;
+  //   font-weight: 600;
 
-    @include breakpoint(laptop) {
-      margin-bottom: 1.1rem;
-      font-size: 1.5rem;
-    }
-  }
+  //   @include breakpoint(laptop) {
+  //     margin-bottom: 1.1rem;
+  //     font-size: 1.5rem;
+  //   }
+  // }
 
   &__text {
     padding: 4rem 0;

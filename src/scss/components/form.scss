@@ -48,6 +48,10 @@
       font-size: 1.6rem;
     }
 
+    &.js-phone-input {
+      letter-spacing: 0.15em;
+    }
+
     &.parsley-error {
       border-color: $error;
     }

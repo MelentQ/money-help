@@ -1,0 +1,62 @@
+<div class="hystmodal menu" id="{{id}}" aria-hidden="true">
+    <div class="hystmodal__wrap menu__wrapper">
+        <div class="hystmodal__window menu__window" role="dialog" aria-modal="true">
+            <div class="container">
+              <div class="menu__inner">
+                <div class="menu__top">
+                  {{>logo}}
+                  <button class="menu__close" data-hystclose type="button" title="Закрыть">
+                    <svg><use xlink:href="#close"></svg>
+                  </button>
+                </div>
+                <div class="menu__content">
+                  <nav class="menu__links">
+                    <ul class="menu__links-list menu__links-list--accent">
+                      {{#each menu1.subsections}}
+                      <li>
+                        <a class="menu__link" href="{{this.link}}">{{this.name}}</a>
+                      </li>
+                      {{/each}}
+                    </ul>
+                    <ul class="menu__links-list">
+                      {{#each menu2.subsections}}
+                      <li>
+                        <a class="menu__link" href="{{this.link}}">{{this.name}}</a>
+                      </li>
+                      {{/each}}
+                    </ul>
+                  </nav>
+                  <div class="menu__group">
+                    <div class="menu__links-group">
+                      <a class="menu__icon-link menu__icon-link--calculator" href="./calculator.html" title="Открыть калькулятор">
+                        <svg><use xlink:href="#calculator"></svg>
+                        <span>Калькулятор</span>
+                      </a>
+                      <a class="menu__icon-link menu__icon-link--whatsapp" href="https://api.whatsapp.com/send?phone=88005512208" title="WhatsApp">
+                        <svg><use xlink:href="#whatsapp"></svg>
+                        <span>WhatsApp чат</span>
+                        <span class="menu__icon-link-label">Мы на связи 24/7</span>
+                      </a>
+                    </div>
+                    <div class="menu__socials">
+                      <span class="menu__socials-label">Следите за нами в соц.сетях</span>
+                      {{>socials}}
+                    </div>
+                  </div>
+                  <div class="menu__group">
+                    <a class="menu__icon-link" href="tel:88005512208" title="Позвонить">
+                      <span>8 800 551 22 08</span>
+                      <span class="menu__link-label">Для звонков по России</span>
+                    </a>
+                    <a class="menu__icon-link" href="mailto:moneyhelp@yandex.ru" title="Написать на почту">
+                      <span>moneyhelp@yandex.ru</span>
+                      <span class="menu__link-label">Для электронных писем</span>
+                    </a>
+                    <button class="button button--large menu__order-button" type="button" data-hystmodal="#order">Заказать звонок</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

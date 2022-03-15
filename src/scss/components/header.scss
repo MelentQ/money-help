@@ -1,3 +1,7 @@
+.hystmodal__opened .header {
+  padding-right: var(--sb-width);
+}
+
 .header {
   position: fixed;
   top: 0;

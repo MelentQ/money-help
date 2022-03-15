@@ -1,11 +1,7 @@
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 4.2rem;
-
-  @include breakpoint(laptop) {
-    gap: 3.5rem;
-  }
+  gap: 2rem;
 
   &__item-link {
     display: block;

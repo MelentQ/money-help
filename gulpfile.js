@@ -197,7 +197,7 @@ gulp.task('beautify-html', () => {
     return gulp.src('./build/*.html')
         .pipe(htmlmin({
             collapseWhitespace: true,
-            collapseInlineTagWhitespace: true,
+            collapseInlineTagWhitespace: false,
             removeComments: true
         }))
         .pipe(prettyHtml({

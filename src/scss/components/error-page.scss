@@ -4,7 +4,7 @@
   align-items: stretch;
   justify-content: center;
 
-  height: calc(100vh - var(--js-header-height) - var(--content-top-padding));
+  min-height: calc(100vh - var(--js-header-height) - var(--content-top-padding));
   
   &__inner {
     position: relative;
@@ -12,6 +12,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12.4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 8rem;
+      padding: 4rem 0;
+    }
   }
 
   &__text {
@@ -24,6 +30,12 @@
     font-size: 3.2rem;
     font-weight: 500;
     line-height: 1.2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.2rem;
+
+      font-size: 2.4rem;
+    }
   }
 
   &__subtitle {
@@ -33,6 +45,20 @@
     font-size: 2.4rem;
     font-weight: 400;
     line-height: 1.2;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3.2rem;
+
+      font-size: 1.4rem;
+    }
+  }
+
+  &__code {
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      max-width: 40rem;
+    }
   }
 
   &__bg {
@@ -44,5 +70,16 @@
 
     pointer-events: none;
     user-select: none;
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+  }
+
+  .blue-btn {
+    @include breakpoint(mobile) {
+      width: 100%;
+      padding: 0 3rem;
+    }
   }
 }

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   formSubmitHandler();
+  setCalculatorData();
 });
 
 function formSubmitHandler() {
@@ -65,6 +66,43 @@ function formSubmitHandler() {
           submitBtn.classList.remove('disabled');
         })
     })
+  })
+}
+
+// Запись данных из калькулятора в форму
+function setCalculatorData() {
+  const containers = Array.from(document.querySelectorAll('.js-init-calculator'));
+  const forms = Array.from(document.querySelectorAll('.js-form-add-calculator-data'));
+
+  containers.forEach(container => {
+    const sumInput = container.querySelector('input[name="sum"]');
+    const monthInput = container.querySelector('input[name="month"]');
+
+    if (sumInput && monthInput) {
+      const submitButtons = Array.from(container.querySelectorAll('.js-submit-button'));
+
+      submitButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault(); // Отменяем сабмит формы с калькулятором
+
+          window.modalApi.open("#calc");
+          const sum = sumInput.value;
+          const month = monthInput.value;
+          const result = window.calculate(sum, month);
+
+          forms.forEach(form => {
+            form["calcName"].value = container.dataset.name,
+            form["sum"].value = sum;
+            form["month"].value = month;
+            form["diffRate"].value = result.diff.rate;
+            form["diffPayment"].value = result.diff.payment;
+            form["annRate"].value = result.ann.rate;
+            form["annPayment"].value = result.ann.payment;
+            form["type"].value = btn.id;
+          })
+        })
+      })
+    }
   })
 }
 

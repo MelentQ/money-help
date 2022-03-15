@@ -1,5 +1,5 @@
 @import './global/variables';
-@import './global/fonts';
+// @import './global/fonts';
 @import './global/vendor';
 @import './global/mixins';
 @import './global/extends';
@@ -22,3 +22,6 @@
 @import './components/faq-tabs';
 @import './components/faq-item';
 @import './components/documents';
+@import './components/intro';
+@import './components/intro-benefits';
+@import './components/calculator';

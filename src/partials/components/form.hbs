@@ -1,15 +1,28 @@
-<form class="form js-handle-form" action="#" name="{{name}}" data-need-validation>
+<form class="form js-handle-form {{#if mod}}{{mod}}{{/if}}" action="#" name="{{name}}" data-need-validation>
+  {{#if calc}}
+  <input type="hidden" name="calcName">
+  <input type="hidden" name="sum">
+  <input type="hidden" name="month">
+  <input type="hidden" name="diffRate">
+  <input type="hidden" name="diffPayment">
+  <input type="hidden" name="annRate">
+  <input type="hidden" name="annPayment">
+  <input type="hidden" name="type">
+  {{/if}}
 
   <label class="form__input-wrapper js-validator-wrapper">
     <span class="form__input-placeholder">Номер телефона</span>
-    <input class="form__input js-input js-phone-input" name="phone" type="tel" required>
+    <input class="form__input js-input js-phone-input" name="phone" type="tel" data-parsley-phone required>
   </label>
 
   <button class="black-btn form__submit js-submit-form" type="submit">Отправить</button>
 
   <label class="checkbox-container form__policy js-validator-wrapper">
     <div class="form__policy-text">
-      Я согласен на обработку <a href="./policy.html" target="_blank">персональных данных</a>
+      <p>
+        Я согласен на обработку 
+        <a href="./policy.html" target="_blank">персональных данных</a>
+      </p>
     </div>
     <input class="js-input" type="checkbox" name="policy" checked required>
     <span class="checkmark"></span>

@@ -5,6 +5,7 @@
 // todo: решить баг с plyr.css "Error: -7px and -2 are incompatible."
 @import '../libs/hystmodal.scss';
 @import "../../../node_modules/@fancyapps/ui/dist/fancybox";
+@import "../../../node_modules/nouislider/dist/nouislider";
 
 .swiper-slide {
     box-sizing: border-box;

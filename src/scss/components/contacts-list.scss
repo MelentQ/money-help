@@ -33,6 +33,10 @@
 
       background-repeat: no-repeat;
       background-size: contain;
+
+      @include breakpoint(laptop) {
+        content: none;
+      }
     }
 
     &:nth-child(5n + 1)::after {
@@ -91,6 +95,25 @@
     &[data-hystmodal] {
       .contacts-list__link-label {
         color: $blue;
+        font-weight: 500;
+      }
+
+      &:hover {
+        .contacts-list__link-name {
+          color: $dark;
+        }
+        .contacts-list__link-label {
+          color: $orange;
+        }
+      }
+  
+      &:focus-visible {
+        .contacts-list__link-name {
+          color: $dark;
+        }
+        .contacts-list__link-label {
+          color: $orange;
+        }
       }
     }
 
@@ -98,16 +121,10 @@
       .contacts-list__link-name {
         color: $orange;
       }
-      .contacts-list__link-label {
-        color: $orange;
-      }
     }
 
     &:focus-visible {
       .contacts-list__link-name {
-        color: $orange;
-      }
-      .contacts-list__link-label {
         color: $orange;
       }
     }

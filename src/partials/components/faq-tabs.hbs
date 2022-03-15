@@ -1,9 +1,9 @@
 <section class="faq-tabs js-init-tabs">
   <div class="container">
     <div class="faq-tabs__inner">
-      <ul class="faq-tabs__nav">
+      <ul class="faq-tabs__nav js-init-horizontal-scroll">
         {{#each faqTabs}}
-          <li>
+          <li class="js-tab-btn-wrapper">
             <button class="faq-tabs__button js-tab-btn {{#if this.active}}active{{/if}}" type="button">
               <span class="faq-tabs__button-label">{{this.name}}</span>
               <svg><use xlink:href="#arrow-right"></svg>

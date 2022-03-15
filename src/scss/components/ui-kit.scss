@@ -96,7 +96,7 @@
   line-height: 1;
   font-weight: 700;
 
-  transition: color $btt $bte, border-color $btt $bte;
+  transition: color $btt $bte, border-color $btt $bte, background-color $btt $bte;
 
   &:link,
   &:visited {
@@ -251,6 +251,80 @@
 
     @include breakpoint(tablet) {
       font-size: 1.6rem;
+    }
+  }
+}
+
+// ******
+// Tooltip
+
+.tip {
+  flex-shrink: 0;
+
+  position: relative;
+
+  width: fit-content;
+
+  &:hover {
+    .tip__content {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 1.9rem;
+    height: 1.9rem;
+
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity $btt $bte;
+  }
+
+  &__content {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 1.4rem);
+    transform: translateX(-50%);
+    z-index: 4;
+
+    width: 33.6rem;
+    padding: 2rem;
+
+    background: #F8F8F7;
+    border: 0.1rem solid #EBEBEC;
+    filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.1));
+    border-radius: 0.4rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity $btt $bte, visibility $btt $bte;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1rem;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      z-index: 5;
+
+      width: 1.6rem;
+      height: 1.6rem;
+
+      background: #F8F8F7;
+      border-left: 0.1rem solid #EBEBEC;
+      border-top: 0.1rem solid #EBEBEC;
+      border-radius: 0.4rem;
+
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 1.2;
     }
   }
 }

@@ -1,0 +1,24 @@
+<section class="intro">
+  <div class="container">
+    <div class="intro__title-block">
+      <h1 class="intro__title">Оказываем финансовую помощь населению в любых ситуациях</h1>
+      <img class="intro__image lazyload" src="img/content-icons/intro.svg" alt="Оказываем финансовую помощь населению в любых ситуациях">
+    </div>
+    <div class="intro__sections">
+      <span class="intro__sections-title">Расчитайте залог онлайн, под любые условия</span>
+      <ul class="intro__sections-list">
+        {{#each intro-sections}}
+          <li class="intro__sections-list-item">
+            <a class="intro__section-link" href="{{this.link}}">
+              <div class="intro__section-link-text">
+                <span class="intro__section-link-title">{{{this.name}}}</span>
+                <svg><use xlink:href="#arrow-right"></svg>
+              </div>
+              <img class="intro__section-link-image lazyload" src="{{this.image}}" alt="{{this.name}}">
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>
