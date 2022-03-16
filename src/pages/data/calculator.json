@@ -1,0 +1,25 @@
+{
+  "title": "Калькулятор для расчета займа ",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Калькулятор для расчета займа ",
+      "link": "./calculator.html"
+    }
+  ],
+  "calc1": {
+    "name": "ПТС",
+    "title": false
+  },
+  "calc2": {
+    "name": "Недвижимость",
+    "title": false
+  },
+  "calc3": {
+    "name": "Юр",
+    "title": false
+  }
+}

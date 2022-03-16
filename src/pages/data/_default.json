@@ -144,5 +144,42 @@
       "name": "Новиков Федор",
       "date": "20 февраля 2022"
     }
+  ],
+  "miniFaq1": [
+    {
+      "active": "true",
+      "q": "Какие требования к заемщику?",
+      "a": "Граждане РФ, от 20 до 65 лет. <br> Местонахождение в регионе работы сервиса для возможности личной встречи (работаем в 350 крупнейших городах России)"
+    },
+    {
+      "q": "Можно ли получить займ по генеральной доверенности?",
+      "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+    },
+    {
+      "q": "Можно ли взять заём на короткий срок?",
+      "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+    },
+    {
+      "q": "Заберут ли транспортное средство, если будет допущена просрочка?",
+      "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+    }
+  ],
+  "miniFaq2": [
+    {
+      "q": "Есть ли ограничения по году выпуска автомобиля для залога?",
+      "a": "Граждане РФ, от 20 до 65 лет. <br> Местонахождение в регионе работы сервиса для возможности личной встречи (работаем в 350 крупнейших городах России)"
+    },
+    {
+      "q": "Вносится ли запись в ПТС/ПСМ о залоге?",
+      "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+    },
+    {
+      "q": "Влияет ли кредитная история на решение о выдаче займа?",
+      "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+    },
+    {
+      "q": "Когда я смогу забрать ПТС\\ПСМ?",
+      "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
+    }
   ]
 }

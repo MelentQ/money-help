@@ -1,0 +1,94 @@
+.calculators {
+
+  &__label {
+    max-width: 62rem;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.3;
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+
+    margin: 0 calc(-1 * var(--content-padding));
+    padding: 0 var(--content-padding);
+    margin-top: 6rem;
+    margin-bottom: 2.4rem;
+
+    overflow: auto;
+
+    @include noScrollbar;
+
+    @include breakpoint(tablet) {
+      margin-top: 4rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-top: 2.4rem;
+    }
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+
+  &__tab {
+    display: block;
+    padding: 0.8rem 2rem 1.4rem;
+    border: 0.2rem solid $dark;
+    border-radius: 6rem;
+
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 600;
+    color: $dark;
+
+    transition: color $btt $bte, background-color $btt $bte, border-color $btt $bte;
+
+    @include breakpoint(tablet) {
+      padding: 0.7rem 2rem 1rem;
+
+      font-size: 1.6rem;
+    }
+
+    &.active {
+      color: $white;
+      background-color: $blue;
+      border-color: $blue;
+    }
+  }
+
+  &__bodies {
+    position: relative;
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity $btt $bte, visibility $btt $bte;
+
+    &.active {
+      position: static;
+
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

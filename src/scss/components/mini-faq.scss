@@ -1,0 +1,53 @@
+.mini-faq {
+
+  &__inner {
+  }
+
+  &__title {
+    margin-bottom: 5rem;
+
+    font-size: 5.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 2.4rem;
+      font-size: 3.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.5rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1.6rem;
+
+    @include breakpoint(small-tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+  }
+}

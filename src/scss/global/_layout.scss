@@ -25,8 +25,9 @@
 }
 
 .page-title {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 2rem;
 
     margin-top: 1.2rem;
@@ -37,7 +38,7 @@
         margin-bottom: 2.6rem;
     }
     @include breakpoint(small-tablet) {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 1.2rem;
     }
     @include breakpoint(mobile) {
@@ -57,9 +58,22 @@
           font-size: 2.4rem;
       }
     }
+
+    &__subtitle-wrapper {
+        margin-top: 1.6rem;
+        width: 50%;
+
+        @include breakpoint(tablet) {
+            margin-top: 1rem;
+        }
+        @include breakpoint(small-tablet) {
+            width: 100%;
+            max-width: 54rem;
+            margin-top: 0;
+        }
+    }
   
     &__subtitle {
-        margin-top: 1.6rem;
         max-width: 54rem;
 
         font-size: 2.4rem;
@@ -67,7 +81,6 @@
         line-height: 1.3;
 
         @include breakpoint(tablet) {
-            margin-top: 1rem;
             font-size: 1.8rem;
         }
         @include breakpoint(small-tablet) {
@@ -104,7 +117,7 @@
 
     h1, h2, h3, h4, h5, h6 {
         line-height: 1.2;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     h1 {
@@ -202,6 +215,8 @@
         align-items: stretch;
         justify-content: flex-start;
         gap: 3rem;
+
+        margin: 0.5rem 0;
 
         @include breakpoint(tablet) {
             gap: 1.6rem;

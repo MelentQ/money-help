@@ -1,0 +1,24 @@
+<section class="mini-faq">
+  <div class="container">
+    <div class="mini-faq__inner">
+      <h2 class="mini-faq__title">Частые вопросы</h2>
+
+      <div class="mini-faq__cols">
+        <ul class="mini-faq__list">
+          {{#each miniFaq1}}
+            <li class="mini-faq__item">
+              {{>faq-item data=this}}
+            </li>
+          {{/each}}
+        </ul>
+        <ul class="mini-faq__list">
+          {{#each miniFaq2}}
+            <li class="mini-faq__item">
+              {{>faq-item data=this}}
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<section class="calculators js-init-tabs">
+  <div class="container">
+    <div class="calculators__inner">
+      <div class="calculators__label">
+        <p>Калькулятор предлагает примерный расчет ставки. Информация не является оффертой</p>
+      </div>
+
+      <ul class="calculators__tabs">
+        <li class="calculators__tab-wrapper">
+          <button class="calculators__tab js-tab-btn active" type="button">Займ  под ПТС</button>
+        </li>
+        <li class="calculators__tab-wrapper">
+          <button class="calculators__tab js-tab-btn" type="button">Под залог недвижимости</button>
+        </li>
+        <li class="calculators__tab-wrapper">
+          <button class="calculators__tab js-tab-btn" type="button">Займ юридическим лицам</button>
+        </li>
+      </ul>
+
+      <ul class="calculators__bodies">
+        <li class="calculator calculators__body js-tab-body active">
+          {{>calculator__inner data=calc1}}
+        </li>
+        <li class="calculator calculators__body js-tab-body">
+          {{>calculator__inner data=calc2}}
+        </li>
+        <li class="calculator calculators__body js-tab-body">
+          {{>calculator__inner data=calc3}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
