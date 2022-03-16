@@ -12,6 +12,9 @@
   }
 
   &__tabs-wrapper {
+    @include breakpoint(tablet) {
+      display: contents;
+    }
   }
 
   &__tabs {

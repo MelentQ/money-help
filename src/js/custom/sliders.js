@@ -10,8 +10,8 @@ function reviewSliders() {
   const containers = Array.from(document.querySelectorAll('.js-init-review-slider'));
   containers.forEach(container => {
     const slider = new Swiper(container, {
-      slidesPerView: 3,
-      spaceBetween: 40,
+      slidesPerView: 1,
+      spaceBetween: 10,
       autoHeight: false,
       autoplay: {
         delay: 5000
@@ -20,6 +20,24 @@ function reviewSliders() {
       navigation: {
         nextEl: container.querySelector('.slider-navigation__btn--next'),
         prevEl: container.querySelector('.slider-navigation__btn--prev'),
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        769: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1025: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1201: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        }
       }
     })
   })

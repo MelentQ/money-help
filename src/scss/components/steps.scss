@@ -1,6 +1,10 @@
 .steps {
   padding: 2.8rem 0 4rem;
 
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
+
   &__inner {
     max-width: 100rem;
     margin: 0 auto;
@@ -13,6 +17,13 @@
     gap: 3rem;
 
     margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      gap: 1rem;
+    }
   }
 
   &__tab-wrapper {
@@ -31,6 +42,15 @@
     line-height: 1.2;
 
     transition: background-color $btt $bte, color $btt $bte, border-color $btt $bte;
+
+    @include breakpoint(laptop) {
+      font-size: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      padding: 0.7rem 2rem 1rem;
+
+      font-size: 1.6rem;
+    }
 
     &::before {
       content: '';
@@ -81,6 +101,11 @@
 
     transition: opacity $btt $bte, visibility $btt $bte;
 
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
     &.active {
       position: relative;
 
@@ -95,6 +120,10 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 4.4rem;
+
+    @include breakpoint(tablet) {
+      gap: 2rem;
+    }
   }
 
   &__step {
@@ -102,6 +131,10 @@
     align-items: center;
     justify-content: flex-start;
     gap: 2.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.2rem;
+    }
   }
 
   &__step-image-wrapper {
@@ -114,11 +147,20 @@
     border-radius: 50%;
     background-color: #F6F7F9;
 
+    @include breakpoint(tablet) {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+
     img {
       width: 3rem;
       height: auto;
 
       object-fit: contain;
+
+      @include breakpoint(tablet) {
+        width: 2.4rem;
+      }
     }
   }
 
@@ -131,6 +173,10 @@
 
     font-size: 2rem;
     line-height: 1.2;
+
+    @include breakpoint(tablet) {
+      font-size: 1.5rem;
+    }
   }
 
   &__step-title {
@@ -143,6 +189,8 @@
   }
 
   &__body-image-wrapper {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,6 +200,14 @@
       height: auto;
 
       object-fit: contain;
+
+      @include breakpoint(small-tablet) {
+        max-height: 30rem;
+      }
+
+      @include breakpoint(mobile) {
+        max-height: 19.2rem;
+      }
     }
   }
 
@@ -177,5 +233,19 @@
     letter-spacing: 0.6px;
     text-transform: uppercase;
     color: $orange;
+
+    @include breakpoint(small-tablet) {
+      width: 12rem;
+      height: 12rem;
+
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 8.2rem;
+      height: 8.2rem;
+
+      font-size: 0.8rem;
+    }
   }
 }

@@ -2,14 +2,27 @@
   overflow: hidden;
 
   padding: 6rem 0 7rem;
+  margin: -1rem 0 2rem;
 
   background-color: #F9F9F9;
+
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 1.8rem 0 3.6rem;
+  }
 
   &__inner {
   }
 
   &__slider {
     overflow: visible;
+
+    @include breakpoint(tablet) {
+      margin-right: 2.4rem;
+    }
   }
 
   &__header {
@@ -19,12 +32,28 @@
     gap: 2rem;
 
     margin-bottom: 5.5rem;
+
+    @include breakpoint(laptop) {
+      margin-bottom: 3.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__title {
     font-size: 4.6rem;
     font-weight: 600;
     line-height: 1.2;
+
+    @include breakpoint(laptop) {
+      font-size: 3.6rem;
+    }
+    
+    @include breakpoint(small-tablet) {
+      font-size: 2.4rem;
+    }
   }
 
   &__slider-wrapper {
@@ -48,6 +77,10 @@
     border-radius: 2rem 2rem 2rem 0;
     background: $white;
     box-shadow: 0px 4px 34px rgba(0, 0, 0, 0.05);
+
+    @include breakpoint(laptop) {
+      padding: 1.7rem;
+    }
 
     &::after {
       content: '';
@@ -98,6 +131,10 @@
     font-size: 2.4rem;
     line-height: 1.3;
     font-weight: 500;
+
+    @include breakpoint(laptop) {
+      font-size: 1.5rem;
+    }
   }
 
   &__slide-text-show-all {
@@ -108,6 +145,10 @@
     font-weight: 400;
     line-height: 1.2;
     color: $blue;
+
+    @include breakpoint(laptop) {
+      font-size: 1.5rem;
+    }
 
     &:hover {
       color: $orange;
@@ -131,6 +172,10 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1.6rem;
+
+    @include breakpoint(tablet) {
+      gap: 0.7rem;
+    }
   }
 
   &__slide-about-image-wrapper {
@@ -144,6 +189,16 @@
     overflow: hidden;
 
     border-radius: 50%;
+
+    @include breakpoint(laptop) {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+
+    @include breakpoint(tablet) {
+      width: 3.4rem;
+      height: 3.4rem;
+    }
 
     img {
       position: absolute;
@@ -163,12 +218,20 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0.5rem;
+
+    @include breakpoint(tablet) {
+      gap: 0.1rem;
+    }
   }
 
   &__slide-name {
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 700;
+
+    @include breakpoint(laptop) {
+      font-size: 1.5rem;
+    }
   }
 
   &__slide-date {
@@ -176,5 +239,15 @@
     line-height: 1.2;
     font-weight: 400;
     color: #9397A3;
+
+    @include breakpoint(laptop) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .slider-navigation {
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 }
