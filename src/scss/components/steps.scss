@@ -1,0 +1,181 @@
+.steps {
+  padding: 2.8rem 0 4rem;
+
+  &__inner {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    margin-bottom: 6rem;
+  }
+
+  &__tab-wrapper {
+  }
+
+  &__tab {
+    position: relative;
+
+    padding: 1.4rem 3.2rem 2rem;
+    border: 0.2rem solid $dark;
+    border-radius: 6rem;
+    background-color: $white;
+
+    font-size: 3.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    transition: background-color $btt $bte, color $btt $bte, border-color $btt $bte;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: calc(100% - 0.6rem);
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      z-index: -1;
+
+      width: 1.2rem;
+      height: 1.2rem;
+
+      background-color: $blue;
+      border-radius: 0.1rem;
+
+      opacity: 0;
+      transition: opacity $btt $bte;
+    }
+
+    &.active {
+      background-color: $blue;
+      border-color: $blue;
+      color: $white;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__bodies {
+    position: relative;
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity $btt $bte, visibility $btt $bte;
+
+    &.active {
+      position: relative;
+
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__body-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4.4rem;
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+  }
+
+  &__step-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: #F6F7F9;
+
+    img {
+      width: 3rem;
+      height: auto;
+
+      object-fit: contain;
+    }
+  }
+
+  &__step-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.8rem;
+
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  &__step-title {
+    font-weight: 700;
+  }
+
+  &__step-subtitle {
+    font-weight: 500;
+    color: #9397A3;
+  }
+
+  &__body-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+
+      object-fit: contain;
+    }
+  }
+
+  &__body-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 15.7rem;
+    height: 15.7rem;
+
+    border-radius: 50%;
+    border: 0.2rem solid $orange;
+
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: $orange;
+  }
+}

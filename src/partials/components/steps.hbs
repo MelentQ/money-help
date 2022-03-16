@@ -1,0 +1,38 @@
+<section class="steps js-init-tabs">
+  <div class="container">
+    <div class="steps__inner">
+      <ul class="steps__tabs">
+        {{#each steps}}
+        <li class="steps__tab-wrapper">
+          <button class="steps__tab js-tab-btn {{#if this.active }}active{{/if}}" type="button">{{this.title}}</button>
+        </li>
+        {{/each}}
+      </ul>
+      <ul class="steps__bodies">
+        {{#each steps}}
+        <li class="steps__body js-tab-body {{#if this.active }}active{{/if}}">
+          <ul class="steps__body-list">
+            {{#each this.items}}
+            <li class="steps__step">
+              <div class="steps__step-image-wrapper">
+                <img class="lazyload" src="{{this.icon}}" alt="{{this.title}}">
+              </div>
+              <div class="steps__step-text">
+                  <h3 class="steps__step-title">{{this.title}}</h3>
+                  <span class="steps__step-subtitle">{{this.subtitle}}</span>
+                </div>
+            </li>
+            {{/each}}
+          </ul>
+          <div class="steps__body-image-wrapper">
+            <img class="lazyload" src="{{this.image}}" alt="{{this.title}}">
+          </div>
+          <div class="steps__body-text">
+            Одобрение всего за 15 минут
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

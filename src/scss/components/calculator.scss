@@ -7,6 +7,18 @@
     border: none;
     border-radius: 1rem;
     background-color: #E0E0E0;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  .tip {
+    margin-bottom: 0.5rem;
+
+    @include breakpoint(tablet) {
+      margin: 1.4rem auto 0;
+    }
   }
 
   &__inner {
@@ -33,10 +45,6 @@
     align-items: center;
     justify-content: flex-start;
     gap: 0.4rem;
-
-    .tip {
-      margin-bottom: 0.5rem;
-    }
   }
 
   &__title {
@@ -45,12 +53,26 @@
     font-size: 4.6rem;
     font-weight: 600;
     line-height: 1.2;
+
+    @include breakpoint(laptop) {
+      font-size: 3.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+      font-size: 2.4rem;
+    }
   }
 
   &__cols {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   // Range
@@ -72,6 +94,10 @@
     font-weight: 600;
     letter-spacing: 0.6px;
     text-transform: uppercase;
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.2rem;
+    }
   }
 
   &__input-wrapper {
@@ -88,6 +114,14 @@
     line-height: 1.2;
     font-weight: 600;
     color: $blue;
+
+    @include breakpoint(laptop) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 2rem;
+    }
   }
 
   &__input-label {
@@ -95,6 +129,14 @@
     line-height: 1.2;
     font-weight: 600;
     color: $blue;
+
+    @include breakpoint(laptop) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 2rem;
+    }
   }
 
   &__range {
@@ -106,6 +148,10 @@
     line-height: 1.2;
     font-weight: 300;
     color: #9397A3;
+
+    @include breakpoint(small-tablet) {
+      font-size: 1rem;
+    }
   }
 
   &__text-value {
@@ -113,6 +159,14 @@
     line-height: 1.2;
     font-weight: 600;
     color: $blue;
+
+    @include breakpoint(laptop) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 2rem;
+    }
   }
 
   // ******
@@ -122,16 +176,40 @@
     display: block;
     margin-top: 4rem;
     margin-bottom: 2.6rem;
+
+    @include breakpoint(small-tablet) {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__result-block {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
     padding: 3rem 4.7rem 4.7rem;
 
     background: $white;
     border-radius: 1.7rem;
 
+    @include breakpoint(laptop) {
+      padding: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 1.1rem 1.7rem 2rem;
+    }
+
     &:nth-child(2n+1) {
       box-shadow: 0px 4px 114px -40px rgba(0, 98, 214, 0.34);
+
+      @include breakpoint(tablet) {
+        box-shadow: 0px 4px 114px -40px rgba(0, 98, 214, 0.34);
+      }
 
       .calculator__result-feature {
         color: $blue;
@@ -142,6 +220,10 @@
     &:nth-child(2n+2) {
       box-shadow: 0px 4px 134px -40px rgba(208, 115, 29, 0.3);
 
+      @include breakpoint(tablet) {
+        box-shadow: 0px 4px 114px -40px rgba(0, 98, 214, 0.34);
+      }
+
       .calculator__result-feature {
         color: $orange;
         background-color: rgba($orange, 0.15);
@@ -149,13 +231,53 @@
     }
   }
 
+  &__accordion-icon {
+    display: none;
+
+    width: 1.2rem;
+    height: 0.7rem;
+
+    transition: transform $btt $bte;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
+  &__result-title-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    margin-bottom: 1.2rem;
+
+    cursor: default;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      
+      cursor: pointer;
+    }
+
+    svg {
+      fill: $dark;
+    }
+  }
+
   &__result-title {
     display: block;
-    margin-bottom: 1.2rem;
 
     font-size: 3rem;
     font-weight: 600;
     line-height: 1.2;
+
+    @include breakpoint(laptop) {
+      font-size: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.7rem;
+    }
   }
 
   &__result-feature {
@@ -169,17 +291,38 @@
     padding: 0.6rem 1rem;
     border-radius: 7px;
 
-    font-size: 1.5;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1;
     letter-spacing: 0.6px;
     text-transform: uppercase;
+
+    @include breakpoint(laptop) {
+      font-size: 1.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.6rem;
+      font-size: 1rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 0.4rem 0.4rem;
+      margin-bottom: 0.5rem;
+
+      font-size: 0.8rem;
+    }
 
     svg {
       flex-shrink: 0;
 
       width: 1.5rem;
       height: 1.5rem;
+
+      @include breakpoint(small-tablet) {
+        width: 0.7rem;
+        height: 0.7rem;
+      }
     }
   }
 
@@ -189,10 +332,31 @@
     gap: 1rem;
 
     margin-bottom: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+
+      .calculator__result-item:nth-child(1) {
+        order: 2;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__result-item {
     flex-shrink: 0;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
   }
 
   &__result-label {
@@ -203,6 +367,10 @@
     font-weight: 400;
     line-height: 1;
     color: #9397A3;
+
+    @include breakpoint(laptop) {
+      font-size: 1.3rem;
+    }
   }
 
   &__result-value {
@@ -212,21 +380,98 @@
     font-size: 4.2rem;
     font-weight: 600;
     line-height: 1;
+
+    @include breakpoint(laptop) {
+      font-size: 3.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.8rem;
+    }
   }
 
   &__button {
     min-height: 6.2rem;
     width: 100%;
 
+    @include breakpoint(tablet) {
+      min-height: 4.6rem;
+
+      font-size: 1.3rem;
+    }
+
+    &.button {
+      @include breakpoint(tablet) {
+        background: rgba(0,0,0,0);
+        color: $orange;
+
+        &:hover {
+          background-color: $orange;
+          color: $white;
+          border-color: $orange;
+        }
+        &:focus-visible {
+          background-color: $orange;
+          color: $white;
+          border-color: $orange;
+        }
+      }
+    }
+
     &.blue-btn {
       color: $blue;
+
+      @include breakpoint(tablet) {
+        padding: 1.1rem 1.5rem;
+      }
 
       &:hover {
         background-color: $blue;
         color: $white;
         border-color: $blue;
       }
+      &:focus-visible {
+        background-color: $blue;
+        color: $white;
+        border-color: $blue;
+      }
     }
+  }
+}
+
+.js-calculator-accordion-content {
+  @include breakpoint(tablet) {
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+.js-calculator-accordion.active {
+  z-index: 2;
+
+  .js-calculator-accordion-btn .calculator__accordion-icon {
+    transform: rotate(180deg);
+  }
+
+  .js-calculator-accordion-content {
+    height: auto;
+    // todo
+  }
+}
+
+.js-calculator-accordion-content {
+  @include breakpoint(tablet) {
+    overflow: hidden;
+    height: 2.4rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    overflow: hidden;
+    height: 1.8rem;
   }
 }
 
@@ -238,6 +483,10 @@
     height: 1.2rem;
 
     cursor: pointer;
+
+    @include breakpoint(laptop) {
+      height: 0.9rem;
+    }
   }
 
   .noUi-target {
@@ -248,10 +497,19 @@
   }
 
   .noUi-horizontal .noUi-handle {
-    width: 3.5rem;
-    height: 3.5rem;
     right: -1.7rem;
     top: -1.1rem;
+
+    width: 3.5rem;
+    height: 3.5rem;
+
+    @include breakpoint(laptop) {
+      right: -1.5rem;
+      top: -1rem;
+
+      height: 2.8rem;
+      width: 2.8rem;
+    }
   }
 
   .noUi-handle {

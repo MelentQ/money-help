@@ -23,6 +23,9 @@ import initModals from './custom/initModals';
 import tabs from './custom/tabs';
 import calculator from './custom/calculator';
 import horizontalTabs from './custom/horizontalTabs';
+import initCalculatorAccordions from './custom/initCalculatorAccordions';
+import sliders from './custom/sliders';
+import textOverflow from './custom/textOverflow';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
     tabs();
     calculator();
     horizontalTabs();
+    initCalculatorAccordions();
+    sliders();
+    textOverflow();
 });
 
 document.addEventListener('lazyloaded', () => {

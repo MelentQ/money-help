@@ -271,6 +271,17 @@
       visibility: visible;
     }
 
+    .tip__shadow {
+      @include breakpoint(tablet) {
+        opacity: 0.6;
+        visibility: visible;
+      }
+    }
+
+    .tip__opener-label {
+      color: $dark;
+    }
+
     svg {
       opacity: 1;
     }
@@ -281,9 +292,45 @@
     width: 1.9rem;
     height: 1.9rem;
 
-    cursor: pointer;
     opacity: 0.4;
     transition: opacity $btt $bte;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__opener-label {
+    display: none;
+
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #9397A3;
+    text-decoration: underline;
+
+    transition: color $btt $bte;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
+  &__shadow {
+    content: '';
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 15;
+
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
   }
 
   &__content {
@@ -291,7 +338,7 @@
     left: 50%;
     top: calc(100% + 1.4rem);
     transform: translateX(-50%);
-    z-index: 4;
+    z-index: 16;
 
     width: 33.6rem;
     padding: 2rem;
@@ -305,6 +352,13 @@
     visibility: hidden;
 
     transition: opacity $btt $bte, visibility $btt $bte;
+
+    @include breakpoint(tablet) {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     &::after {
       content: '';
@@ -325,6 +379,68 @@
       font-size: 1.4rem;
       font-weight: 300;
       line-height: 1.2;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+}
+
+.slider-navigation {
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.8rem;
+    height: 4.8rem;
+
+    border-radius: 50%;
+    border: 0.2rem solid $blue;
+
+    transition: border-color $btt $bte;
+
+    &:hover {
+      border-color: $orange;
+      svg {
+        fill: $orange;
+      }
+    }
+
+    &:focus-visible {
+      border-color: $orange;
+      svg {
+        fill: $orange;
+      }
+    }
+
+    svg {
+      width: 1.1rem;
+      height: 2rem;
+      margin-right: 0.3rem;
+
+      fill: $blue;
+
+      transform-origin: center center;
+    }
+  }
+
+  &__btn--prev {
+    
+  }
+
+  &__btn--next {
+    svg {
+      transform: rotate(180deg);
+      margin-right: 0;
+      margin-left: 0.3rem;
     }
   }
 }

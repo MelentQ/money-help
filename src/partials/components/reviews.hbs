@@ -1,0 +1,38 @@
+<section class="reviews">
+  <div class="container">
+    <div class="reviews__inner">
+      <div class="swiper reviews__slider js-init-review-slider">
+        <div class="reviews__header">
+          <h2 class="reviews__title">Отзывы наших клиентов</h2>
+          {{>slider-navigation}}
+        </div>
+        <ul class="swiper-wrapper reviews__slider-wrapper">
+          {{#each reviews}}
+          <li class="swiper-slide reviews__slide-wrapper">
+            <div class="reviews__slide">
+              <div class="reviews__slide-text-wrapper js-text-overflow">
+                <div class="reviews__slide-text js-text">
+                  {{{this.text}}}
+                </div>
+                <button class="reviews__slide-text-show-all js-btn">
+                  <span class="reviews__slide-text-show-all-open-text">Читать полностью</span>
+                  <span class="reviews__slide-text-show-all-close-text">Скрыть</span>
+                </button>
+              </div>
+              <div class="reviews__slide-about">
+                <div class="reviews__slide-about-image-wrapper">
+                  <img src="{{this.photo}}" alt="{{this.name}}">
+                </div>
+                <div class="reviews__slide-text-block">
+                  <h3 class="reviews__slide-name">{{this.name}}</h3>
+                  <span class="reviews__slide-date">{{this.date}}</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
