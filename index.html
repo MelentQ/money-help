@@ -34,6 +34,9 @@
                 <symbol viewBox="0 0 18 18" id="accordion-icon" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.84 18V0h2.34v18H7.84zM0 10.12V7.88h18v2.24H0z" />
                 </symbol>
+                <symbol viewBox="0 0 12 7" id="arrow-bottom" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.264.268a.896.896 0 011.276 0l4.465 4.525L10.471.268a.896.896 0 011.265.01.92.92 0 01.01 1.282L6.644 6.732a.896.896 0 01-1.275 0L.264 1.56a.92.92 0 010-1.292z" />
+                </symbol>
                 <symbol fill="none" viewBox="0 0 25 25" id="arrow-right" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 12.5h17m-7-7l7 7-7 7" />
                 </symbol>
@@ -63,6 +66,9 @@
                 </symbol>
                 <symbol viewBox="0 0 32 32" id="phone" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.05 27.43a2.4 2.4 0 001.71-.71l3.25-3.26a1.2 1.2 0 000-1.7l-4.8-4.8a1.2 1.2 0 00-1.69 0l-1.92 1.9a9.06 9.06 0 01-3.6-1.9 9.17 9.17 0 01-1.9-3.61l1.9-1.92a1.2 1.2 0 000-1.7l-4.8-4.8a1.2 1.2 0 00-1.7 0L5.28 8.18a2.4 2.4 0 00-.7 1.72c.1 4.62 1.94 9.03 5.15 12.35a18.32 18.32 0 0012.33 5.17zM9.36 7.48l3.1 3.12-1.54 1.55a1.2 1.2 0 00-.36 1.1c.45 2 1.4 3.86 2.76 5.4a12.09 12.09 0 005.4 2.77 1.2 1.2 0 001.1-.33l1.54-1.58 3.11 3.1-2.4 2.41c-3.98-.1-7.78-1.69-10.64-4.46A15.98 15.98 0 016.96 9.9l2.4-2.4z" />
+                </symbol>
+                <symbol viewBox="0 0 12 20" id="slider-arr" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M.256 9.726l9.426 9.706 1.358-1.397-8.128-8.33 8.107-8.31L9.681.022.256 9.726z" />
                 </symbol>
                 <symbol viewBox="0 0 15 15" id="time-five" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.5 1.25A6.257 6.257 0 001.25 7.5a6.257 6.257 0 006.25 6.25 6.257 6.257 0 006.25-6.25A6.257 6.257 0 007.5 1.25zm0 11.25c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z" />
@@ -179,21 +185,21 @@
                                 <h2 class="intro-benefits__title">Автозайм — это внимательное обслуживание</h2>
                                 <ul class="intro-benefits__list">
                                     <li class="intro-benefits__item">
-                                        <img class="intro-benefits__item-image lazyload" src="img/content-icons/intro-benefit-1.svg" alt="Есть лицензия ЦБ">
+                                        <img class="lazyload intro-benefits__item-image" src="img/content-icons/intro-benefit-1.svg" alt="Есть лицензия ЦБ">
                                         <div class="intro-benefits__text">
                                             <h3 class="intro-benefits__item-title">Есть лицензия ЦБ</h3>
                                             <p class="intro-benefits__subtitle">Мы установили минимальную процентную ставку на займы от 4% в месяц</p>
                                         </div>
                                     </li>
                                     <li class="intro-benefits__item">
-                                        <img class="intro-benefits__item-image lazyload" src="img/content-icons/intro-benefit-2.svg" alt="Работаем по РФ онлайн">
+                                        <img class="lazyload intro-benefits__item-image" src="img/content-icons/intro-benefit-2.svg" alt="Работаем по РФ онлайн">
                                         <div class="intro-benefits__text">
                                             <h3 class="intro-benefits__item-title">Работаем по РФ онлайн</h3>
                                             <p class="intro-benefits__subtitle">95% вопросов решаются при первом обращении</p>
                                         </div>
                                     </li>
                                     <li class="intro-benefits__item">
-                                        <img class="intro-benefits__item-image lazyload" src="img/content-icons/intro-benefit-3.svg" alt="Даем лучшие условия">
+                                        <img class="lazyload intro-benefits__item-image" src="img/content-icons/intro-benefit-3.svg" alt="Даем лучшие условия">
                                         <div class="intro-benefits__text">
                                             <h3 class="intro-benefits__item-title">Даем лучшие условия</h3>
                                             <p class="intro-benefits__subtitle">Мы установили минимальную процентную ставку на займы от 4% в месяц</p>
@@ -241,15 +247,24 @@
                                         <span class="calculator__caption">Тип платежа</span>
                                     </div>
                                     <div class="calculator__cols">
-                                        <div class="calculator__result-block">
+                                        <div class="calculator__result-block js-calculator-accordion" data-close-other>
                                             <div class="calculator__result-title-block">
-                                                <span class="calculator__result-title">Дифференцированный</span>
-                                                <div class="tip">
-                                                    <svg>
-                                                        <use xlink:href="#tip"></use>
+                                                <button class="calculator__result-title-btn js-calculator-accordion-btn" type="button">
+                                                    <span class="calculator__result-title">Дифференцированный</span>
+                                                    <svg class="calculator__accordion-icon">
+                                                        <use xlink:href="#arrow-bottom"></use>
                                                     </svg>
+                                                </button>
+                                                <div class="tip">
+                                                    <button class="tip__opener" type="button">
+                                                        <svg>
+                                                            <use xlink:href="#tip"></use>
+                                                        </svg>
+                                                        <span class="tip__opener-label">Что такое дифференцированный платеж?</span>
+                                                    </button>
+                                                    <div class="tip__shadow"></div>
                                                     <div class="tip__content">
-                                                        <p>Аннуитетный платеж — ежемесячная сумма к оплате будет состоять преимущественно из суммы процентов, основная сумма долга погашается в конце периода</p>
+                                                        <p>Дифференцированный платеж</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -259,25 +274,36 @@
                                                 </svg>
                                                 <span>Оплата долга в конце</span>
                                             </div>
-                                            <div class="calculator__result-items">
-                                                <div class="calculator__result-item">
-                                                    <span class="calculator__result-label">Ставка</span>
-                                                    <span class="calculator__result-value js-diff-rate-value"></span>
+                                            <div class="js-calculator-accordion-content">
+                                                <div class="calculator__result-items">
+                                                    <div class="calculator__result-item">
+                                                        <span class="calculator__result-label">Ставка</span>
+                                                        <span class="calculator__result-value js-diff-rate-value"></span>
+                                                    </div>
+                                                    <div class="calculator__result-item">
+                                                        <span class="calculator__result-label">Ежемесячный платеж</span>
+                                                        <span class="calculator__result-value js-diff-payment-value"></span>
+                                                    </div>
                                                 </div>
-                                                <div class="calculator__result-item">
-                                                    <span class="calculator__result-label">Ежемесячный платеж</span>
-                                                    <span class="calculator__result-value js-diff-payment-value"></span>
-                                                </div>
+                                                <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
                                             </div>
-                                            <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
                                         </div>
-                                        <div class="calculator__result-block">
+                                        <div class="calculator__result-block js-calculator-accordion active" data-close-other>
                                             <div class="calculator__result-title-block">
-                                                <span class="calculator__result-title">Аннуитетный</span>
-                                                <div class="tip">
-                                                    <svg>
-                                                        <use xlink:href="#tip"></use>
+                                                <button class="calculator__result-title-btn js-calculator-accordion-btn" type="button">
+                                                    <span class="calculator__result-title">Аннуитетный</span>
+                                                    <svg class="calculator__accordion-icon">
+                                                        <use xlink:href="#arrow-bottom"></use>
                                                     </svg>
+                                                </button>
+                                                <div class="tip">
+                                                    <button class="tip__opener" type="button">
+                                                        <svg>
+                                                            <use xlink:href="#tip"></use>
+                                                        </svg>
+                                                        <span class="tip__opener-label">Что такое аннуитетный платеж?</span>
+                                                    </button>
+                                                    <div class="tip__shadow"></div>
                                                     <div class="tip__content">
                                                         <p>Аннуитетный платеж — ежемесячная сумма к оплате будет состоять преимущественно из суммы процентов, основная сумма долга погашается в конце периода</p>
                                                     </div>
@@ -289,17 +315,19 @@
                                                 </svg>
                                                 <span>Меньше сумма переплаты</span>
                                             </div>
-                                            <div class="calculator__result-items">
-                                                <div class="calculator__result-item">
-                                                    <span class="calculator__result-label">Ставка</span>
-                                                    <span class="calculator__result-value js-ann-rate-value"></span>
+                                            <div class="js-calculator-accordion-content">
+                                                <div class="calculator__result-items">
+                                                    <div class="calculator__result-item">
+                                                        <span class="calculator__result-label">Ставка</span>
+                                                        <span class="calculator__result-value js-ann-rate-value"></span>
+                                                    </div>
+                                                    <div class="calculator__result-item">
+                                                        <span class="calculator__result-label">Ежемесячный платеж</span>
+                                                        <span class="calculator__result-value js-ann-payment-value"></span>
+                                                    </div>
                                                 </div>
-                                                <div class="calculator__result-item">
-                                                    <span class="calculator__result-label">Ежемесячный платеж</span>
-                                                    <span class="calculator__result-value js-ann-payment-value"></span>
-                                                </div>
+                                                <button class="button calculator__button js-submit-button" id="ann" type="button">Оставить заявку</button>
                                             </div>
-                                            <button class="button calculator__button js-submit-button" id="ann" type="button">Оставить заявку</button>
                                         </div>
                                     </div>
                                 </form>
@@ -327,6 +355,338 @@
                             };
                         }
                     </script>
+                    <section class="steps js-init-tabs">
+                        <div class="container">
+                            <div class="steps__inner">
+                                <ul class="steps__tabs">
+                                    <li class="steps__tab-wrapper">
+                                        <button class="steps__tab js-tab-btn active" type="button">Как оформить займ?</button>
+                                    </li>
+                                    <li class="steps__tab-wrapper">
+                                        <button class="steps__tab js-tab-btn" type="button">Как его погасить?</button>
+                                    </li>
+                                </ul>
+                                <ul class="steps__bodies">
+                                    <li class="steps__body js-tab-body active">
+                                        <ul class="steps__body-list">
+                                            <li class="steps__step">
+                                                <div class="steps__step-image-wrapper">
+                                                    <img class="lazyload" src="img/content-icons/steps/steps-1.svg" alt="Заполняете заявку">
+                                                </div>
+                                                <div class="steps__step-text">
+                                                    <h3 class="steps__step-title">Заполняете заявку</h3>
+                                                    <span class="steps__step-subtitle">Заполните, что считаете важным</span>
+                                                </div>
+                                            </li>
+                                            <li class="steps__step">
+                                                <div class="steps__step-image-wrapper">
+                                                    <img class="lazyload" src="img/content-icons/steps/steps-2.svg" alt="Проверка документов и одобрение">
+                                                </div>
+                                                <div class="steps__step-text">
+                                                    <h3 class="steps__step-title">Проверка документов и одобрение</h3>
+                                                    <span class="steps__step-subtitle">Процесс проверки займет от 30 мин</span>
+                                                </div>
+                                            </li>
+                                            <li class="steps__step">
+                                                <div class="steps__step-image-wrapper">
+                                                    <img class="lazyload" src="img/content-icons/steps/steps-3.svg" alt="Подписание договора">
+                                                </div>
+                                                <div class="steps__step-text">
+                                                    <h3 class="steps__step-title">Подписание договора</h3>
+                                                    <span class="steps__step-subtitle">Несколько формальных документов</span>
+                                                </div>
+                                            </li>
+                                            <li class="steps__step">
+                                                <div class="steps__step-image-wrapper">
+                                                    <img class="lazyload" src="img/content-icons/steps/steps-4.svg" alt="Выдача займа">
+                                                </div>
+                                                <div class="steps__step-text">
+                                                    <h3 class="steps__step-title">Выдача займа</h3>
+                                                    <span class="steps__step-subtitle">Получаете деньги на карту</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="steps__body-image-wrapper">
+                                            <img class="lazyload" src="img/content-icons/steps/bg.svg" alt="Как оформить займ?">
+                                        </div>
+                                        <div class="steps__body-text">Одобрение всего за 15 минут</div>
+                                    </li>
+                                    <li class="steps__body js-tab-body">
+                                        <ul class="steps__body-list">
+                                            <li class="steps__step">
+                                                <div class="steps__step-image-wrapper">
+                                                    <img class="lazyload" src="img/content-icons/steps/steps-1.svg" alt="Пункт 1">
+                                                </div>
+                                                <div class="steps__step-text">
+                                                    <h3 class="steps__step-title">Пункт 1</h3>
+                                                    <span class="steps__step-subtitle">Описание</span>
+                                                </div>
+                                            </li>
+                                            <li class="steps__step">
+                                                <div class="steps__step-image-wrapper">
+                                                    <img class="lazyload" src="img/content-icons/steps/steps-1.svg" alt="Пункт 2">
+                                                </div>
+                                                <div class="steps__step-text">
+                                                    <h3 class="steps__step-title">Пункт 2</h3>
+                                                    <span class="steps__step-subtitle">Описание</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="steps__body-image-wrapper">
+                                            <img class="lazyload" src="img/content-icons/steps/bg.svg" alt="Как его погасить?">
+                                        </div>
+                                        <div class="steps__body-text">Одобрение всего за 15 минут</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="list-tabs js-init-tabs">
+                        <div class="container">
+                            <div class="list-tabs__inner">
+                                <div class="list-tabs__tabs-wrapper">
+                                    <ul class="list-tabs__tabs">
+                                        <li class="list-tabs__tab-wrapper">
+                                            <button class="list-tabs__tab js-tab-btn active" type="button">
+                                                <span class="list-tabs__tab-label">Условия займа</span>
+                                                <svg>
+                                                    <use xlink:href="#arrow-right"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="list-tabs__tab-wrapper">
+                                            <button class="list-tabs__tab js-tab-btn" type="button">
+                                                <span class="list-tabs__tab-label">Требования к авто</span>
+                                                <svg>
+                                                    <use xlink:href="#arrow-right"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="list-tabs__tab-wrapper">
+                                            <button class="list-tabs__tab js-tab-btn" type="button">
+                                                <span class="list-tabs__tab-label">Преимущества займов</span>
+                                                <svg>
+                                                    <use xlink:href="#arrow-right"></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <button class="blue-btn list-tabs__order-btn" type="button" data-hystmodal="#order">Оставить заявку</button>
+                                </div>
+                                <ul class="list-tabs__bodies">
+                                    <li class="list-tabs__body-wrapper js-tab-body active">
+                                        <ul class="list-tabs__body">
+                                            <li>Ставка от 5% в месяц</li>
+                                            <li>От 80 000 до 1 000 000 рублей, выдается наличными или на карту</li>
+                                            <li>Для оформления нужны 3 документа: паспорт гражданина РФ, СТС, ПТС</li>
+                                            <li>Оформление и получение денег в течение 30 минут</li>
+                                            <li>Полная конфиденциальность клиента</li>
+                                            <li>Автомобиль и ПТС остается у вас</li>
+                                            <li>Вы можете получить до 70% от стоимости автомобиля</li>
+                                            <li>Рассматриваем заявки с любой кредитной историей</li>
+                                            <li>Без скрытых услуг и комиссий.</li>
+                                            <li>Возможно досрочное погашение</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-tabs__body-wrapper js-tab-body">
+                                        <ul class="list-tabs__body">
+                                            <li>Требование 1</li>
+                                            <li>Требование 2</li>
+                                        </ul>
+                                    </li>
+                                    <li class="list-tabs__body-wrapper js-tab-body">
+                                        <ul class="list-tabs__body">
+                                            <li>Преимущество 1</li>
+                                            <li>Преимущество 2</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="reviews">
+                        <div class="container">
+                            <div class="reviews__inner">
+                                <div class="swiper reviews__slider js-init-review-slider">
+                                    <div class="reviews__header">
+                                        <h2 class="reviews__title">Отзывы наших клиентов</h2>
+                                        <div class="slider-navigation">
+                                            <button class="slider-navigation__btn slider-navigation__btn--prev" type="button" title="Назад">
+                                                <svg>
+                                                    <use xlink:href="#slider-arr"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="slider-navigation__btn slider-navigation__btn--next" type="button" title="Вперед">
+                                                <svg>
+                                                    <use xlink:href="#slider-arr"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <ul class="swiper-wrapper reviews__slider-wrapper">
+                                        <li class="swiper-slide reviews__slide-wrapper">
+                                            <div class="reviews__slide">
+                                                <div class="reviews__slide-text-wrapper js-text-overflow">
+                                                    <div class="reviews__slide-text js-text">Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под</div>
+                                                    <button class="reviews__slide-text-show-all js-btn">
+                                                        <span class="reviews__slide-text-show-all-open-text">Читать полностью</span>
+                                                        <span class="reviews__slide-text-show-all-close-text">Скрыть</span>
+                                                    </button>
+                                                </div>
+                                                <div class="reviews__slide-about">
+                                                    <div class="reviews__slide-about-image-wrapper">
+                                                        <img src="img/content/reviews/review-1.jpg" alt="Гордеев Иван">
+                                                    </div>
+                                                    <div class="reviews__slide-text-block">
+                                                        <h3 class="reviews__slide-name">Гордеев Иван</h3>
+                                                        <span class="reviews__slide-date">20 февраля 2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide reviews__slide-wrapper">
+                                            <div class="reviews__slide">
+                                                <div class="reviews__slide-text-wrapper js-text-overflow">
+                                                    <div class="reviews__slide-text js-text">Оперативная, качественная работа. Приветливый, очень внимательный менеджер. Оперативная, качественная работа. Приветливый, очень внимательный менеджер.</div>
+                                                    <button class="reviews__slide-text-show-all js-btn">
+                                                        <span class="reviews__slide-text-show-all-open-text">Читать полностью</span>
+                                                        <span class="reviews__slide-text-show-all-close-text">Скрыть</span>
+                                                    </button>
+                                                </div>
+                                                <div class="reviews__slide-about">
+                                                    <div class="reviews__slide-about-image-wrapper">
+                                                        <img src="img/content/reviews/review-2.jpg" alt="Скребенков Владимир">
+                                                    </div>
+                                                    <div class="reviews__slide-text-block">
+                                                        <h3 class="reviews__slide-name">Скребенков Владимир</h3>
+                                                        <span class="reviews__slide-date">20 февраля 2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide reviews__slide-wrapper">
+                                            <div class="reviews__slide">
+                                                <div class="reviews__slide-text-wrapper js-text-overflow">
+                                                    <div class="reviews__slide-text js-text">Впервые пользуюсь услугами данной компании. Хочется отметить высокий профессионализм сотрудников</div>
+                                                    <button class="reviews__slide-text-show-all js-btn">
+                                                        <span class="reviews__slide-text-show-all-open-text">Читать полностью</span>
+                                                        <span class="reviews__slide-text-show-all-close-text">Скрыть</span>
+                                                    </button>
+                                                </div>
+                                                <div class="reviews__slide-about">
+                                                    <div class="reviews__slide-about-image-wrapper">
+                                                        <img src="img/content/reviews/review-3.jpg" alt="Новиков Федор">
+                                                    </div>
+                                                    <div class="reviews__slide-text-block">
+                                                        <h3 class="reviews__slide-name">Новиков Федор</h3>
+                                                        <span class="reviews__slide-date">20 февраля 2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide reviews__slide-wrapper">
+                                            <div class="reviews__slide">
+                                                <div class="reviews__slide-text-wrapper js-text-overflow">
+                                                    <div class="reviews__slide-text js-text">Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под</div>
+                                                    <button class="reviews__slide-text-show-all js-btn">
+                                                        <span class="reviews__slide-text-show-all-open-text">Читать полностью</span>
+                                                        <span class="reviews__slide-text-show-all-close-text">Скрыть</span>
+                                                    </button>
+                                                </div>
+                                                <div class="reviews__slide-about">
+                                                    <div class="reviews__slide-about-image-wrapper">
+                                                        <img src="img/content/reviews/review-1.jpg" alt="Гордеев Иван">
+                                                    </div>
+                                                    <div class="reviews__slide-text-block">
+                                                        <h3 class="reviews__slide-name">Гордеев Иван</h3>
+                                                        <span class="reviews__slide-date">20 февраля 2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide reviews__slide-wrapper">
+                                            <div class="reviews__slide">
+                                                <div class="reviews__slide-text-wrapper js-text-overflow">
+                                                    <div class="reviews__slide-text js-text">Оперативная, качественная работа. Приветливый, очень внимательный менеджер. Оперативная, качественная работа. Приветливый, очень внимательный менеджер.</div>
+                                                    <button class="reviews__slide-text-show-all js-btn">
+                                                        <span class="reviews__slide-text-show-all-open-text">Читать полностью</span>
+                                                        <span class="reviews__slide-text-show-all-close-text">Скрыть</span>
+                                                    </button>
+                                                </div>
+                                                <div class="reviews__slide-about">
+                                                    <div class="reviews__slide-about-image-wrapper">
+                                                        <img src="img/content/reviews/review-2.jpg" alt="Скребенков Владимир">
+                                                    </div>
+                                                    <div class="reviews__slide-text-block">
+                                                        <h3 class="reviews__slide-name">Скребенков Владимир</h3>
+                                                        <span class="reviews__slide-date">20 февраля 2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide reviews__slide-wrapper">
+                                            <div class="reviews__slide">
+                                                <div class="reviews__slide-text-wrapper js-text-overflow">
+                                                    <div class="reviews__slide-text js-text">Впервые пользуюсь услугами данной компании. Хочется отметить высокий профессионализм сотрудников</div>
+                                                    <button class="reviews__slide-text-show-all js-btn">
+                                                        <span class="reviews__slide-text-show-all-open-text">Читать полностью</span>
+                                                        <span class="reviews__slide-text-show-all-close-text">Скрыть</span>
+                                                    </button>
+                                                </div>
+                                                <div class="reviews__slide-about">
+                                                    <div class="reviews__slide-about-image-wrapper">
+                                                        <img src="img/content/reviews/review-3.jpg" alt="Новиков Федор">
+                                                    </div>
+                                                    <div class="reviews__slide-text-block">
+                                                        <h3 class="reviews__slide-name">Новиков Федор</h3>
+                                                        <span class="reviews__slide-date">20 февраля 2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="form-order">
+                        <div class="container">
+                            <div class="form-order__inner">
+                                <div class="form-order__content-block js-form-message-in-content">
+                                    <div class="form-order__form js-form-block">
+                                        <h2 class="form-order__title">Нужно как можно быстрее?</h2>
+                                        <p class="form-order__subtitle">Оставьте сотовый номер телефона, чтобы получить бесплатную консультацию</p>
+                                        <form class="form js-handle-form" action="#" name="form-order" data-need-validation>
+                                            <label class="form__input-wrapper js-validator-wrapper">
+                                                <span class="form__input-placeholder">Номер телефона</span>
+                                                <input class="form__input js-input js-phone-input" name="phone" type="tel" data-parsley-phone required>
+                                            </label>
+                                            <button class="black-btn form__submit js-submit-form" type="submit">Отправить</button>
+                                            <label class="checkbox-container form__policy js-validator-wrapper">
+                                                <div class="form__policy-text">
+                                                    <p>Я согласен на обработку <a href="./policy.html" target="_blank">персональных данных</a>
+                                                    </p>
+                                                </div>
+                                                <input class="js-input" type="checkbox" name="policy" checked="checked" required>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="form-order__message form-order__success js-form-success">
+                                        <span class="form-order__title form-order__success-title">Спасибо, заявка ваша отправлена!</span>
+                                        <span class="form-order__subtitle form-order__success-subtitle">Мы перезвоним вам в течении 30 минут!</span>
+                                    </div>
+                                    <div class="form-order__message form-order__error js-form-error">
+                                        <span class="form-order__title form-order__error-title">Что-то пошло не так...</span>
+                                        <span class="form-order__subtitle form-order__error-subtitle">Повторите попытку позже</span>
+                                    </div>
+                                </div>
+                                <div class="form-order__image-block">
+                                    <img class="lazyload form-order__image" src="img/content-icons/form-order.svg" alt="Нужно как можно быстрее?">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
 
