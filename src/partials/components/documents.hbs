@@ -5,16 +5,7 @@
       <ul class="documents__list">
         {{#each data.documents}}
         <li class="documents__list-item">
-          <a class="documents__item"
-            href="img/content/docs/gramota.jpg"
-            data-fancybox="gallery-{{../this.id}}"
-            data-caption="{{this.name}}"
-          >
-            <div class="documents__item-image-wrapper">
-              <img class="lazyload documents__item-image" src="{{this.image}}" alt="{{this.name}}">
-            </div>
-            <span class="documents__item-name">{{this.name}}</span>
-          </a>
+          {{>document-item data=this}}
         </li>
         {{/each}}
       </ul>

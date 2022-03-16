@@ -25,24 +25,57 @@
 }
 
 .page-title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
     margin-top: 1.2rem;
     margin-bottom: 3.5rem;
-
-    font-size: 5.4rem;
-    line-height: 1.2;
-    font-weight: 600;
 
     @include breakpoint(tablet) {
         margin-top: 0.6rem;
         margin-bottom: 2.6rem;
-
-        font-size: 3.2rem;
+    }
+    @include breakpoint(small-tablet) {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
     @include breakpoint(mobile) {
         margin-top: 0;
         margin-bottom: 2.6rem;
+    }
+
+    &__title {
+      font-size: 5.4rem;
+      line-height: 1.2;
+      font-weight: 600;
+  
+      @include breakpoint(tablet) {
+          font-size: 3.2rem;
+      }
+      @include breakpoint(mobile) {
+          font-size: 2.4rem;
+      }
+    }
+  
+    &__subtitle {
+        margin-top: 1.6rem;
+        max-width: 54rem;
 
         font-size: 2.4rem;
+        font-weight: 500;
+        line-height: 1.3;
+
+        @include breakpoint(tablet) {
+            margin-top: 1rem;
+            font-size: 1.8rem;
+        }
+        @include breakpoint(small-tablet) {
+            margin-top: 0;
+        }
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+        }
     }
 }
 

@@ -1,0 +1,19 @@
+<section class="benefits">
+  <div class="container">
+    <div class="benefits__inner">
+      <ul class="benefits__list">
+        {{#each benefits}}
+        <li class="benefits__item-wrapper">
+          <div class="benefits__item">
+            <img class="lazyload benefits__item-image" src="{{this.image}}" alt="{{this.title}}">
+            <div class="benefits__text">
+              <h3 class="benefits__item-title">{{this.title}}</h3>
+              <p class="benefits__subtitle">{{this.subtitle}}</p>
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

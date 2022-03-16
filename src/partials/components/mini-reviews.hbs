@@ -1,0 +1,21 @@
+<section class="mini-reviews">
+  <div class="container">
+    <div class="mini-reviews__inner">
+      <h2 class="mini-reviews__title">Нас выбирают, потому что</h2>
+      <div class="mini-reviews__subtitle">
+        <p>Какой-то блок текста про Оформление займов под авто без справок в Москве. Какой-то блок текста про Оформление займов под авто без справок в Москве.</p>
+      </div>
+      <ul class="mini-reviews__list">
+        {{#each miniReviews}}
+        <li class="mini-reviews__item">
+          <span class="mini-reviews__item-text">{{this.text}}</span>
+          <span class="mini-reviews__item-author">{{this.author}}</span>
+        </li>
+        {{/each}}
+        <li class="mini-reviews__item mini-reviews__item--accent">
+          <span class="mini-reviews__item-text">Более 1 000 положительных отзывов</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

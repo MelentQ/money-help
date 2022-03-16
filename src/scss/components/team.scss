@@ -1,0 +1,258 @@
+.team {
+
+  &__inner {
+  }
+
+  &__blockquote-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+
+    margin-bottom: 6rem;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 5rem;
+
+      grid-template-columns: 2fr 5fr;
+    }
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  &__header {
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+
+    font-size: 5.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 2rem;
+      font-size: 3.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__subtitle {
+    max-width: 33rem;
+
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #8E9098;
+
+    @include breakpoint(desktop) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__blockquote {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 10rem;
+    align-items: center;
+
+    @include breakpoint(desktop) {
+      gap: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__blockquote-photo-wrapper {
+    align-self: flex-start;
+
+    position: relative;
+
+    height: 0;
+    padding-bottom: 130%;
+
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  &__blockquote-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  &__blockquote-text-container {
+    position: relative;
+
+    max-width: 47.5rem;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -6.8rem;
+      left: -9.8rem;
+      z-index: -1;
+
+      width: 130%;
+      height: 0;
+      padding-bottom: 106.8%;
+      
+      background-image: url(../img/content-icons/team.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include breakpoint(small-tablet) {
+        top: -3.5rem;
+        left: 2rem;
+
+        width: 88%;
+        padding-bottom: 73%;
+      }
+    }
+  }
+
+  &__blockquote-text {
+    font-size: 3.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @include breakpoint(desktop) {
+      font-size: 2.8rem;
+    }
+    @include breakpoint(laptop) {
+      font-size: 2.4rem;
+    }
+    @include breakpoint(tablet) {
+      font-size: 2.8rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 2rem;
+    }
+  }
+
+  &__blockquote-author {
+    display: block;
+    margin-top: 8rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.5rem;
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__blockquote-author-post {
+    display: block;
+    margin-top: 0.3rem;
+
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #9397A3;
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.5rem;
+      margin-top: 0.2rem;
+    }
+  }
+
+  &__slider {
+    overflow: visible;
+
+    @include breakpoint(tablet) {
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__slider-wrapper {
+    margin-top: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &__slide-wrapper {
+    
+  }
+
+  &__slide {
+  }
+
+  &__slide-image-wrapper {
+    position: relative;
+
+    height: 24rem;
+    margin-bottom: 2.5rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 2rem;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__slide-name {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+
+    @include breakpoint(desktop) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__slide-post {
+    display: block;
+    margin-top: 0.6rem;
+
+    font-size: 1.9rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #9397A3;
+    text-align: center;
+    letter-spacing: -0.01em;
+
+    @include breakpoint(desktop) {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  .slider-navigation {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+}

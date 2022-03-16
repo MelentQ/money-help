@@ -1,0 +1,21 @@
+<section class="mini-documents">
+  <div class="container">
+    <div class="mini-documents__inner">
+      <h2 class="mini-documents__title">Документы и лицензии</h2>
+      <a href="./documents.html" class="mini-documents__link">
+        <span>Смотреть все</span>
+        <svg><use xlink:href="#arrow-right"></svg>
+      </a>
+
+      <div class="swiper mini-documents__slider js-init-mini-documents-slider">
+        <ul class="swiper-wrapper mini-documents__slider-wrapper">
+          {{#each miniDocs.documents}}
+            <li class="swiper-slide mini-documents__list-item">
+              {{>document-item data=this}}
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

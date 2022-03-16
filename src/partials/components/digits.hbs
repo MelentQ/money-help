@@ -1,0 +1,16 @@
+<section class="digits">
+  <div class="container">
+    <div class="digits__inner">
+      <h2 class="digits__title">Мы работаем с 2017 года</h2>
+
+      <ul class="digits__list">
+        {{#each digits}}
+        <li class="digits__item">
+          <span class="digits__digit">{{this.digit}}</span>
+          <span class="digits__digit-description">{{this.description}}</span>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

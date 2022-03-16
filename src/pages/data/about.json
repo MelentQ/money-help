@@ -1,0 +1,156 @@
+{
+  "title": "О компании",
+  "subtitle": "Какой-то блок текста про оформление займов под авто без справок в России",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "О компании",
+      "link": "./about.html"
+    }
+  ],
+  "benefits": [
+    {
+      "image": "img/content-icons/benefits/benefit-1.svg",
+      "title": "Прозрачность",
+      "subtitle": "Мы установили минимальную процентную ставку на займы от 4% в месяц"
+    },
+    {
+      "image": "img/content-icons/benefits/benefit-2.svg",
+      "title": "Скорость",
+      "subtitle": "95% вопросов решаются при первом обращении"
+    },
+    {
+      "image": "img/content-icons/benefits/benefit-3.svg",
+      "title": "Доверие",
+      "subtitle": "Мы установили минимальную процентную ставку на займы от 4% в месяц"
+    },
+    {
+      "image": "img/content-icons/benefits/benefit-4.svg",
+      "title": "Инновация",
+      "subtitle": "95% вопросов решаются при первом обращении"
+    }
+  ],
+  "miniReviews": [
+    {
+      "text": "Оперативная, качественная работа. оформили все за 20 минут",
+      "author": "Иванов Петр"
+    },
+    {
+      "text": "Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко",
+      "author": "Скребенков Владимир"
+    },
+    {
+      "text": "Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко",
+      "author": "Скребенков Владимир"
+    }
+  ],
+  "digits": [
+    {
+      "digit": "350 млн",
+      "description": "Мы выдали для наших клиентов"
+    },
+    {
+      "digit": "95%",
+      "description": "Возвращающихся клиентов"
+    },
+    {
+      "digit": "1000001",
+      "description": "Займов выдали"
+    }
+  ],
+  "team": [
+    {
+      "photo": "img/content/team/team-1.jpg",
+      "name": "Павел Исаев",
+      "post": "Директор по рискам"
+    },
+    {
+      "photo": "img/content/team/team-2.jpg",
+      "name": "Анна Калугина",
+      "post": "Генеральный директор"
+    },
+    {
+      "photo": "img/content/team/team-3.jpg",
+      "name": "Оксана Фролова",
+      "post": "Советник"
+    },
+    {
+      "photo": "img/content/team/team-4.jpg",
+      "name": "Артём Саратикян",
+      "post": "Советник"
+    },
+    {
+      "photo": "img/content/team/team-5.jpg",
+      "name": "Елена Яшина",
+      "post": "Директор по рискам"
+    },
+    {
+      "photo": "img/content/team/team-6.jpg",
+      "name": "Павел Исаев",
+      "post": "Директор по персоналу"
+    },
+    {
+      "photo": "img/content/team/team-1.jpg",
+      "name": "Павел Исаев",
+      "post": "Директор по рискам"
+    },
+    {
+      "photo": "img/content/team/team-2.jpg",
+      "name": "Анна Калугина",
+      "post": "Генеральный директор"
+    },
+    {
+      "photo": "img/content/team/team-3.jpg",
+      "name": "Оксана Фролова",
+      "post": "Советник"
+    },
+    {
+      "photo": "img/content/team/team-4.jpg",
+      "name": "Артём Саратикян",
+      "post": "Советник"
+    },
+    {
+      "photo": "img/content/team/team-5.jpg",
+      "name": "Елена Яшина",
+      "post": "Директор по рискам"
+    },
+    {
+      "photo": "img/content/team/team-6.jpg",
+      "name": "Павел Исаев",
+      "post": "Директор по персоналу"
+    }
+  ],
+  "miniDocs": {
+    "id": "1",
+    "documents": [
+      {
+        "image": "img/content/docs/doc-1.jpg",
+        "name": "Свидетельство МФО в реестре Центрального Банка РФ",
+        "id": "1"
+      },
+      {
+        "image": "img/content/docs/doc-1.jpg",
+        "name": "Свидетельство МФО в реестре Центрального Банка РФ",
+        "id": "1"
+      },
+      {
+        "image": "img/content/docs/doc-1.jpg",
+        "name": "Свидетельство МФО в реестре Центрального Банка РФ",
+        "id": "1"
+      },
+      {
+        "image": "img/content/docs/doc-1.jpg",
+        "name": "Свидетельство МФО в реестре Центрального Банка РФ",
+        "id": "1"
+      },
+      {
+        "image": "img/content/docs/doc-1.jpg",
+        "name": "Свидетельство МФО в реестре Центрального Банка РФ",
+        "id": "1"
+      }
+    ]
+  }
+}
