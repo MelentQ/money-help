@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   formSubmitHandler();
   setCalculatorData();
+  // city(); // Автоопределение геолокации
 });
 
 function formSubmitHandler() {
@@ -125,4 +126,44 @@ const pristineConfig = {
   errorTextTag: 'span',
   // class of the error text element
   errorTextClass: 'form__input-error' 
+}
+
+function city() {
+  // ### Автоопределение геолокации ###
+
+  // Тут проверяем наличие куков,
+  // чтобы каждый раз не перезаписывать выбор пользователя
+  if (!getCookie("city")) {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        fetch(`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
+          .then(res => res.json())
+          .then(data => {
+            setCity(data.address.city);
+          })
+          .catch(err => {
+            console.warn(err);
+          })
+      });
+    } else {
+      console.warn('Не удалось определить геолокацию');
+    }
+  }
+}
+
+function setCity(name) {
+  const element = document.querySelector('.js-city');
+  if (element) {
+    element.textContent = name;
+  }
+
+  // Записываем в куки
+  document.cookie = `city=${encodeURIComponent(name)}`;
+}
+
+function getCookie(name) {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
 }

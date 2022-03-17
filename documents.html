@@ -98,7 +98,7 @@
                                 <svg>
                                     <use xlink:href="#location"></use>
                                 </svg>
-                                <span class="header__selected-city">Москва</span>
+                                <span class="header__selected-city js-city">Москва</span>
                             </button>
                             <button class="header__open-menu" type="button" data-hystmodal="#menu" title="Меню">
                                 <svg>
@@ -544,6 +544,27 @@
                             </svg>
                         </button>
                         <h2 class="modal__title">Выберите город</h2>
+                        <div class="select js-accordion js-select-city" data-name="city">
+                            <button class="select__button js-accordion-btn">
+                                <span class="select__button-label">Москва</span>
+                                <svg>
+                                    <use xlink:href="#arrow-bottom"></use>
+                                </svg>
+                            </button>
+                            <div class="select__content js-accordion-content" style="height: 0;">
+                                <ul class="select__list">
+                                    <li class="select__item active" data-code="1">Москва</li>
+                                    <li class="select__item" data-code="2">Санкт-Петербург</li>
+                                    <li class="select__item" data-code="3">Нижний Новгород</li>
+                                    <li class="select__item" data-code="4">Казань</li>
+                                    <li class="select__item" data-code="5">Пермь</li>
+                                    <li class="select__item" data-code="6">Краснодар</li>
+                                    <li class="select__item" data-code="7">Екатеринбург</li>
+                                    <li class="select__item" data-code="8">Новосибирск</li>
+                                    <li class="select__item" data-code="9">Сочи</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -648,6 +669,20 @@
                             </svg>
                         </button>
                         <h2 class="modal__title">Здесь будет карта</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="hystmodal modal" id="cardInfo" aria-hidden="true">
+                <div class="hystmodal__wrap modal__wrapper">
+                    <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                        <button class="modal__close" data-hystclose type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <h2 class="modal__title"></h2>
+                        <div class="modal__description"></div>
+                        <div class="editable-text-container modal__content-block"></div>
                     </div>
                 </div>
             </div>
