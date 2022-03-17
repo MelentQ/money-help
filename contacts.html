@@ -253,16 +253,16 @@
                     </div>
                     <div class="footer__links">
                         <nav class="footer__menu">
-                            <a class="footer__menu-link footer__menu-link--section" href="#">Займы</a>
+                            <a class="footer__menu-link footer__menu-link--section" href="./entity.html">Займы</a>
                             <ul class="footer__menu-list">
                                 <li>
-                                    <a class="footer__menu-link" href="#">Займы для бизнеса</a>
+                                    <a class="footer__menu-link" href="./entity.html">Займы для бизнеса</a>
                                 </li>
                                 <li>
-                                    <a class="footer__menu-link" href="#">Под залог недвижимости</a>
+                                    <a class="footer__menu-link" href="./realty.html">Под залог недвижимости</a>
                                 </li>
                                 <li>
-                                    <a class="footer__menu-link" href="#">Под залог ПТС</a>
+                                    <a class="footer__menu-link" href="./transport.html">Под залог ПТС</a>
                                 </li>
                             </ul>
                         </nav>
@@ -363,13 +363,13 @@
                                     <nav class="menu__links">
                                         <ul class="menu__links-list menu__links-list--accent">
                                             <li>
-                                                <a class="menu__link" href="#">Займы для бизнеса</a>
+                                                <a class="menu__link" href="./entity.html">Займы для бизнеса</a>
                                             </li>
                                             <li>
-                                                <a class="menu__link" href="#">Под залог недвижимости</a>
+                                                <a class="menu__link" href="./realty.html">Под залог недвижимости</a>
                                             </li>
                                             <li>
-                                                <a class="menu__link" href="#">Под залог ПТС</a>
+                                                <a class="menu__link" href="./transport.html">Под залог ПТС</a>
                                             </li>
                                         </ul>
                                         <ul class="menu__links-list">
@@ -586,22 +586,54 @@
                 <div class="ie-placeholder__message">Извините, ваш браузер не поддерживается</div>
             </div>
             <script>
+                // name - название калькулятора,
+                //        должно совпадать с data-name контейнера
                 // sum - сумма займа
                 // month - срок займа
-                // функция должна возвращать число
-                function calculate(sum, month) {
+                function calculate(name, sum, month) {
+                    let getRate; // Функция, которая получает на вход сумму и возвращает ставку
+                    switch (name) {
+                        case 'ПТС':
+                            getRate = (sum) => {
+                                if (sum >= 500000) {
+                                    return 0.05;
+                                }
+                                return 0.06;
+                            };
+                            break;
+                        case 'Недвижимость':
+                            getRate = (sum) => {
+                                return 0.05;
+                            };
+                            break;
+                        case 'Юр':
+                            getRate = (sum) => {
+                                if (sum >= 500000) {
+                                    return 0.05;
+                                }
+                                return 0.06;
+                            };
+                            break;
+                        default:
+                            getRate = (sum) => {
+                                return 0.05;
+                            };
+                    }
 
-                    const rate = month;
-                    const payment = (1 + rate / 100) * sum / month;
+                    const rate = getRate(sum);
+
+                    const getAnnPayment = (sum, rate, month) => {
+                        return Math.round(sum * (rate * Math.pow(1 + rate, month)) / (Math.pow(1 + rate, month) - 1));
+                    }
 
                     return {
                         diff: {
-                            rate: Math.round((rate) * 10) / 10,
-                            payment: Math.round(payment)
+                            rate: rate * 100,
+                            payment: getAnnPayment(sum, rate, month)
                         },
                         ann: {
-                            rate: Math.round((rate * 1.1) * 10) / 10,
-                            payment: Math.round(payment * 1.1)
+                            rate: rate * 100,
+                            payment: getAnnPayment(sum, rate, month)
                         }
                     };
                 }

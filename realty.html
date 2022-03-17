@@ -23,7 +23,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <title>Главная страница</title>
+        <title>Под залог недвижимости</title>
     </head>
     <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -133,353 +133,336 @@
 
             <main class="page-main">
                 <div class="sections-24">
-                    <section class="intro">
+                    <section class="intro-form">
                         <div class="container">
-                            <div class="intro__title-block">
-                                <h1 class="intro__title">Оказываем финансовую помощь населению в любых ситуациях</h1>
-                                <img class="intro__image lazyload" src="img/content-icons/intro.svg" alt="Оказываем финансовую помощь населению в любых ситуациях">
-                            </div>
-                            <div class="intro__sections">
-                                <span class="intro__sections-title">Расчитайте залог онлайн, под любые условия</span>
-                                <ul class="intro__sections-list">
-                                    <li class="intro__sections-list-item">
-                                        <a class="link" href="./transport.html">
-                                            <div class="link__text">
-                                                <span class="link__title">Займ под залог ПТС</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </div>
-                                            <img class="link__image lazyload" src="img/content-icons/intro-section-1.svg" alt="Займ под залог ПТС">
-                                        </a>
-                                    </li>
-                                    <li class="intro__sections-list-item">
-                                        <a class="link" href="./realty.html">
-                                            <div class="link__text">
-                                                <span class="link__title">Под залог недвижимости</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </div>
-                                            <img class="link__image lazyload" src="img/content-icons/intro-section-2.svg" alt="Под залог недвижимости">
-                                        </a>
-                                    </li>
-                                    <li class="intro__sections-list-item">
-                                        <a class="link" href="./entity.html">
-                                            <div class="link__text">
-                                                <span class="link__title">Займ юридическим лицам</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </div>
-                                            <img class="link__image lazyload" src="img/content-icons/intro-section-3.svg" alt="Займ юридическим лицам">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="intro-benefits">
-                        <div class="container">
-                            <div class="intro-benefits__inner">
-                                <h2 class="intro-benefits__title">Автозайм — это внимательное обслуживание</h2>
-                                <ul class="intro-benefits__list">
-                                    <li class="intro-benefits__item">
-                                        <img class="lazyload intro-benefits__item-image" src="img/content-icons/intro-benefit-1.svg" alt="Есть лицензия ЦБ">
-                                        <div class="intro-benefits__text">
-                                            <h3 class="intro-benefits__item-title">Есть лицензия ЦБ</h3>
-                                            <p class="intro-benefits__subtitle">Мы установили минимальную процентную ставку на займы от 4% в месяц</p>
-                                        </div>
-                                    </li>
-                                    <li class="intro-benefits__item">
-                                        <img class="lazyload intro-benefits__item-image" src="img/content-icons/intro-benefit-2.svg" alt="Работаем по РФ онлайн">
-                                        <div class="intro-benefits__text">
-                                            <h3 class="intro-benefits__item-title">Работаем по РФ онлайн</h3>
-                                            <p class="intro-benefits__subtitle">95% вопросов решаются при первом обращении</p>
-                                        </div>
-                                    </li>
-                                    <li class="intro-benefits__item">
-                                        <img class="lazyload intro-benefits__item-image" src="img/content-icons/intro-benefit-3.svg" alt="Даем лучшие условия">
-                                        <div class="intro-benefits__text">
-                                            <h3 class="intro-benefits__item-title">Даем лучшие условия</h3>
-                                            <p class="intro-benefits__subtitle">Мы установили минимальную процентную ставку на займы от 4% в месяц</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="calculator">
-                        <div class="container">
-                            <div class="calculator__inner js-init-calculator" data-name="ПТС">
-                                <form class="calculator__form" action="#" name="calculator">
-                                    <h2 class="calculator__title">Калькулятор займа под ПТС</h2>
-                                    <div class="calculator__cols">
-                                        <div class="calculator__range-block js-range-slider-container" id="sum-range" data-start="400000" data-min="80000" data-max="1000000" data-step="10000">
-                                            <div class="calculator__range-block-group">
-                                                <span class="calculator__caption">Сумма займа</span>
-                                                <div class="calculator__input-wrapper">
-                                                    <input class="calculator__input js-range-input" type="text" name="sum" value="">
-                                                    <span class="calculator__input-label">₽</span>
-                                                </div>
-                                            </div>
-                                            <div class="calculator__range js-range-elem"></div>
-                                            <div class="calculator__range-block-group">
-                                                <span class="calculator__range-label js-min-label"></span>
-                                                <span class="calculator__range-label js-max-label"></span>
-                                            </div>
-                                        </div>
-                                        <div class="calculator__range-block js-range-slider-container" id="month-range" data-start="6" data-min="2" data-max="12" data-step="1">
-                                            <input class="js-range-input" type="hidden" name="month">
-                                            <div class="calculator__range-block-group">
-                                                <span class="calculator__caption">Срок займа</span>
-                                                <span class="calculator__text-value js-range-value"></span>
-                                            </div>
-                                            <div class="calculator__range js-range-elem"></div>
-                                            <div class="calculator__range-block-group">
-                                                <span class="calculator__range-label js-min-label"></span>
-                                                <span class="calculator__range-label js-max-label"></span>
-                                            </div>
-                                        </div>
+                            <div class="intro-form__inner">
+                                <div class="intro-form__text-block">
+                                    <h1 class="intro-form__title">Под залог недвижимости</h1>
+                                    <div class="intro-form__subtitle">
+                                        <p>Получите деньги под залог недвижимости от 4%. Недвижимость остается у вас по ФЗ-102</p>
                                     </div>
-                                    <hr>
-                                    <div class="calculator__result-caption">
-                                        <span class="calculator__caption">Тип платежа</span>
+                                    <div class="intro-form__form-wrapper">
+                                        <form class="intro-form__form js-handle-form" action="#" name="realty" data-need-validation>
+                                            <div class="intro-form__form-input-wrapper">
+                                                <input class="intro-form__form-input js-phone-input" type="tel" name="phone" data-parsley-phone required>
+                                            </div>
+                                            <button class="intro-form__form-submit js-submit-form" type="submit">Отправить</button>
+                                        </form>
+                                        <a class="intro-form__button" href="#">
+                                            <svg>
+                                                <use xlink:href="#calculator"></use>
+                                            </svg>
+                                            <span class="intro-form__button-label">Расчитать</span>
+                                        </a>
                                     </div>
-                                    <div class="calculator__cols">
-                                        <div class="calculator__result-block js-calculator-accordion" data-close-other>
-                                            <div class="calculator__result-title-block">
-                                                <button class="calculator__result-title-btn js-calculator-accordion-btn" type="button">
-                                                    <span class="calculator__result-title">Дифференцированный</span>
-                                                    <svg class="calculator__accordion-icon">
-                                                        <use xlink:href="#arrow-bottom"></use>
-                                                    </svg>
-                                                </button>
-                                                <div class="tip">
-                                                    <button class="tip__opener" type="button">
-                                                        <svg>
-                                                            <use xlink:href="#tip"></use>
-                                                        </svg>
-                                                        <span class="tip__opener-label">Что такое дифференцированный платеж?</span>
-                                                    </button>
-                                                    <div class="tip__shadow"></div>
-                                                    <div class="tip__content">
-                                                        <p>Дифференцированный платеж</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="calculator__result-feature">
-                                                <svg>
-                                                    <use xlink:href="#time-five"></use>
-                                                </svg>
-                                                <span>Оплата долга в конце</span>
-                                            </div>
-                                            <div class="js-calculator-accordion-content">
-                                                <div class="calculator__result-items">
-                                                    <div class="calculator__result-item">
-                                                        <span class="calculator__result-label">Ставка</span>
-                                                        <span class="calculator__result-value js-diff-rate-value"></span>
-                                                    </div>
-                                                    <div class="calculator__result-item">
-                                                        <span class="calculator__result-label">Ежемесячный платеж</span>
-                                                        <span class="calculator__result-value js-diff-payment-value"></span>
-                                                    </div>
-                                                </div>
-                                                <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
-                                            </div>
-                                        </div>
-                                        <div class="calculator__result-block js-calculator-accordion active" data-close-other>
-                                            <div class="calculator__result-title-block">
-                                                <button class="calculator__result-title-btn js-calculator-accordion-btn" type="button">
-                                                    <span class="calculator__result-title">Аннуитетный</span>
-                                                    <svg class="calculator__accordion-icon">
-                                                        <use xlink:href="#arrow-bottom"></use>
-                                                    </svg>
-                                                </button>
-                                                <div class="tip">
-                                                    <button class="tip__opener" type="button">
-                                                        <svg>
-                                                            <use xlink:href="#tip"></use>
-                                                        </svg>
-                                                        <span class="tip__opener-label">Что такое аннуитетный платеж?</span>
-                                                    </button>
-                                                    <div class="tip__shadow"></div>
-                                                    <div class="tip__content">
-                                                        <p>Аннуитетный платеж — ежемесячная сумма к оплате будет состоять преимущественно из суммы процентов, основная сумма долга погашается в конце периода</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="calculator__result-feature">
-                                                <svg>
-                                                    <use xlink:href="#coins"></use>
-                                                </svg>
-                                                <span>Меньше сумма переплаты</span>
-                                            </div>
-                                            <div class="js-calculator-accordion-content">
-                                                <div class="calculator__result-items">
-                                                    <div class="calculator__result-item">
-                                                        <span class="calculator__result-label">Ставка</span>
-                                                        <span class="calculator__result-value js-ann-rate-value"></span>
-                                                    </div>
-                                                    <div class="calculator__result-item">
-                                                        <span class="calculator__result-label">Ежемесячный платеж</span>
-                                                        <span class="calculator__result-value js-ann-payment-value"></span>
-                                                    </div>
-                                                </div>
-                                                <button class="button calculator__button js-submit-button" id="ann" type="button">Оставить заявку</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                </div>
+                                <div class="intro-form__image-wrapper">
+                                    <img src="img/content-icons/realty.svg" alt="Под залог недвижимости">
+                                </div>
                             </div>
                         </div>
                     </section>
-                    <section class="steps js-init-tabs">
+                    <section class="cards cards--4">
                         <div class="container">
-                            <div class="steps__inner">
-                                <ul class="steps__tabs">
-                                    <li class="steps__tab-wrapper">
-                                        <button class="steps__tab js-tab-btn active" type="button">Как оформить займ?</button>
-                                    </li>
-                                    <li class="steps__tab-wrapper">
-                                        <button class="steps__tab js-tab-btn" type="button">Как его погасить?</button>
-                                    </li>
-                                </ul>
-                                <ul class="steps__bodies">
-                                    <li class="steps__body js-tab-body active">
-                                        <ul class="steps__body-list">
-                                            <li class="steps__step">
-                                                <div class="steps__step-image-wrapper">
-                                                    <img class="lazyload" src="img/content-icons/steps/steps-1.svg" alt="Заполняете заявку">
-                                                </div>
-                                                <div class="steps__step-text">
-                                                    <h3 class="steps__step-title">Заполняете заявку</h3>
-                                                    <span class="steps__step-subtitle">Заполните, что считаете важным</span>
-                                                </div>
-                                            </li>
-                                            <li class="steps__step">
-                                                <div class="steps__step-image-wrapper">
-                                                    <img class="lazyload" src="img/content-icons/steps/steps-2.svg" alt="Проверка документов и одобрение">
-                                                </div>
-                                                <div class="steps__step-text">
-                                                    <h3 class="steps__step-title">Проверка документов и одобрение</h3>
-                                                    <span class="steps__step-subtitle">Процесс проверки займет от 30 мин</span>
-                                                </div>
-                                            </li>
-                                            <li class="steps__step">
-                                                <div class="steps__step-image-wrapper">
-                                                    <img class="lazyload" src="img/content-icons/steps/steps-3.svg" alt="Подписание договора">
-                                                </div>
-                                                <div class="steps__step-text">
-                                                    <h3 class="steps__step-title">Подписание договора</h3>
-                                                    <span class="steps__step-subtitle">Несколько формальных документов</span>
-                                                </div>
-                                            </li>
-                                            <li class="steps__step">
-                                                <div class="steps__step-image-wrapper">
-                                                    <img class="lazyload" src="img/content-icons/steps/steps-4.svg" alt="Выдача займа">
-                                                </div>
-                                                <div class="steps__step-text">
-                                                    <h3 class="steps__step-title">Выдача займа</h3>
-                                                    <span class="steps__step-subtitle">Получаете деньги на карту</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="steps__body-image-wrapper">
-                                            <img class="lazyload" src="img/content-icons/steps/bg.svg" alt="Как оформить займ?">
-                                            <div class="steps__body-text">Одобрение всего за 15 минут</div>
+                            <div class="cards__inner">
+                                <h2 class="cards__title">Работаем с любым недвижимым имуществом</h2>
+                                <ul class="cards__list">
+                                    <li class="cards__item-wrapper">
+                                        <div class="cards__item">
+                                            <div class="cards__item-text">
+                                                <h3 class="cards__item-name">Квартира</h3>
+                                                <div class="cards__item-description">До 80% от стоимости</div>
+                                            </div>
+                                            <div class="cards__item-icon-wrapper">
+                                                <img class="cards__item-icon lazyload" src="img/content-icons/cards/card-1.svg" alt="Квартира">
+                                            </div>
                                         </div>
                                     </li>
-                                    <li class="steps__body js-tab-body">
-                                        <ul class="steps__body-list">
-                                            <li class="steps__step">
-                                                <div class="steps__step-image-wrapper">
-                                                    <img class="lazyload" src="img/content-icons/steps/steps-1.svg" alt="Пункт 1">
-                                                </div>
-                                                <div class="steps__step-text">
-                                                    <h3 class="steps__step-title">Пункт 1</h3>
-                                                    <span class="steps__step-subtitle">Описание</span>
-                                                </div>
-                                            </li>
-                                            <li class="steps__step">
-                                                <div class="steps__step-image-wrapper">
-                                                    <img class="lazyload" src="img/content-icons/steps/steps-1.svg" alt="Пункт 2">
-                                                </div>
-                                                <div class="steps__step-text">
-                                                    <h3 class="steps__step-title">Пункт 2</h3>
-                                                    <span class="steps__step-subtitle">Описание</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="steps__body-image-wrapper">
-                                            <img class="lazyload" src="img/content-icons/steps/bg.svg" alt="Как его погасить?">
-                                            <div class="steps__body-text">Одобрение всего за 15 минут</div>
+                                    <li class="cards__item-wrapper">
+                                        <div class="cards__item">
+                                            <div class="cards__item-text">
+                                                <h3 class="cards__item-name">Дом</h3>
+                                                <div class="cards__item-description">До 50% от стоимости</div>
+                                            </div>
+                                            <div class="cards__item-icon-wrapper">
+                                                <img class="cards__item-icon lazyload" src="img/content-icons/cards/card-2.svg" alt="Дом">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cards__item-wrapper">
+                                        <div class="cards__item">
+                                            <div class="cards__item-text">
+                                                <h3 class="cards__item-name">Земельный участок</h3>
+                                                <div class="cards__item-description">До 60% от стоимости</div>
+                                            </div>
+                                            <div class="cards__item-icon-wrapper">
+                                                <img class="cards__item-icon lazyload" src="img/content-icons/cards/card-3.svg" alt="Земельный участок">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cards__item-wrapper">
+                                        <div class="cards__item">
+                                            <div class="cards__item-text">
+                                                <h3 class="cards__item-name">Коммерческое помещение</h3>
+                                                <div class="cards__item-description">До 80% от стоимости</div>
+                                            </div>
+                                            <div class="cards__item-icon-wrapper">
+                                                <img class="cards__item-icon lazyload" src="img/content-icons/cards/card-4.svg" alt="Коммерческое помещение">
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </section>
-                    <section class="list-tabs js-init-tabs">
+                    <section class="steps-and-terms">
                         <div class="container">
-                            <div class="list-tabs__inner">
-                                <div class="list-tabs__tabs-wrapper">
-                                    <ul class="list-tabs__tabs">
-                                        <li class="list-tabs__tab-wrapper">
-                                            <button class="list-tabs__tab js-tab-btn active" type="button">
-                                                <span class="list-tabs__tab-label">Условия займа</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </button>
+                            <div class="steps-and-terms__inner">
+                                <div class="steps-and-terms__block steps-and-terms__steps-block">
+                                    <h2 class="steps-and-terms__title steps-and-terms__steps-title">3 простых шага</h2>
+                                    <ul class="steps-and-terms__steps">
+                                        <li class="steps-and-terms__step-wrapper">
+                                            <div class="steps-and-terms__step" data-hystmodal="#order">
+                                                <div class="steps-and-terms__step-image-wrapper">
+                                                    <img class="lazyload steps-and-terms__step-image" src="img/content-icons/steps/steps-1.svg" alt="Заполняете заявку &gt;">
+                                                </div>
+                                                <div class="steps-and-terms__step-text">
+                                                    <span class="steps-and-terms__step-title">Заполняете заявку &gt;</span>
+                                                    <span class="steps-and-terms__step-subtitle">Ожидание одобрения 15 мин</span>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li class="list-tabs__tab-wrapper">
-                                            <button class="list-tabs__tab js-tab-btn" type="button">
-                                                <span class="list-tabs__tab-label">Требования к авто</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </button>
+                                        <li class="steps-and-terms__step-wrapper">
+                                            <div class="steps-and-terms__step">
+                                                <div class="steps-and-terms__step-image-wrapper">
+                                                    <img class="lazyload steps-and-terms__step-image" src="img/content-icons/steps/steps-2.svg" alt="Проверка документов и одобрение">
+                                                </div>
+                                                <div class="steps-and-terms__step-text">
+                                                    <span class="steps-and-terms__step-title">Проверка документов и одобрение</span>
+                                                    <span class="steps-and-terms__step-subtitle">С залоговым обеспечением 1 день</span>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li class="list-tabs__tab-wrapper">
-                                            <button class="list-tabs__tab js-tab-btn" type="button">
-                                                <span class="list-tabs__tab-label">Преимущества займов</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </button>
+                                        <li class="steps-and-terms__step-wrapper">
+                                            <div class="steps-and-terms__step">
+                                                <div class="steps-and-terms__step-image-wrapper">
+                                                    <img class="lazyload steps-and-terms__step-image" src="img/content-icons/steps/steps-4.svg" alt="Выдача займа">
+                                                </div>
+                                                <div class="steps-and-terms__step-text">
+                                                    <span class="steps-and-terms__step-title">Выдача займа</span>
+                                                    <span class="steps-and-terms__step-subtitle">Получение денег от заявки до денег – 2 дня</span>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
-                                    <button class="blue-btn list-tabs__order-btn" type="button" data-hystmodal="#order">Оставить заявку</button>
                                 </div>
-                                <ul class="list-tabs__bodies">
-                                    <li class="list-tabs__body-wrapper js-tab-body active">
-                                        <ul class="list-tabs__body">
-                                            <li>Ставка от 5% в месяц</li>
-                                            <li>От 80 000 до 1 000 000 рублей, выдается наличными или на карту</li>
-                                            <li>Для оформления нужны 3 документа: паспорт гражданина РФ, СТС, ПТС</li>
-                                            <li>Оформление и получение денег в течение 30 минут</li>
-                                            <li>Полная конфиденциальность клиента</li>
-                                            <li>Автомобиль и ПТС остается у вас</li>
-                                            <li>Вы можете получить до 70% от стоимости автомобиля</li>
-                                            <li>Рассматриваем заявки с любой кредитной историей</li>
-                                            <li>Без скрытых услуг и комиссий.</li>
-                                            <li>Возможно досрочное погашение</li>
-                                        </ul>
+                                <div class="steps-and-terms__block steps-and-terms__terms-block">
+                                    <h2 class="steps-and-terms__title steps-and-terms__terms-title">Условия</h2>
+                                    <ul class="steps-and-terms__terms">
+                                        <li class="steps-and-terms__term">Возраст заемщика от 18 до 60 лет</li>
+                                        <li class="steps-and-terms__term">До 70-95% от стоимости залога</li>
+                                        <li class="steps-and-terms__term">Работаем с ИП, ООО</li>
+                                        <li class="steps-and-terms__term">Возраст компании от 6 месяцев</li>
+                                        <li class="steps-and-terms__term">Минимальный пакет документов</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="form-order">
+                        <div class="container">
+                            <div class="form-order__inner">
+                                <div class="form-order__content-block js-form-message-in-content">
+                                    <div class="form-order__form js-form-block">
+                                        <h2 class="form-order__title">Получи аванс в день обращения</h2>
+                                        <p class="form-order__subtitle">В любой жизненной ситуации
+                                            <br>Даже если отказал банк
+                                        </p>
+                                        <form class="form js-handle-form" action="#" name="form-order" data-need-validation>
+                                            <label class="form__input-wrapper js-validator-wrapper">
+                                                <span class="form__input-placeholder">Номер телефона</span>
+                                                <input class="form__input js-input js-phone-input" name="phone" type="tel" data-parsley-phone required>
+                                            </label>
+                                            <button class="black-btn form__submit js-submit-form" type="submit">Отправить</button>
+                                            <label class="checkbox-container form__policy js-validator-wrapper">
+                                                <div class="form__policy-text">
+                                                    <p>Я согласен на обработку <a href="./policy.html" target="_blank">персональных данных</a>
+                                                    </p>
+                                                </div>
+                                                <input class="js-input" type="checkbox" name="policy" checked="checked" required>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </form>
+                                    </div>
+                                    <div class="form-order__message form-order__success js-form-success">
+                                        <span class="form-order__title form-order__success-title">Спасибо, заявка ваша отправлена!</span>
+                                        <span class="form-order__subtitle form-order__success-subtitle">Мы перезвоним вам в течении 30 минут!</span>
+                                    </div>
+                                    <div class="form-order__message form-order__error js-form-error">
+                                        <span class="form-order__title form-order__error-title">Что-то пошло не так...</span>
+                                        <span class="form-order__subtitle form-order__error-subtitle">Повторите попытку позже</span>
+                                    </div>
+                                </div>
+                                <div class="form-order__image-block">
+                                    <img class="lazyload form-order__image" src="img/content-icons/form-order.svg" alt="Нужно как можно быстрее?">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="benefits benefits--3">
+                        <div class="container">
+                            <div class="benefits__inner">
+                                <ul class="benefits__list">
+                                    <li class="benefits__item-wrapper">
+                                        <div class="benefits__item">
+                                            <img class="lazyload benefits__item-image" src="img/content-icons/intro-benefit-1.svg" alt="Есть лицензия">
+                                            <div class="benefits__text">
+                                                <h3 class="benefits__item-title">Есть лицензия</h3>
+                                                <p class="benefits__subtitle">Мы установили минимальную процентную ставку на займы от 4% в месяц</p>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list-tabs__body-wrapper js-tab-body">
-                                        <ul class="list-tabs__body">
-                                            <li>Требование 1</li>
-                                            <li>Требование 2</li>
-                                        </ul>
+                                    <li class="benefits__item-wrapper">
+                                        <div class="benefits__item">
+                                            <img class="lazyload benefits__item-image" src="img/content-icons/intro-benefit-2.svg" alt="Безопасность">
+                                            <div class="benefits__text">
+                                                <h3 class="benefits__item-title">Безопасность</h3>
+                                                <p class="benefits__subtitle">Мы внесены в реестр ЦБ РФ и работаем строго в соответствии с законодательством РФ</p>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="list-tabs__body-wrapper js-tab-body">
-                                        <ul class="list-tabs__body">
-                                            <li>Преимущество 1</li>
-                                            <li>Преимущество 2</li>
-                                        </ul>
+                                    <li class="benefits__item-wrapper">
+                                        <div class="benefits__item">
+                                            <img class="lazyload benefits__item-image" src="img/content-icons/intro-benefit-3.svg" alt="Выгодное предложение">
+                                            <div class="benefits__text">
+                                                <h3 class="benefits__item-title">Выгодное предложение</h3>
+                                                <p class="benefits__subtitle">До 90% сумма займа от стоимости авто</p>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="cases">
+                        <div class="container">
+                            <div class="cases__inner js-slider-navigation-parent">
+                                <div class="swiper cases__slider js-init-cases-slider">
+                                    <ul class="swiper-wrapper cases__slider-wrapper">
+                                        <li class="swiper-slide cases__slide-wrapper">
+                                            <div class="cases__slide">
+                                                <div class="cases__slide-image-block">
+                                                    <img class="lazyload cases__slide-image" src="img/content/cases/case-3.jpg" alt="Дом 250 м2, двухэтажный, с бассейном">
+                                                    <ul class="cases__slide-tags">
+                                                        <li class="cases__slide-tag">Займ под залог ПТС</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cases__slide-info-block">
+                                                    <h3 class="cases__slide-title">Дом 250 м2, двухэтажный, с бассейном</h3>
+                                                    <span class="cases__slide-label">2017 год</span>
+                                                    <ul class="cases__slide-info">
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item cases__slide-info-item--accent">
+                                                                <span class="cases__slide-info-item-label">Ставка</span>
+                                                                <span class="cases__slide-info-item-value">2,7%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item cases__slide-info-item--accent">
+                                                                <span class="cases__slide-info-item-label">Ежемесячный платеж</span>
+                                                                <span class="cases__slide-info-item-value">3 729 ₽</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item">
+                                                                <span class="cases__slide-info-item-label">Стоимоть по рынку</span>
+                                                                <span class="cases__slide-info-item-value">1 450 000</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item">
+                                                                <span class="cases__slide-info-item-label">Выданная сумма</span>
+                                                                <span class="cases__slide-info-item-value">1 000 000</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item cases__slide-info-item--city">
+                                                                <span class="cases__slide-info-item-label">Москва</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item">
+                                                                <span class="cases__slide-info-item-label">Скребенков Владимир</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="swiper-slide cases__slide-wrapper">
+                                            <div class="cases__slide">
+                                                <div class="cases__slide-image-block">
+                                                    <img class="lazyload cases__slide-image" src="img/content/cases/case-3.jpg" alt="Дом 250 м2, двухэтажный, с бассейном">
+                                                    <ul class="cases__slide-tags">
+                                                        <li class="cases__slide-tag">Займ под залог ПТС</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="cases__slide-info-block">
+                                                    <h3 class="cases__slide-title">Дом 250 м2, двухэтажный, с бассейном</h3>
+                                                    <span class="cases__slide-label">2017 год</span>
+                                                    <ul class="cases__slide-info">
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item cases__slide-info-item--accent">
+                                                                <span class="cases__slide-info-item-label">Ставка</span>
+                                                                <span class="cases__slide-info-item-value">2,7%</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item cases__slide-info-item--accent">
+                                                                <span class="cases__slide-info-item-label">Ежемесячный платеж</span>
+                                                                <span class="cases__slide-info-item-value">3 729 ₽</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item">
+                                                                <span class="cases__slide-info-item-label">Стоимоть по рынку</span>
+                                                                <span class="cases__slide-info-item-value">1 450 000</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item">
+                                                                <span class="cases__slide-info-item-label">Выданная сумма</span>
+                                                                <span class="cases__slide-info-item-value">1 000 000</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item cases__slide-info-item--city">
+                                                                <span class="cases__slide-info-item-label">Москва</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cases__slide-info-item-wrapper">
+                                                            <div class="cases__slide-info-item">
+                                                                <span class="cases__slide-info-item-label">Скребенков Владимир</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="slider-navigation">
+                                    <button class="slider-navigation__btn slider-navigation__btn--prev" type="button" title="Назад">
+                                        <svg>
+                                            <use xlink:href="#slider-arr"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="slider-navigation__btn slider-navigation__btn--next" type="button" title="Вперед">
+                                        <svg>
+                                            <use xlink:href="#slider-arr"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -628,41 +611,155 @@
                             </div>
                         </div>
                     </section>
-                    <section class="form-order">
+                    <section class="mini-faq">
                         <div class="container">
-                            <div class="form-order__inner">
-                                <div class="form-order__content-block js-form-message-in-content">
-                                    <div class="form-order__form js-form-block">
-                                        <h2 class="form-order__title">Нужно как можно быстрее?</h2>
-                                        <p class="form-order__subtitle">Оставьте сотовый номер телефона, чтобы получить бесплатную консультацию</p>
-                                        <form class="form js-handle-form" action="#" name="form-order" data-need-validation>
-                                            <label class="form__input-wrapper js-validator-wrapper">
-                                                <span class="form__input-placeholder">Номер телефона</span>
-                                                <input class="form__input js-input js-phone-input" name="phone" type="tel" data-parsley-phone required>
-                                            </label>
-                                            <button class="black-btn form__submit js-submit-form" type="submit">Отправить</button>
-                                            <label class="checkbox-container form__policy js-validator-wrapper">
-                                                <div class="form__policy-text">
-                                                    <p>Я согласен на обработку <a href="./policy.html" target="_blank">персональных данных</a>
-                                                    </p>
+                            <div class="mini-faq__inner">
+                                <h2 class="mini-faq__title">Частые вопросы</h2>
+                                <div class="mini-faq__cols">
+                                    <ul class="mini-faq__list">
+                                        <li class="mini-faq__item">
+                                            <div class="faq-item js-accordion active" data-close-other>
+                                                <button class="faq-item__btn js-accordion-btn">
+                                                    <span class="faq-item__btn-label">Какие требования к заемщику?</span>
+                                                    <svg>
+                                                        <use xlink:href="#accordion-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="faq-item__content js-accordion-content">
+                                                    <div class="editable-text-container faq-item__content-inner">Граждане РФ, от 20 до 65 лет.
+                                                        <br>Местонахождение в регионе работы сервиса для возможности личной встречи (работаем в 350 крупнейших городах России)
+                                                    </div>
                                                 </div>
-                                                <input class="js-input" type="checkbox" name="policy" checked="checked" required>
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </form>
-                                    </div>
-                                    <div class="form-order__message form-order__success js-form-success">
-                                        <span class="form-order__title form-order__success-title">Спасибо, заявка ваша отправлена!</span>
-                                        <span class="form-order__subtitle form-order__success-subtitle">Мы перезвоним вам в течении 30 минут!</span>
-                                    </div>
-                                    <div class="form-order__message form-order__error js-form-error">
-                                        <span class="form-order__title form-order__error-title">Что-то пошло не так...</span>
-                                        <span class="form-order__subtitle form-order__error-subtitle">Повторите попытку позже</span>
-                                    </div>
+                                            </div>
+                                        </li>
+                                        <li class="mini-faq__item">
+                                            <div class="faq-item js-accordion" data-close-other>
+                                                <button class="faq-item__btn js-accordion-btn">
+                                                    <span class="faq-item__btn-label">Можно ли получить займ по генеральной доверенности?</span>
+                                                    <svg>
+                                                        <use xlink:href="#accordion-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                    <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mini-faq__item">
+                                            <div class="faq-item js-accordion" data-close-other>
+                                                <button class="faq-item__btn js-accordion-btn">
+                                                    <span class="faq-item__btn-label">Можно ли взять заём на короткий срок?</span>
+                                                    <svg>
+                                                        <use xlink:href="#accordion-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                    <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mini-faq__item">
+                                            <div class="faq-item js-accordion" data-close-other>
+                                                <button class="faq-item__btn js-accordion-btn">
+                                                    <span class="faq-item__btn-label">Заберут ли транспортное средство, если будет допущена просрочка?</span>
+                                                    <svg>
+                                                        <use xlink:href="#accordion-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                    <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="mini-faq__list">
+                                        <li class="mini-faq__item">
+                                            <div class="faq-item js-accordion" data-close-other>
+                                                <button class="faq-item__btn js-accordion-btn">
+                                                    <span class="faq-item__btn-label">Есть ли ограничения по году выпуска автомобиля для залога?</span>
+                                                    <svg>
+                                                        <use xlink:href="#accordion-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                    <div class="editable-text-container faq-item__content-inner">Граждане РФ, от 20 до 65 лет.
+                                                        <br>Местонахождение в регионе работы сервиса для возможности личной встречи (работаем в 350 крупнейших городах России)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mini-faq__item">
+                                            <div class="faq-item js-accordion" data-close-other>
+                                                <button class="faq-item__btn js-accordion-btn">
+                                                    <span class="faq-item__btn-label">Вносится ли запись в ПТС/ПСМ о залоге?</span>
+                                                    <svg>
+                                                        <use xlink:href="#accordion-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                    <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mini-faq__item">
+                                            <div class="faq-item js-accordion" data-close-other>
+                                                <button class="faq-item__btn js-accordion-btn">
+                                                    <span class="faq-item__btn-label">Влияет ли кредитная история на решение о выдаче займа?</span>
+                                                    <svg>
+                                                        <use xlink:href="#accordion-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                    <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="mini-faq__item">
+                                            <div class="faq-item js-accordion" data-close-other>
+                                                <button class="faq-item__btn js-accordion-btn">
+                                                    <span class="faq-item__btn-label">Когда я смогу забрать ПТС\ПСМ?</span>
+                                                    <svg>
+                                                        <use xlink:href="#accordion-icon"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="faq-item__content js-accordion-content" style="height: 0;">
+                                                    <div class="editable-text-container faq-item__content-inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="form-order__image-block">
-                                    <img class="lazyload form-order__image" src="img/content-icons/form-order.svg" alt="Нужно как можно быстрее?">
-                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="links">
+                        <div class="container">
+                            <div class="links__inner">
+                                <h2 class="links__title">Другие наши продукты</h2>
+                                <ul class="links__list">
+                                    <li class="links__item-wrapper">
+                                        <a class="link" href="./transport.html">
+                                            <div class="link__text">
+                                                <span class="link__title">Займ под залог ПТС</span>
+                                                <svg>
+                                                    <use xlink:href="#arrow-right"></use>
+                                                </svg>
+                                            </div>
+                                            <img class="link__image lazyload" src="img/content-icons/intro-section-1.svg" alt="Займ под залог ПТС">
+                                        </a>
+                                    </li>
+                                    <li class="links__item-wrapper">
+                                        <a class="link" href="./entity.html">
+                                            <div class="link__text">
+                                                <span class="link__title">Займ юридическим лицам</span>
+                                                <svg>
+                                                    <use xlink:href="#arrow-right"></use>
+                                                </svg>
+                                            </div>
+                                            <img class="link__image lazyload" src="img/content-icons/intro-section-3.svg" alt="Займ юридическим лицам">
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </section>
