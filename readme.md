@@ -1,4 +1,22 @@
-# Handlebars Boilerplate
+# Сайт Money Help
+
+Финансовая помощь, займы
+
+## Страницы
+
+* [Главная](https://melentq.github.io/money-help/index)
+* [Займ для бизнеса](https://melentq.github.io/money-help/entity)
+* [Под ПТС](https://melentq.github.io/money-help/transport)
+* [Под залог недвижимости](https://melentq.github.io/money-help/realty)
+* [О компании](https://melentq.github.io/money-help/about)
+* [Калькулятор](https://melentq.github.io/money-help/calculator)
+* [Документы](https://melentq.github.io/money-help/documents)
+* [FAQ](https://melentq.github.io/money-help/faq)
+* [Контакты](https://melentq.github.io/money-help/contacts)
+* [404](https://melentq.github.io/money-help/404)
+* [Текстовая страница](https://melentq.github.io/money-help/policy)
+
+## Handlebars Boilerplate
 
 Бойлерплейт на основе связки Gulp + Webpack с поддержкой SVG спрайтов и SCSS
 
