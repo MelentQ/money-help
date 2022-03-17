@@ -1,0 +1,171 @@
+.points {
+
+  padding-bottom: 3rem;
+ 
+  @include breakpoint(tablet) {
+    padding-bottom: 0;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @include breakpoint(laptop) {
+      grid-template-columns: 2fr 3fr;
+      gap: 3rem;
+    }
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text {
+  }
+
+  &__title {
+    max-width: 57rem;
+    margin-bottom: 5rem;
+
+    font-size: 5.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 3.2rem;
+      font-size: 3.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__subtitle {
+    max-width: 46rem;
+
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @include breakpoint(desktop) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__lists {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    margin-top: 2.7rem;
+
+    @include breakpoint(desktop) {
+      margin-top: 1.2rem;
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 74%;
+      left: 42%;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+
+      width: 123%;
+      height: 173%;
+
+      background-image: url(../img/content-icons/points.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4.4rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      gap: 1.6rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    padding-left: 4.4rem;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.1;
+
+    @include breakpoint(desktop) {
+      padding-left: 3.2rem;
+
+      font-size: 2rem;
+    }
+    @include breakpoint(tablet) {
+      font-size: 1.8rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 2.4rem;
+      height: 2.4rem;
+
+      border-radius: 50%;
+
+      background-color: $blue;
+
+      @include breakpoint(desktop) {
+        width: 2rem;
+        height: 2rem;
+
+        margin-top: 0.2rem;
+      }
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 0.7rem;
+      left: 0.6rem;
+
+      width: 1.3rem;
+      height: 1rem;
+
+      background-image: url(../img/check.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include breakpoint(desktop) {
+        top: 0.8rem;
+        left: 0.5rem;
+
+        width: 1.1rem;
+        height: 0.9rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.link {
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 4rem;
+
+  height: 100%;
+  padding: 2.6rem 3.6rem 3.6rem;
+
+  border: 0.1rem solid $blue;
+  border-radius: 1.4rem;
+
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  overflow: hidden;
+
+  @include breakpoint(laptop) {
+    font-size: 1.8rem;
+  }
+
+  @include breakpoint(tablet) {
+    padding: 2rem 2.5rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    font-size: 1.2rem;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: -5rem;
+    left: 10rem;
+    z-index: -1;
+
+    width: 127%;
+    height: 261%;
+
+    border-radius: 50%;
+
+    background-color: #F9F9F9;;
+
+    transition: transform $btt $bte;
+
+    @include breakpoint(tablet) {
+      top: -2.4rem;
+      left: calc(100% - 16rem);
+
+      width: 26.6rem;
+      height: 21.8rem;
+    }
+  }
+
+  &:link,
+  &:visited {
+    color: $dark;
+  }
+
+  &:hover {
+    color: $blue;
+
+    &::before {
+      transform: scale(2);
+    }
+  }
+
+  &:focus-visible {
+    color: $blue;
+
+    &::before {
+      transform: scale(2);
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+
+    width: 2rem;
+    height: 2rem;
+    stroke: $blue;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+
+    width: 80%;
+
+    @include breakpoint(tablet) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__title {
+    display: block;
+  }
+
+  &__image {
+    flex-shrink: 0;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3rem;
+    z-index: 1;
+
+    width: 13rem;
+    height: auto;
+    max-height: calc(100% - 6rem);
+
+    object-fit: contain;
+
+    @include breakpoint(tablet) {
+      width: 8rem;
+      max-height: calc(100% - 0.4rem);
+    }
+  }
+}

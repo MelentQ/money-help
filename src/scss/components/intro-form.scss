@@ -1,0 +1,258 @@
+.intro-form {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
+
+  &__inner {
+    position: relative;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+
+  &__text-block {
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint(small-tablet) {
+      display: contents;
+    }
+  }
+
+  &__title {
+    max-width: 72rem;
+    margin-bottom: 4rem;
+
+    font-size: 7.4rem;
+    font-weight: 600;
+    line-height: 1.1;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 3rem;
+      font-size: 4.8rem;
+    }
+    @include breakpoint(tablet) {
+      max-width: 40rem;
+      font-size: 3.2rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 1.2rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__subtitle {
+    max-width: 50rem;
+    margin-bottom: 9rem;
+    
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @include breakpoint(desktop) {
+      font-size: 2rem;
+    }
+    @include breakpoint(tablet) {
+      max-width: 36rem;
+      font-size: 1.6rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: -2rem;
+    }
+  }
+
+  &__form-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.4rem;
+
+    max-width: 80rem;
+
+    @include breakpoint(desktop) {
+      max-width: 70rem;
+    }
+    @include breakpoint(small-tablet) {
+      order: 99;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__form-input-wrapper {
+  }
+
+  &__form-input {
+    height: 100%;
+    padding: 1.8rem 2.2rem;
+
+    border: 0.2rem solid #E8E8E8;
+    border-radius: 0.8rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+    transition: border-color $btt $bte;
+
+    @include breakpoint(desktop) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 6rem;
+    }
+
+    &.parsley-error {
+      border-color: $error;
+    }
+  }
+
+  &__form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.8rem;
+
+    background-color: $blue;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: $white;
+    text-transform: uppercase;
+    border: 0.1rem solid $blue;
+
+    transition: color $btt $bte, background-color $btt $bte;
+
+    @include breakpoint(desktop) {
+      font-size: 1.3rem;
+    }
+    @include breakpoint(small-tablet) {
+      min-height: 6rem;
+    }
+
+    &:hover {
+      color: $blue;
+      background-color: $white;
+    }
+
+    &:focus-visible {
+      color: $blue;
+      background-color: $white;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    margin-left: 2.4rem;
+    padding: 1.8rem 1.8rem;
+
+    border-radius: 0.8rem;
+    border: 0.1rem solid $blue;
+
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    transition: color $btt $bte, background-color $btt $bte;
+
+    @include breakpoint(desktop) {
+      margin-left: 1.4rem;
+      font-size: 1.3rem;
+    }
+    @include breakpoint(small-tablet) {
+      min-height: 6rem;
+      margin-left: 0;
+    }
+    
+    &:link,
+    &:visited {
+      color: $blue;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $blue;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    &:focus-visible {
+      color: $white;
+      background-color: $blue;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 2.2rem;
+      height: 2.2rem;
+
+      fill: $blue;
+    }
+  }
+
+  &__button-label {
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    top: -5rem;
+    bottom: 2rem;
+    right: 0;
+    z-index: -1;
+
+    @include breakpoint(small-tablet) {
+      position: relative;
+      top: unset;
+      right: unset;
+      bottom: unset;
+
+      margin-bottom: 2.4rem;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+
+      object-fit: contain;
+
+      @include breakpoint(tablet) {
+        height: 80%;
+      }
+      @include breakpoint(small-tablet) {
+        height: 100%;
+        max-height: 32rem;
+        margin: 0 auto;
+      }
+    }
+  }
+}

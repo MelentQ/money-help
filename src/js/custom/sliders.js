@@ -6,6 +6,7 @@ export default function sliders() {
   reviewSliders();
   teamSliders();
   miniDocsSliders();
+  casesSliders();
 }
 
 function reviewSliders() {
@@ -116,6 +117,46 @@ function miniDocsSliders() {
         },
         1401: {
           slidesPerView: 5,
+          spaceBetween: 40,
+        }
+      }
+    })
+  })
+}
+
+function casesSliders() {
+  const containers = Array.from(document.querySelectorAll('.js-init-cases-slider'));
+  containers.forEach(container => {
+    const navContainer = container.closest('.js-slider-navigation-parent');
+
+    const slider = new Swiper(container, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoHeight: true,
+      autoplay: {
+        delay: 5000
+      },
+      loop: true,
+      disableOnInteraction: true,
+      navigation: {
+        nextEl: navContainer ? navContainer.querySelector('.slider-navigation__btn--next') : null,
+        prevEl: navContainer ? navContainer.querySelector('.slider-navigation__btn--prev') : null,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        769: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        1025: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        1201: {
+          slidesPerView: 1,
           spaceBetween: 40,
         }
       }

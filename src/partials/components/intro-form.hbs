@@ -1,0 +1,27 @@
+<section class="intro-form">
+  <div class="container">
+    <div class="intro-form__inner">
+      <div class="intro-form__text-block">
+        <h1 class="intro-form__title">{{data.title}}</h1>
+        <div class="intro-form__subtitle">
+          {{{data.subtitle}}}
+        </div>
+        <div class="intro-form__form-wrapper">
+          <form class="intro-form__form js-handle-form" action="#" name="{{data.formName}}" data-need-validation>
+            <div class="intro-form__form-input-wrapper">
+              <input class="intro-form__form-input js-phone-input" type="tel" name="phone" data-parsley-phone required>
+            </div>
+            <button class="intro-form__form-submit js-submit-form" type="submit">Отправить</button>
+          </form>
+          <a class="intro-form__button" href="#">
+            <svg><use xlink:href="#calculator"></svg>
+            <span class="intro-form__button-label">Расчитать</span>
+          </a>
+        </div>
+      </div>
+      <div class="intro-form__image-wrapper">
+        <img src="{{data.image}}" alt="{{data.title}}">
+      </div>
+    </div>
+  </div>
+</section>

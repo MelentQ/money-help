@@ -84,17 +84,17 @@ export default function calculator() {
     // Вывод результатов
     if (sumRange && monthRange) {
       sumRange.on('update', (values) => {
-        getRes(sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
+        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
       })
       monthRange.on('update', (values) => {
-        getRes(sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
+        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
       })
     }
   })
 }
 
-function getRes(sum, month, diffRateElem, diffPaymentElem, annRateElem, annPaymentElem) {
-  const result = window.calculate(sum, month);
+function getRes(name, sum, month, diffRateElem, diffPaymentElem, annRateElem, annPaymentElem) {
+  const result = window.calculate(name, sum, month);
   diffRateElem.textContent = `${result.diff.rate}%`;
   diffPaymentElem.textContent = `${result.diff.payment.toLocaleString('ru')} ₽`;
 

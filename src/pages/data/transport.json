@@ -1,0 +1,87 @@
+{
+  "title": "Под залог ПТС",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Под залог ПТС",
+      "link": "./transport.html"
+    }
+  ],
+  "introForm": {
+    "title": "Под залог ПТС",
+    "subtitle": "<p>Cтавка от 4% в месяц без переплат и ожидания.</p><p>С любой кредитной историей На карту или наличными</p>",
+    "image": "img/content-icons/transport.svg",
+    "formName": "transport"
+  },
+  "transportCalc": {
+    "title": "Калькулятор займа под ПТС",
+    "name": "ПТС"
+  },
+  "cases": [
+    {
+      "image": "img/content/cases/case-2.jpg",
+      "name": "Mercedes-Benz E-класс"
+    },
+    {
+      "image": "img/content/cases/case-2.jpg",
+      "name": "Mercedes-Benz E-класс"
+    }
+  ],
+  "links": [
+    {
+      "name": "Займ юридическим лицам",
+      "link": "./entity.html",
+      "image": "img/content-icons/intro-section-3.svg"
+    },
+    {
+      "name": "Под залог недвижимости",
+      "link": "./realty.html",
+      "image": "img/content-icons/intro-section-2.svg"
+    }
+  ],
+  "benefits": [
+    {
+      "image": "img/content-icons/intro-benefit-1.svg",
+      "title": "Есть лицензия",
+      "subtitle": "Мы установили минимальную процентную ставку на займы от 4% в месяц"
+    },
+    {
+      "image": "img/content-icons/intro-benefit-2.svg",
+      "title": "Безопасность",
+      "subtitle": "Мы внесены в реестр ЦБ РФ и работаем строго в соответствии с законодательством РФ"
+    },
+    {
+      "image": "img/content-icons/intro-benefit-3.svg",
+      "title": "Выгодное предложение",
+      "subtitle": "До 90% сумма займа от стоимости авто"
+    }
+  ],
+  "cards": {
+    "title": "Работаем с любыми транспортными средствами",
+    "items": [
+      {
+        "name": "Легковые автомобили",
+        "icon": "img/content-icons/cards/card-5.svg"
+      },
+      {
+        "name": "Грузовые автомобили",
+        "icon": "img/content-icons/cards/card-6.svg"
+      },
+      {
+        "name": "Спецтехника",
+        "icon": "img/content-icons/cards/card-7.svg"
+      },
+      {
+        "name": "Мототехника",
+        "icon": "img/content-icons/cards/card-8.svg"
+      },
+      {
+        "name": "Водный транспорт",
+        "icon": "img/content-icons/cards/card-9.svg"
+      }
+    ]
+  }
+}

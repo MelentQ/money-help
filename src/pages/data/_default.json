@@ -25,20 +25,20 @@
   "menu1": {
     "section": {
       "name": "Займы",
-      "link": "#"
+      "link": "./entity.html"
     },
     "subsections": [
       {
         "name": "Займы для бизнеса",
-        "link": "#"
+        "link": "./entity.html"
       },
       {
         "name": "Под залог недвижимости",
-        "link": "#"
+        "link": "./realty.html"
       },
       {
         "name": "Под залог ПТС",
-        "link": "#"
+        "link": "./transport.html"
       }
     ]
   },
@@ -181,5 +181,30 @@
       "q": "Когда я смогу забрать ПТС\\ПСМ?",
       "a": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deleniti perspiciatis consequatur cum odio nobis fuga possimus quidem? Illum, est."
     }
+  ],
+  "steps2": [
+    {
+      "modal": true,
+      "icon": "img/content-icons/steps/steps-1.svg",
+      "title": "Заполняете заявку >",
+      "subtitle": "Ожидание одобрения 15 мин"
+    },
+    {
+      "icon": "img/content-icons/steps/steps-2.svg",
+      "title": "Проверка документов и одобрение",
+      "subtitle": "С залоговым обеспечением 1 день"
+    },
+    {
+      "icon": "img/content-icons/steps/steps-4.svg",
+      "title": "Выдача займа",
+      "subtitle": "Получение денег от заявки до денег – 2 дня"
+    }
+  ],
+  "terms": [
+    "Возраст заемщика от 18 до 60 лет",
+    "До 70-95% от стоимости залога",
+    "Работаем с ИП, ООО",
+    "Возраст компании от 6 месяцев",
+    "Минимальный пакет документов"
   ]
 }

@@ -1,0 +1,65 @@
+<section class="cases">
+  <div class="container">
+    <div class="cases__inner js-slider-navigation-parent">
+      <div class="swiper cases__slider js-init-cases-slider">
+        <ul class="swiper-wrapper cases__slider-wrapper">
+          {{#each cases}}
+            <li class="swiper-slide cases__slide-wrapper">
+              <div class="cases__slide">
+                <div class="cases__slide-image-block">
+                  <img class="lazyload cases__slide-image" src="{{this.image}}" alt="{{this.name}}">
+                  <ul class="cases__slide-tags">
+                    <li class="cases__slide-tag">
+                      Займ под залог ПТС
+                    </li>
+                  </ul>
+                </div>
+                <div class="cases__slide-info-block">
+                  <h3 class="cases__slide-title">{{{this.name}}}</h3>
+                  <span class="cases__slide-label">2017 год</span>
+                  <ul class="cases__slide-info">
+                    <li class="cases__slide-info-item-wrapper">
+                      <div class="cases__slide-info-item cases__slide-info-item--accent">
+                        <span class="cases__slide-info-item-label">Ставка</span>
+                        <span class="cases__slide-info-item-value">2,7%</span>
+                      </div>
+                    </li>
+                    <li class="cases__slide-info-item-wrapper">
+                      <div class="cases__slide-info-item cases__slide-info-item--accent">
+                        <span class="cases__slide-info-item-label">Ежемесячный платеж</span>
+                        <span class="cases__slide-info-item-value">3 729 ₽</span>
+                      </div>
+                    </li>
+                    <li class="cases__slide-info-item-wrapper">
+                      <div class="cases__slide-info-item">
+                        <span class="cases__slide-info-item-label">Стоимоть по рынку</span>
+                        <span class="cases__slide-info-item-value">1 450 000</span>
+                      </div>
+                    </li>
+                    <li class="cases__slide-info-item-wrapper">
+                      <div class="cases__slide-info-item">
+                        <span class="cases__slide-info-item-label">Выданная сумма</span>
+                        <span class="cases__slide-info-item-value">1 000 000</span>
+                      </div>
+                    </li>
+                    <li class="cases__slide-info-item-wrapper">
+                      <div class="cases__slide-info-item cases__slide-info-item--city">
+                        <span class="cases__slide-info-item-label">Москва</span>
+                      </div>
+                    </li>
+                    <li class="cases__slide-info-item-wrapper">
+                      <div class="cases__slide-info-item">
+                        <span class="cases__slide-info-item-label">Скребенков Владимир</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+      {{>slider-navigation}}
+    </div>
+  </div>
+</section>

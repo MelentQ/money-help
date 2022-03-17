@@ -56,23 +56,55 @@
         {{> modals/map id="map"}}
         {{> ie-placeholder }}
         <script>
+        // name - название калькулятора,
+        //        должно совпадать с data-name контейнера
         // sum - сумма займа
         // month - срок займа
-        // функция должна возвращать число
-        function calculate(sum, month) {
+        function calculate(name, sum, month) {
+            let getRate; // Функция, которая получает на вход сумму и возвращает ставку
+            switch(name) {
+                case 'ПТС':
+                    getRate = (sum) => {
+                        if (sum >= 500000) {
+                            return 0.05;
+                        }
+                        return 0.06;
+                    };
+                    break;
+                case 'Недвижимость':
+                    getRate = (sum) => {
+                        return 0.05;
+                    };
+                    break;
+                case 'Юр':
+                    getRate = (sum) => {
+                        if (sum >= 500000) {
+                            return 0.05;
+                        }
+                        return 0.06;
+                    };
+                    break;
+                default:
+                    getRate = (sum) => {
+                        return 0.05;
+                    };
+            }
 
-            const rate = month;
-            const payment = (1 + rate / 100) * sum / month;
+            const rate = getRate(sum);
+
+            const getAnnPayment = (sum, rate, month) => {
+                return Math.round(sum * (rate * Math.pow(1 + rate, month)) / (Math.pow(1 + rate, month) - 1));
+            }
 
             return {
-            diff: {
-                rate: Math.round((rate)*10)/10,
-                payment: Math.round(payment)
-            },
-            ann: {
-                rate: Math.round((rate * 1.1)*10)/10,
-                payment: Math.round(payment * 1.1)
-            }
+                diff: {
+                    rate: rate * 100,
+                    payment: getAnnPayment(sum, rate, month)
+                },
+                ann: {
+                    rate: rate * 100,
+                    payment: getAnnPayment(sum, rate, month)
+                }
             };
         }
         </script>

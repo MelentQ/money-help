@@ -1,0 +1,101 @@
+.links {
+
+  .link {
+    padding: 4rem 5.5rem 5rem;
+
+    font-size: 4.2rem;
+    text-transform: none;
+
+    @include breakpoint(desktop) {
+      padding: 2rem 3rem 4rem;
+
+      font-size: 3.2rem;
+    }
+    @include breakpoint(tablet) {
+      padding: 2rem 2.5rem;
+
+      font-size: 2rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    &::before {
+      @include breakpoint(tablet) {
+        top: -5rem;
+        left: 10rem;
+
+        width: 127%;
+        height: 261%;
+      }
+      @include breakpoint(small-tablet) {
+        top: -2.4rem;
+        left: calc(100% - 16rem);
+  
+        width: 26.6rem;
+        height: 21.8rem;
+      }
+    }
+
+    svg {
+      width: 3.6rem;
+      height: 3.6rem;
+
+      @include breakpoint(tablet) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &__text {
+      width: 60%;
+    }
+
+    &__image {
+      width: 23.6rem;
+
+      @include breakpoint(desktop) {
+        width: 16rem
+      }
+      @include breakpoint(desktop) {
+        width: 12rem
+      }
+    }
+  }
+
+  &__inner {
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @include breakpoint(tablet) {
+      font-size: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @include breakpoint(tablet) {
+      gap: 2rem;
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+  }
+
+  &__item-wrapper {
+  }
+}

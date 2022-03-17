@@ -1,0 +1,34 @@
+<section class="steps-and-terms">
+  <div class="container">
+    <div class="steps-and-terms__inner">
+      <div class="steps-and-terms__block steps-and-terms__steps-block">
+        <h2 class="steps-and-terms__title steps-and-terms__steps-title">3 простых шага</h2>
+        <ul class="steps-and-terms__steps">
+          {{#each steps2}}
+          <li class="steps-and-terms__step-wrapper">
+            <div class="steps-and-terms__step" {{#if modal}}data-hystmodal="#order"{{/if}}>
+              <div class="steps-and-terms__step-image-wrapper">
+                <img class="lazyload steps-and-terms__step-image" src="{{this.icon}}" alt="{{this.title}}">
+              </div>
+              <div class="steps-and-terms__step-text">
+                <span class="steps-and-terms__step-title">{{this.title}}</span>
+                <span class="steps-and-terms__step-subtitle">{{this.subtitle}}</span>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="steps-and-terms__block steps-and-terms__terms-block">
+        <h2 class="steps-and-terms__title steps-and-terms__terms-title">Условия</h2>
+        <ul class="steps-and-terms__terms">
+          {{#each terms}}
+          <li class="steps-and-terms__term">
+            {{this}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

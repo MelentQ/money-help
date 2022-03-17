@@ -3,17 +3,17 @@
     "intro-sections": [
         {
             "name": "Займ под залог ПТС",
-            "link": "#",
+            "link": "./transport.html",
             "image": "img/content-icons/intro-section-1.svg"
         },
         {
             "name": "Под залог недвижимости",
-            "link": "#",
+            "link": "./realty.html",
             "image": "img/content-icons/intro-section-2.svg"
         },
         {
             "name": "Займ юридическим лицам",
-            "link": "#",
+            "link": "./entity.html",
             "image": "img/content-icons/intro-section-3.svg"
         }
     ],

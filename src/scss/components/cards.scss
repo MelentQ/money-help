@@ -1,0 +1,198 @@
+.cards {
+
+  &--4 {
+    .cards__list {
+      grid-template-columns: repeat(4, 1fr);
+
+      @include breakpoint(tablet) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__inner {
+  }
+
+  &__title {
+    max-width: 90rem;
+    margin-bottom: 5rem;
+
+    font-size: 5.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 3.2rem;
+      font-size: 3.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.4rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+  }
+
+  &__item-wrapper {
+    &:nth-child(5n + 1) {
+      .cards__item-icon-wrapper::before {
+        width: 155%;
+        height: 118%;
+
+        background-image: url(../img/content-icons/cards-1.svg);
+      }
+    }
+    &:nth-child(5n + 2) {
+      .cards__item-icon-wrapper::before {
+        width: 166%;
+        height: 115%;
+
+        background-image: url(../img/content-icons/cards-2.svg);
+      }
+    }
+    &:nth-child(5n + 3) {
+      .cards__item-icon-wrapper::before {
+        width: 156%;
+        height: 100%;
+
+        background-image: url(../img/content-icons/cards-3.svg);
+      }
+    }
+    &:nth-child(5n + 4) {
+      .cards__item-icon-wrapper::before {
+        width: 147%;
+        height: 100%;
+
+        background-image: url(../img/content-icons/cards-4.svg);
+      }
+    }
+    &:nth-child(5n + 5) {
+      .cards__item-icon-wrapper::before {
+        width: 139%;
+        height: 131%;
+
+        background-image: url(../img/content-icons/cards-5.svg);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    height: 100%;
+    min-height: 16.6rem;
+    padding: 1.5rem 3rem 2.2rem;
+
+    border: 0.1rem solid $blue;
+    border-radius: 1.4rem;
+
+    @include breakpoint(desktop) {
+      min-height: 13.6rem;
+    }
+    @include breakpoint(tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+
+      min-height: unset;
+    }
+  }
+
+  &__item-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.4rem;
+
+    height: 100%;
+  }
+
+  &__item-name {
+    max-width: 17rem;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @include breakpoint(desktop) {
+      font-size: 2rem;
+    }
+    @include breakpoint(tablet) {
+      max-width: unset;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__item-description {
+    max-width: 13.2rem;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: $blue;
+
+    @include breakpoint(desktop) {
+      font-size: 1.3rem;
+    }
+    @include breakpoint(tablet) {
+      max-width: unset;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__item-icon-wrapper {
+    flex-shrink: 0;
+
+    position: absolute;
+    bottom: 2.4rem;
+    right: 2.4rem;
+
+    align-self: flex-end;
+
+    @include breakpoint(tablet) {
+      position: relative;
+      bottom: unset;
+      right: unset;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__item-icon {
+    width: 6.2rem;
+    height: auto;
+
+    object-fit: contain;
+
+    @include breakpoint(desktop) {
+      width: 5.2rem;
+    }
+    @include breakpoint(desktop) {
+      width: 4.2rem;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.mini-text {
+
+  padding-bottom: 14rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 6rem;
+  }
+  @include breakpoint(small-tablet) {
+    padding-bottom: 0;
+  }
+
+  &__inner {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 4rem;
+
+    @include breakpoint(tablet) {
+      gap: 3rem;
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -13.2rem;
+      left: 7%;
+      z-index: -1;
+
+      width: 64%;
+      height: 0;
+      padding-bottom: 28.7%;
+
+      background-image: url(../img/content-icons/mini-text.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include breakpoint(desktop) {
+        top: -9rem;
+      }
+  
+      @include breakpoint(tablet) {
+        top: -6rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 100%;
+        padding-bottom: 40%;
+      }
+      @include breakpoint(mobile) {
+        top: 0;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 49rem;
+
+    font-size: 5.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @include breakpoint(desktop) {
+      font-size: 3.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__text {
+    margin-top: 2rem;
+
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.3;
+
+    @include breakpoint(desktop) {
+      margin-top: 0.8rem;
+
+      font-size: 2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-top: 0.6rem;
+
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "title": "Под залог недвижимости",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Под залог недвижимости",
+      "link": "./realty.html"
+    }
+  ],
+  "introForm": {
+    "title": "Под залог недвижимости",
+    "subtitle": "<p>Получите деньги под залог недвижимости от 4%. Недвижимость остается у вас по ФЗ-102</p>",
+    "image": "img/content-icons/realty.svg",
+    "formName": "realty"
+  },
+  "cases": [
+    {
+      "image": "img/content/cases/case-3.jpg",
+      "name": "Дом 250 м2, двухэтажный, с бассейном"
+    },
+    {
+      "image": "img/content/cases/case-3.jpg",
+      "name": "Дом 250 м2, двухэтажный, с бассейном"
+    }
+  ],
+  "links": [
+    {
+      "name": "Займ под залог ПТС",
+      "link": "./transport.html",
+      "image": "img/content-icons/intro-section-1.svg"
+    },
+    {
+      "name": "Займ юридическим лицам",
+      "link": "./entity.html",
+      "image": "img/content-icons/intro-section-3.svg"
+    }
+  ],
+  "benefits": [
+    {
+      "image": "img/content-icons/intro-benefit-1.svg",
+      "title": "Есть лицензия",
+      "subtitle": "Мы установили минимальную процентную ставку на займы от 4% в месяц"
+    },
+    {
+      "image": "img/content-icons/intro-benefit-2.svg",
+      "title": "Безопасность",
+      "subtitle": "Мы внесены в реестр ЦБ РФ и работаем строго в соответствии с законодательством РФ"
+    },
+    {
+      "image": "img/content-icons/intro-benefit-3.svg",
+      "title": "Выгодное предложение",
+      "subtitle": "До 90% сумма займа от стоимости авто"
+    }
+  ],
+  "cards": {
+    "title": "Работаем с любым недвижимым имуществом",
+    "items": [
+      {
+        "name": "Квартира",
+        "description": "До 80% от стоимости",
+        "icon": "img/content-icons/cards/card-1.svg"
+      },
+      {
+        "name": "Дом",
+        "description": "До 50% от стоимости",
+        "icon": "img/content-icons/cards/card-2.svg"
+      },
+      {
+        "name": "Земельный участок",
+        "description": "До 60% от стоимости",
+        "icon": "img/content-icons/cards/card-3.svg"
+      },
+      {
+        "name": "Коммерческое помещение",
+        "description": "До 80% от стоимости",
+        "icon": "img/content-icons/cards/card-4.svg"
+      }
+    ]
+  }
+}

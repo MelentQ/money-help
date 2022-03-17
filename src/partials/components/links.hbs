@@ -1,0 +1,15 @@
+<section class="links">
+  <div class="container">
+    <div class="links__inner">
+      <h2 class="links__title">Другие наши продукты</h2>
+
+      <ul class="links__list">
+        {{#each links}}
+        <li class="links__item-wrapper">
+          {{>link data=this}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

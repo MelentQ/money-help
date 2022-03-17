@@ -1,0 +1,73 @@
+{
+  "title": "Финансовая помощь компаниям",
+  "breadcrumbs": [
+    {
+      "name": "Главная",
+      "link": "./index.html"
+    },
+    {
+      "name": "Финансовая помощь компаниям",
+      "link": "./entity.html"
+    }
+  ],
+  "introForm": {
+    "title": "Финансовая помощь компаниям",
+    "subtitle": "<p>Получите займ для развития малого бизнеса или на открытия бизнеса с нуля</p>",
+    "image": "img/content-icons/entity.svg",
+    "formName": "entity"
+  },
+  "points1": [
+    "Оборотные средства",
+    "Выплата зарплаты",
+    "Закупка товаров/оборудования ",
+    "Расчет с поставщиками"
+  ],
+  "points2": [
+    "Участие в тендере",
+    "Покрытие кассового разрыва",
+    "Рефинансирование текущих задолженностей"
+  ],
+  "benefits": [
+    {
+      "image": "img/content-icons/benefits/benefit-5.svg",
+      "title": "Выгодно",
+      "subtitle": "Наша минимальная ставка – 4%"
+    },
+    {
+      "image": "img/content-icons/benefits/benefit-6.svg",
+      "title": "Удобно",
+      "subtitle": "Подача заявки онлайн"
+    },
+    {
+      "image": "img/content-icons/benefits/benefit-7.svg",
+      "title": "Надежно",
+      "subtitle": "Лицензия ЦБ  №82823-8304"
+    }
+  ],
+  "entityCalc": {
+    "title": "Калькулятор займа",
+    "name": "Юр"
+  },
+  "cases": [
+    {
+      "image": "img/content/cases/case-1.jpg",
+      "name": "Торговая площадь, <br> 93 м²"
+    },
+    {
+      "image": "img/content/cases/case-1.jpg",
+      "name": "Торговая площадь, <br> 93 м²"
+    }
+  ],
+  "links": [
+    {
+      "name": "Займ под залог ПТС",
+      "link": "./transport.html",
+      "image": "img/content-icons/intro-section-1.svg"
+    },
+    {
+      "name": "Под залог недвижимости",
+      "link": "./realty.html",
+      "image": "img/content-icons/intro-section-2.svg"
+    }
+  ]
+}

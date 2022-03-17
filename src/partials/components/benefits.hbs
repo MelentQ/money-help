@@ -1,6 +1,9 @@
-<section class="benefits">
+<section class="benefits {{#if col3}}benefits--3{{/if}}">
   <div class="container">
     <div class="benefits__inner">
+      {{#if t}}
+      <h2 class="benefits__title">{{t}}</h2>
+      {{/if}}
       <ul class="benefits__list">
         {{#each benefits}}
         <li class="benefits__item-wrapper">

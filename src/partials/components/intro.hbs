@@ -9,13 +9,7 @@
       <ul class="intro__sections-list">
         {{#each intro-sections}}
           <li class="intro__sections-list-item">
-            <a class="intro__section-link" href="{{this.link}}">
-              <div class="intro__section-link-text">
-                <span class="intro__section-link-title">{{{this.name}}}</span>
-                <svg><use xlink:href="#arrow-right"></svg>
-              </div>
-              <img class="intro__section-link-image lazyload" src="{{this.image}}" alt="{{this.name}}">
-            </a>
+            {{>link data=this}}
           </li>
         {{/each}}
       </ul>
