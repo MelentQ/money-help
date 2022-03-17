@@ -61,22 +61,26 @@
       {
         "name": "Квартира",
         "description": "До 80% от стоимости",
-        "icon": "img/content-icons/cards/card-1.svg"
+        "icon": "img/content-icons/cards/card-1.svg",
+        "content": "<ul><li>элитное жилье</li><li>квартиры бизнес-класса</li><li>жилье эконом-класса</li></ul>"
       },
       {
         "name": "Дом",
         "description": "До 50% от стоимости",
-        "icon": "img/content-icons/cards/card-2.svg"
+        "icon": "img/content-icons/cards/card-2.svg",
+        "content": "<ul><li>элитное жилье</li><li>квартиры бизнес-класса</li><li>жилье эконом-класса</li></ul>"
       },
       {
         "name": "Земельный участок",
         "description": "До 60% от стоимости",
-        "icon": "img/content-icons/cards/card-3.svg"
+        "icon": "img/content-icons/cards/card-3.svg",
+        "content": "<ul><li>элитное жилье</li><li>квартиры бизнес-класса</li><li>жилье эконом-класса</li></ul>"
       },
       {
         "name": "Коммерческое помещение",
         "description": "До 80% от стоимости",
-        "icon": "img/content-icons/cards/card-4.svg"
+        "icon": "img/content-icons/cards/card-4.svg",
+        "content": "<ul><li>элитное жилье</li><li>квартиры бизнес-класса</li><li>жилье эконом-класса</li></ul>"
       }
     ]
   }

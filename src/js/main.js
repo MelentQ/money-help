@@ -3,7 +3,7 @@ import './build-in/lazyload';
 import detectTouch from './build-in/detectTouch';
 import setScrollbarWidth from './build-in/setScrollbarWidth';
 import validation from './build-in/validation';
-// import customSelects from './build-in/customSelects';
+import customSelects from './build-in/customSelects';
 import masks from './build-in/masks';
 // import fileUpload from './build-in/fileUpload';
 import anchorLinks from './build-in/anchorLinks';
@@ -26,6 +26,7 @@ import horizontalTabs from './custom/horizontalTabs';
 import initCalculatorAccordions from './custom/initCalculatorAccordions';
 import sliders from './custom/sliders';
 import textOverflow from './custom/textOverflow';
+import city from './custom/city';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
     setScrollbarWidth();
     validation();
-    // customSelects();
+    customSelects();
     masks();
     // fileUpload();
     anchorLinks();
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initCalculatorAccordions();
     sliders();
     textOverflow();
+    city();
 });
 
 document.addEventListener('lazyloaded', () => {

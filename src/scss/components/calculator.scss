@@ -547,3 +547,108 @@
     transform: translate(-50%, -50%);
   }
 }
+
+.calculator {
+  .choices {
+    margin-top: 3.2rem;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+
+    border-radius: 1rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+
+    * {
+      font-size: inherit;
+    }
+  }
+
+  .choices__inner {
+    padding: 1.5rem 2.4rem;
+    background-color: $white;
+    border: none;
+    min-height: unset;
+    font-size: inherit;
+    border-radius: 1rem;
+
+    @include breakpoint(small-tablet) {
+      padding: 1.7rem;
+    }
+  }
+
+  .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 1.5rem;
+  }
+
+  .choices__list--single {
+    padding: 0;
+  }
+
+  .choices__list--dropdown {
+    border: none;
+    box-shadow: 0 4px 34px rgb(0 0 0 / 5%);
+    z-index: 10;
+    border-radius: 1rem;
+
+    top: calc(100% + 2.4rem);
+    opacity: 0;
+
+    transition: opacity $btt $bte, visibility $btt $bte;
+
+    &.is-active {
+      opacity: 1;
+    }
+
+    .choices__item--selectable.is-highlighted {
+      color: $blue;
+      background-color: #F9F9F9;
+    }
+  }
+
+  .choices__list--dropdown .choices__item {
+    padding: 1.5rem 2.4rem;
+
+    @include breakpoint(small-tablet) {
+      padding: 1.7rem;
+    }
+  }
+
+  .choices__item--selectable {
+    transition: color $btt $bte, background-color $btt $bte;
+  }
+
+  .choices__item--selectable.is-selected {
+    opacity: 0.75;
+  }
+
+  .choices[data-type*=select-one]::after {
+    border: none;
+    margin-top: 0;
+    right: 2.4rem;
+    transform-origin: center center;
+    transform: translateY(-50%);
+
+    width: 1.2rem;
+    height: 0.7rem;
+
+    transition: transform $btt $bte;
+
+    background-image: url(../img/icons/arrow-bottom.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include breakpoint(small-tablet) {
+      right: 1.7rem;
+    }
+  }
+
+  .choices[data-type*=select-one].is-open::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}

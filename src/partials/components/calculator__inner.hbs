@@ -4,6 +4,7 @@
       <h2 class="calculator__title">{{data.title}}</h2>
     {{/if}}
     <div class="calculator__cols">
+
       <div class="calculator__range-block js-range-slider-container" id="sum-range" data-start="400000" data-min="80000" data-max="1000000" data-step="10000">
         <div class="calculator__range-block-group">
           <span class="calculator__caption">Сумма займа</span>
@@ -31,14 +32,30 @@
           <span class="calculator__range-label js-max-label"></span>
         </div>
       </div>
+
     </div>
 
+    {{#if data.select}}
+    <select class="calculator__select js-custom-select" name="purpose">
+      <option value="1" selected>Выберите цель займа</option>
+      <option value="2">Цель 1</option>
+      <option value="3">Цель 2</option>
+      <option value="4">Цель 3</option>
+    </select>
+    {{else}}
     <hr>
+    {{/if}}
+
+
 
     <div class="calculator__result-caption">
       <span class="calculator__caption">Тип платежа</span>
     </div>
+
     <div class="calculator__cols">
+
+
+
       <div class="calculator__result-block js-calculator-accordion" data-close-other>
         <div class="calculator__result-title-block">
           <button class="calculator__result-title-btn js-calculator-accordion-btn" type="button">
@@ -65,6 +82,9 @@
           <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
         </div>
       </div>
+
+
+
       <div class="calculator__result-block js-calculator-accordion active" data-close-other>
         <div class="calculator__result-title-block">
           <button class="calculator__result-title-btn js-calculator-accordion-btn" type="button">
@@ -91,6 +111,9 @@
           <button class="button calculator__button js-submit-button" id="ann" type="button">Оставить заявку</button>
         </div>
       </div>
+
+
+
     </div>
   </form>
 </div>

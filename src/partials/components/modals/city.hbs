@@ -1,5 +1,19 @@
 {{#extend "modal"}}
 {{#content "content"}}
   <h2 class="modal__title">Выберите город</h2>
+
+  <div class="select js-accordion js-select-city" data-name="city">
+    <button class="select__button js-accordion-btn">
+      <span class="select__button-label">Москва</span>
+      <svg><use xlink:href="#arrow-bottom"></svg>
+    </button>
+    <div class="select__content js-accordion-content" style="height: 0;">
+      <ul class="select__list">
+        {{#each cities}}
+        <li class="select__item {{#if this.active}}active{{/if}}" data-code="{{this.code}}">{{this.name}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 {{/content}}
 {{/extend}}

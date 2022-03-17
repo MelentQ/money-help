@@ -46,7 +46,8 @@
   ],
   "entityCalc": {
     "title": "Калькулятор займа",
-    "name": "Юр"
+    "name": "Юр",
+    "select": true
   },
   "cases": [
     {

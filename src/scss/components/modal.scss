@@ -54,6 +54,18 @@
     }
   }
 
+  &__description {
+    display: block;
+    margin-bottom: 0.5rem;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.6px;
+    color: $blue;
+    text-transform: uppercase;
+  }
+
   &__subtitle {
     margin-bottom: 4.2rem;
 
@@ -65,6 +77,14 @@
       margin-bottom: 3.2rem;
 
       font-size: 1.5rem;
+    }
+  }
+
+  &__content-block {
+    padding-top: 1.5rem;
+
+    ol, ul {
+      gap: 2rem;
     }
   }
 }

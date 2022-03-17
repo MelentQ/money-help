@@ -444,3 +444,95 @@
     }
   }
 }
+
+.select {
+
+  border-radius: 2rem;
+  border: 0.1rem solid $blue;
+
+  &.active {
+    .select__button svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 2.2rem 3.5rem 2.6rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+    border-radius: 2rem;
+
+    transition: background-color $btt $bte;
+
+    &:hover {
+      background-color: #F9F9F9;
+    }
+    &:focus-visible {
+      background-color: #F9F9F9;
+    }
+
+    svg {
+      transform-origin: center center;
+      transition: transform $btt $bte;
+
+      margin-top: 0.5rem;
+      width: 1.9rem;
+      height: 1.2rem;
+
+      fill: $blue;
+    }
+  }
+
+  &__button-label {
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__list {
+    // overflow-y: auto;
+    // overflow-x: visible;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-bottom: 3rem;
+    // margin: 0 3.5rem 3rem;
+    // max-height: 30rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+
+    @include customScrollbar;
+  }
+
+  &__item {
+    cursor: pointer;
+    transition: color $btt $bte, background-color $btt $bte;
+
+    width: 100%;
+    padding: 0.7rem 3.5rem;
+
+    &:hover {
+      color: $blue;
+      background-color: #F9F9F9;
+    }
+
+    &.active {
+      opacity: 0.7;
+    }
+  }
+}

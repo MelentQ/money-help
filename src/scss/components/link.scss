@@ -58,12 +58,15 @@
     }
   }
 
+  transition: transform $btt $bte;
+
   &:link,
   &:visited {
     color: $dark;
   }
 
   &:hover {
+    transform: scale(1.04);
     color: $blue;
 
     &::before {
@@ -72,6 +75,7 @@
   }
 
   &:focus-visible {
+    transform: scale(1.04);
     color: $blue;
 
     &::before {

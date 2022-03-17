@@ -89,12 +89,32 @@
   &__item {
     position: relative;
 
+    display: block;
+
     height: 100%;
     min-height: 16.6rem;
     padding: 1.5rem 3rem 2.2rem;
 
     border: 0.1rem solid $blue;
     border-radius: 1.4rem;
+
+    transition: transform $btt $bte;
+
+    &:hover {
+      transform: scale(1.04);
+
+      .cards__item-name {
+        color: $blue;
+      }
+    }
+
+    &:focus-visible {
+      transform: scale(1.04);
+
+      .cards__item-name {
+        color: $blue;
+      }
+    }
 
     @include breakpoint(desktop) {
       min-height: 13.6rem;
@@ -125,6 +145,8 @@
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 1.2;
+
+    transition: color $btt $bte;
 
     @include breakpoint(desktop) {
       font-size: 2rem;
@@ -194,5 +216,9 @@
     @include breakpoint(desktop) {
       width: 4.2rem;
     }
+  }
+
+  &__modal-content {
+    display: none;
   }
 }
