@@ -26,6 +26,7 @@
         <title>Главная страница</title>
     </head>
     <body class="no-touch" ontouchstart="">
+        <div class="visually-hidden" id="mapUrl" data-url="https://api-maps.yandex.ru/2.1/?apikey=99155e03-fba1-47e8-8e51-62786c760fbc&lang=ru_RU"></div>
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <symbol viewBox="0 0 19 12" id="accordion-arrow" xmlns="http://www.w3.org/2000/svg">
@@ -390,31 +391,28 @@
                                             <div class="steps__body-text">Одобрение всего за 15 минут</div>
                                         </div>
                                     </li>
-                                    <li class="steps__body js-tab-body">
-                                        <ul class="steps__body-list">
+                                    <li class="steps__body steps__body--row js-tab-body">
+                                        <span class="steps__body-caption">У нас 2 варианта погашения займа</span>
+                                        <ul class="steps__body-list steps__body-list--row">
                                             <li class="steps__step">
                                                 <div class="steps__step-image-wrapper">
-                                                    <img class="lazyload" src="img/content-icons/steps/steps-1.svg" alt="Пункт 1">
+                                                    <img class="lazyload" src="img/content-icons/steps/steps-5.svg" alt="Наличными">
                                                 </div>
                                                 <div class="steps__step-text">
-                                                    <h3 class="steps__step-title">Пункт 1</h3>
-                                                    <span class="steps__step-subtitle">Описание</span>
+                                                    <h3 class="steps__step-title">Наличными</h3>
+                                                    <span class="steps__step-subtitle">Можете приехать в наш офис и совершить оплату. Также вы получите чек об облате</span>
                                                 </div>
                                             </li>
                                             <li class="steps__step">
                                                 <div class="steps__step-image-wrapper">
-                                                    <img class="lazyload" src="img/content-icons/steps/steps-1.svg" alt="Пункт 2">
+                                                    <img class="lazyload" src="img/content-icons/steps/steps-6.svg" alt="Безналично">
                                                 </div>
                                                 <div class="steps__step-text">
-                                                    <h3 class="steps__step-title">Пункт 2</h3>
-                                                    <span class="steps__step-subtitle">Описание</span>
+                                                    <h3 class="steps__step-title">Безналично</h3>
+                                                    <span class="steps__step-subtitle">На р/с нашей компании. Оплата возможно через ваше банковскую карту</span>
                                                 </div>
                                             </li>
                                         </ul>
-                                        <div class="steps__body-image-wrapper">
-                                            <img class="lazyload" src="img/content-icons/steps/bg.svg" alt="Как его погасить?">
-                                            <div class="steps__body-text">Одобрение всего за 15 минут</div>
-                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -424,32 +422,34 @@
                         <div class="container">
                             <div class="list-tabs__inner">
                                 <div class="list-tabs__tabs-wrapper">
-                                    <ul class="list-tabs__tabs">
-                                        <li class="list-tabs__tab-wrapper">
-                                            <button class="list-tabs__tab js-tab-btn active" type="button">
-                                                <span class="list-tabs__tab-label">Условия займа</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </button>
-                                        </li>
-                                        <li class="list-tabs__tab-wrapper">
-                                            <button class="list-tabs__tab js-tab-btn" type="button">
-                                                <span class="list-tabs__tab-label">Требования к авто</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </button>
-                                        </li>
-                                        <li class="list-tabs__tab-wrapper">
-                                            <button class="list-tabs__tab js-tab-btn" type="button">
-                                                <span class="list-tabs__tab-label">Преимущества займов</span>
-                                                <svg>
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg>
-                                            </button>
-                                        </li>
-                                    </ul>
+                                    <div class="swiper js-init-slider-tabs">
+                                        <ul class="swiper-wrapper list-tabs__tabs">
+                                            <li class="swiper-slide list-tabs__tab-wrapper">
+                                                <button class="list-tabs__tab js-tab-btn active" type="button">
+                                                    <span class="list-tabs__tab-label">Условия займа</span>
+                                                    <svg>
+                                                        <use xlink:href="#arrow-right"></use>
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="swiper-slide list-tabs__tab-wrapper">
+                                                <button class="list-tabs__tab js-tab-btn" type="button">
+                                                    <span class="list-tabs__tab-label">Требования к авто</span>
+                                                    <svg>
+                                                        <use xlink:href="#arrow-right"></use>
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="swiper-slide list-tabs__tab-wrapper">
+                                                <button class="list-tabs__tab js-tab-btn" type="button">
+                                                    <span class="list-tabs__tab-label">Преимущества займов</span>
+                                                    <svg>
+                                                        <use xlink:href="#arrow-right"></use>
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <button class="blue-btn list-tabs__order-btn" type="button" data-hystmodal="#order">Оставить заявку</button>
                                 </div>
                                 <ul class="list-tabs__bodies">

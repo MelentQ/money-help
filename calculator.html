@@ -26,6 +26,7 @@
         <title>Калькулятор для расчета займа</title>
     </head>
     <body class="no-touch" ontouchstart="">
+        <div class="visually-hidden" id="mapUrl" data-url="https://api-maps.yandex.ru/2.1/?apikey=99155e03-fba1-47e8-8e51-62786c760fbc&lang=ru_RU"></div>
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <symbol viewBox="0 0 19 12" id="accordion-arrow" xmlns="http://www.w3.org/2000/svg">
@@ -154,17 +155,21 @@
                                 <div class="calculators__label">
                                     <p>Калькулятор предлагает примерный расчет ставки. Информация не является оффертой</p>
                                 </div>
-                                <ul class="calculators__tabs">
-                                    <li class="calculators__tab-wrapper">
-                                        <button class="calculators__tab js-tab-btn active" type="button">Займ под ПТС</button>
-                                    </li>
-                                    <li class="calculators__tab-wrapper">
-                                        <button class="calculators__tab js-tab-btn" type="button">Под залог недвижимости</button>
-                                    </li>
-                                    <li class="calculators__tab-wrapper">
-                                        <button class="calculators__tab js-tab-btn" type="button">Займ юридическим лицам</button>
-                                    </li>
-                                </ul>
+                                <div class="calculators__tabs-wrapper">
+                                    <div class="swiper js-init-slider-tabs">
+                                        <ul class="swiper-wrapper calculators__tabs">
+                                            <li class="swiper-slide calculators__tab-wrapper">
+                                                <button class="calculators__tab js-tab-btn active" type="button">Займ под ПТС</button>
+                                            </li>
+                                            <li class="swiper-slide calculators__tab-wrapper">
+                                                <button class="calculators__tab js-tab-btn" type="button">Под залог недвижимости</button>
+                                            </li>
+                                            <li class="swiper-slide calculators__tab-wrapper">
+                                                <button class="calculators__tab js-tab-btn" type="button">Займ юридическим лицам</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <ul class="calculators__bodies">
                                     <li class="calculator calculators__body js-tab-body active">
                                         <div class="calculator__inner js-init-calculator" data-name="ПТС">
