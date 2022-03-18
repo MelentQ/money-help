@@ -15,20 +15,10 @@
     }
   }
 
-  &__tabs {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
-
-    margin: 0 calc(-1 * var(--content-padding));
-    padding: 0 var(--content-padding);
+  &__tabs-wrapper {
+    min-width: 0;
     margin-top: 6rem;
     margin-bottom: 2.4rem;
-
-    overflow: auto;
-
-    @include noScrollbar;
 
     @include breakpoint(tablet) {
       margin-top: 4rem;
@@ -36,10 +26,12 @@
     @include breakpoint(small-tablet) {
       margin-top: 2.4rem;
     }
+  }
 
-    & > * {
-      flex-shrink: 0;
-    }
+  &__tabs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   &__tab {
@@ -47,6 +39,8 @@
     padding: 0.8rem 2rem 1.4rem;
     border: 0.2rem solid $dark;
     border-radius: 6rem;
+
+    width: fit-content;
 
     font-size: 2rem;
     line-height: 1;
@@ -90,5 +84,14 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+
+  .swiper {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    width: auto;
   }
 }

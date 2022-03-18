@@ -12,9 +12,7 @@
   }
 
   &__tabs-wrapper {
-    @include breakpoint(tablet) {
-      display: contents;
-    }
+    min-width: 0;
   }
 
   &__tabs {
@@ -24,26 +22,18 @@
     justify-content: flex-start;
     gap: 3.2rem;
 
-    @include noScrollbar;
-
     margin-bottom: 8rem;
 
-    & > * {
-      flex-shrink: 0;
-    }
-
     @include breakpoint(tablet) {
+      gap: unset;
       flex-direction: row;
-      gap: 2rem;
 
-      margin: 0 calc(-1 * var(--content-padding));
-      padding: 0 var(--content-padding);
-
-      overflow: auto;
+      margin-bottom: 0;
     }
   }
 
   &__tab-wrapper {
+    
   }
 
   &__tab {
@@ -51,6 +41,8 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1.6rem;
+
+    width: fit-content;
 
     font-size: 3rem;
     line-height: 1.2;
@@ -179,5 +171,22 @@
       color: $blue;
       border-color: $blue;
     }
+  }
+
+  .swiper {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    height: unset;
+
+    @include breakpoint(tablet) {
+      height: 100%;
+    }
+  }
+
+  .swiper-slide {
+    width: auto;
   }
 }

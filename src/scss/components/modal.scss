@@ -47,6 +47,10 @@
     line-height: 1.2;
     font-weight: 600;
 
+    @include breakpoint(desktop) {
+      font-size: 2.8rem;
+    }
+
     @include breakpoint(tablet) {
       margin-bottom: 1rem;
 

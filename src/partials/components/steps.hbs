@@ -2,17 +2,17 @@
   <div class="container">
     <div class="steps__inner">
       <ul class="steps__tabs">
-        {{#each steps}}
         <li class="steps__tab-wrapper">
-          <button class="steps__tab js-tab-btn {{#if this.active }}active{{/if}}" type="button">{{this.title}}</button>
+          <button class="steps__tab js-tab-btn active" type="button">Как оформить займ?</button>
         </li>
-        {{/each}}
+        <li class="steps__tab-wrapper">
+          <button class="steps__tab js-tab-btn" type="button">Как его погасить?</button>
+        </li>
       </ul>
       <ul class="steps__bodies">
-        {{#each steps}}
-        <li class="steps__body js-tab-body {{#if this.active }}active{{/if}}">
+        <li class="steps__body js-tab-body active">
           <ul class="steps__body-list">
-            {{#each this.items}}
+            {{#each step1.items}}
             <li class="steps__step">
               <div class="steps__step-image-wrapper">
                 <img class="lazyload" src="{{this.icon}}" alt="{{this.title}}">
@@ -25,13 +25,28 @@
             {{/each}}
           </ul>
           <div class="steps__body-image-wrapper">
-            <img class="lazyload" src="{{this.image}}" alt="{{this.title}}">
+            <img class="lazyload" src="img/content-icons/steps/bg.svg" alt="Как оформить займ?">
             <div class="steps__body-text">
               Одобрение всего за 15 минут
             </div>
           </div>
         </li>
-        {{/each}}
+        <li class="steps__body steps__body--row js-tab-body">
+          <span class="steps__body-caption">У нас 2 варианта погашения займа</span>
+          <ul class="steps__body-list steps__body-list--row">
+            {{#each step2.items}}
+            <li class="steps__step">
+              <div class="steps__step-image-wrapper">
+                <img class="lazyload" src="{{this.icon}}" alt="{{this.title}}">
+              </div>
+              <div class="steps__step-text">
+                  <h3 class="steps__step-title">{{this.title}}</h3>
+                  <span class="steps__step-subtitle">{{this.subtitle}}</span>
+                </div>
+            </li>
+            {{/each}}
+          </ul>
+        </li>
       </ul>
     </div>
   </div>

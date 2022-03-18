@@ -1,12 +1,13 @@
-import {Swiper, Navigation, Autoplay} from "swiper";
+import {Swiper, Navigation, Autoplay, FreeMode} from "swiper";
 
-Swiper.use([Navigation, Autoplay]);
+Swiper.use([Navigation, Autoplay, FreeMode]);
 
 export default function sliders() {
   reviewSliders();
   teamSliders();
   miniDocsSliders();
   casesSliders();
+  initSliderTabs();
 }
 
 function reviewSliders() {
@@ -162,4 +163,31 @@ function casesSliders() {
       }
     })
   })
+}
+
+function initSliderTabs() {
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    const containers = Array.from(document.querySelectorAll('.js-init-slider-tabs'));
+    containers.forEach(container => {
+      const slider = new Swiper(container, {
+        slidesPerView: 'auto',
+        spaceBetween: 14,
+        freeMode: {
+          enabled: true,
+          sticky: true
+        },
+        breakpoints: {
+          641: {
+            spaceBetween: 24
+          }
+        }
+      })
+
+      slider.slides.forEach((slide, i) => {
+        slide.addEventListener('click', () => {
+          slider.slideTo(i);
+        })
+      })
+    })
+  }
 }

@@ -27,6 +27,7 @@ import initCalculatorAccordions from './custom/initCalculatorAccordions';
 import sliders from './custom/sliders';
 import textOverflow from './custom/textOverflow';
 import city from './custom/city';
+import initMaps from './custom/initMaps';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sliders();
     textOverflow();
     city();
+    initMaps();
 });
 
 document.addEventListener('lazyloaded', () => {

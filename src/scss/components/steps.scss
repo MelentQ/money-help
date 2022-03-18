@@ -101,6 +101,10 @@
 
     transition: opacity $btt $bte, visibility $btt $bte;
 
+    &--row {
+      grid-template-columns: 1fr;
+    }
+
     @include breakpoint(small-tablet) {
       grid-template-columns: 1fr;
       gap: 2rem;
@@ -121,6 +125,14 @@
     justify-content: flex-start;
     gap: 4.4rem;
 
+    &--row {
+      flex-direction: row;
+
+      @include breakpoint(small-tablet) {
+        flex-direction: column;
+      }
+    }
+
     @include breakpoint(tablet) {
       gap: 2rem;
     }
@@ -138,6 +150,9 @@
   }
 
   &__step-image-wrapper {
+    flex-shrink: 0;
+    align-self: flex-start;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,6 +261,23 @@
       height: 8.2rem;
 
       font-size: 0.8rem;
+    }
+  }
+
+  &__body-caption {
+    display: block;
+    margin: 0 auto 3.2rem;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @include breakpoint(tablet) {
+      font-size: 1.8rem;
+      margin-bottom: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1.4rem;
     }
   }
 }

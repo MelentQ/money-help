@@ -2,16 +2,18 @@
   <div class="container">
     <div class="list-tabs__inner">
       <div class="list-tabs__tabs-wrapper">
-        <ul class="list-tabs__tabs">
-          {{#each listTabs}}
-          <li class="list-tabs__tab-wrapper">
-            <button class="list-tabs__tab js-tab-btn {{#if this.active}}active{{/if}}" type="button">
-              <span class="list-tabs__tab-label">{{this.title}}</span>
-              <svg><use xlink:href="#arrow-right"></svg>
-            </button>
-          </li>
-          {{/each}}
-        </ul>
+        <div class="swiper js-init-slider-tabs">
+          <ul class="swiper-wrapper list-tabs__tabs">
+            {{#each listTabs}}
+            <li class="swiper-slide list-tabs__tab-wrapper">
+              <button class="list-tabs__tab js-tab-btn {{#if this.active}}active{{/if}}" type="button">
+                <span class="list-tabs__tab-label">{{this.title}}</span>
+                <svg><use xlink:href="#arrow-right"></svg>
+              </button>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
         <button class="blue-btn list-tabs__order-btn" type="button" data-hystmodal="#order">Оставить заявку</button>
       </div>
       <ul class="list-tabs__bodies">

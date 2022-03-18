@@ -1,16 +1,20 @@
 <section class="faq-tabs js-init-tabs">
   <div class="container">
     <div class="faq-tabs__inner">
-      <ul class="faq-tabs__nav js-init-horizontal-scroll">
-        {{#each faqTabs}}
-          <li class="js-tab-btn-wrapper">
-            <button class="faq-tabs__button js-tab-btn {{#if this.active}}active{{/if}}" type="button">
-              <span class="faq-tabs__button-label">{{this.name}}</span>
-              <svg><use xlink:href="#arrow-right"></svg>
-            </button>
-          </li>
-        {{/each}}
-      </ul>
+      <div class="faq-tabs__tabs-wrapper">
+        <div class="swiper js-init-slider-tabs">
+          <ul class="swiper-wrapper faq-tabs__nav js-init-horizontal-scroll">
+            {{#each faqTabs}}
+              <li class="swiper-slide js-tab-btn-wrapper">
+                <button class="faq-tabs__button js-tab-btn {{#if this.active}}active{{/if}}" type="button">
+                  <span class="faq-tabs__button-label">{{this.name}}</span>
+                  <svg><use xlink:href="#arrow-right"></svg>
+                </button>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
       <ul class="faq-tabs__bodies">
         {{#each faqTabs}}
           <li class="faq-tabs__body-wrapper js-tab-body {{#if this.active}}active{{/if}}">

@@ -62,51 +62,44 @@
       }
     ]
   },
-  "steps": [
-    {
-      "title": "Как оформить займ?",
-      "image": "img/content-icons/steps/bg.svg",
-      "active": true,
-      "items": [
-        {
-          "icon": "img/content-icons/steps/steps-1.svg",
-          "title": "Заполняете заявку",
-          "subtitle": "Заполните, что считаете важным"
-        },
-        {
-          "icon": "img/content-icons/steps/steps-2.svg",
-          "title": "Проверка документов и одобрение",
-          "subtitle": "Процесс проверки займет от 30 мин"
-        },
-        {
-          "icon": "img/content-icons/steps/steps-3.svg",
-          "title": "Подписание договора",
-          "subtitle": "Несколько формальных документов"
-        },
-        {
-          "icon": "img/content-icons/steps/steps-4.svg",
-          "title": "Выдача займа",
-          "subtitle": "Получаете деньги на карту"
-        }
-      ]
-    },
-    {
-      "title": "Как его погасить?",
-      "image": "img/content-icons/steps/bg.svg",
-      "items": [
-        {
-          "icon": "img/content-icons/steps/steps-1.svg",
-          "title": "Пункт 1",
-          "subtitle": "Описание"
-        },
-        {
-          "icon": "img/content-icons/steps/steps-1.svg",
-          "title": "Пункт 2",
-          "subtitle": "Описание"
-        }
-      ]
-    }
-  ],
+  "step1": {
+    "items": [
+      {
+        "icon": "img/content-icons/steps/steps-1.svg",
+        "title": "Заполняете заявку",
+        "subtitle": "Заполните, что считаете важным"
+      },
+      {
+        "icon": "img/content-icons/steps/steps-2.svg",
+        "title": "Проверка документов и одобрение",
+        "subtitle": "Процесс проверки займет от 30 мин"
+      },
+      {
+        "icon": "img/content-icons/steps/steps-3.svg",
+        "title": "Подписание договора",
+        "subtitle": "Несколько формальных документов"
+      },
+      {
+        "icon": "img/content-icons/steps/steps-4.svg",
+        "title": "Выдача займа",
+        "subtitle": "Получаете деньги на карту"
+      }
+    ]
+  },
+  "step2": {
+    "items": [
+      {
+        "icon": "img/content-icons/steps/steps-5.svg",
+        "title": "Наличными",
+        "subtitle": "Можете приехать в наш офис и совершить оплату. Также вы получите чек об облате"
+      },
+      {
+        "icon": "img/content-icons/steps/steps-6.svg",
+        "title": "Безналично",
+        "subtitle": "На р/с нашей компании. Оплата возможно через ваше банковскую карту"
+      }
+    ]
+  },
   "reviews": [
     {
       "text": "Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под Честная и надёжная компания! Приятное обслуживание, все доходчиво объяснили, оформили быстро и легко. Сразу после под",

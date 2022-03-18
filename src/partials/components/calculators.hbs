@@ -5,17 +5,21 @@
         <p>Калькулятор предлагает примерный расчет ставки. Информация не является оффертой</p>
       </div>
 
-      <ul class="calculators__tabs">
-        <li class="calculators__tab-wrapper">
-          <button class="calculators__tab js-tab-btn active" type="button">Займ  под ПТС</button>
-        </li>
-        <li class="calculators__tab-wrapper">
-          <button class="calculators__tab js-tab-btn" type="button">Под залог недвижимости</button>
-        </li>
-        <li class="calculators__tab-wrapper">
-          <button class="calculators__tab js-tab-btn" type="button">Займ юридическим лицам</button>
-        </li>
-      </ul>
+      <div class="calculators__tabs-wrapper">
+        <div class="swiper js-init-slider-tabs">
+          <ul class="swiper-wrapper calculators__tabs">
+            <li class="swiper-slide calculators__tab-wrapper">
+              <button class="calculators__tab js-tab-btn active" type="button">Займ  под ПТС</button>
+            </li>
+            <li class="swiper-slide calculators__tab-wrapper">
+              <button class="calculators__tab js-tab-btn" type="button">Под залог недвижимости</button>
+            </li>
+            <li class="swiper-slide calculators__tab-wrapper">
+              <button class="calculators__tab js-tab-btn" type="button">Займ юридическим лицам</button>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <ul class="calculators__bodies">
         <li class="calculator calculators__body js-tab-body active">
