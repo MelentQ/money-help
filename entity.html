@@ -355,11 +355,12 @@
                                                         <span class="calculator__result-value js-diff-rate-value"></span>
                                                     </div>
                                                     <div class="calculator__result-item">
-                                                        <span class="calculator__result-label">Ежемесячный платеж</span>
+                                                        <span class="calculator__result-label">Ежемесячный платеж от*</span>
                                                         <span class="calculator__result-value js-diff-payment-value"></span>
                                                     </div>
                                                 </div>
                                                 <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
+                                                <button class="calculator__mini-link" data-hystmodal="#table" type="button">* график платежей</button>
                                             </div>
                                         </div>
                                         <div class="calculator__result-block js-calculator-accordion active" data-close-other>
@@ -1182,6 +1183,36 @@
                     </div>
                 </div>
             </div>
+            <div class="hystmodal modal" id="table" aria-hidden="true">
+                <div class="hystmodal__wrap modal__wrapper">
+                    <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                        <button class="modal__close" data-hystclose type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                        <h2 class="modal__title">График платежей</h2>
+                        <table class="modal__table js-table">
+                            <tr class="modal__table-row">
+                                <th class="modal__table-cell modal__table-cell--head">Месяцы</th>
+                                <th class="modal__table-cell modal__table-cell--head">Платеж</th>
+                            </tr>
+                        </table>
+                        <template id="tableHead">
+                            <tr class="modal__table-row">
+                                <th class="modal__table-cell modal__table-cell--head">Месяцы</th>
+                                <th class="modal__table-cell modal__table-cell--head">Платеж</th>
+                            </tr>
+                        </template>
+                        <template id="tableRow">
+                            <tr class="modal__table-row">
+                                <td class="modal__table-cell modal__table-cell--month"></td>
+                                <td class="modal__table-cell modal__table-cell--payment"></td>
+                            </tr>
+                        </template>
+                    </div>
+                </div>
+            </div>
             <style>
                 .ie-placeholder {
                     z-index: 4000;
@@ -1251,18 +1282,42 @@
 
                     const rate = getRate(sum);
 
+                    // Дифференцированный (diff)
+                    const getDiffPayment = (sum, rate, month) => {
+                        let payments = [];
+                        let sumLeft = sum; // оставшаяся сумма платежа
+                        let monthLeft = month; // оставшееся количество месяцев до погашения
+
+                        while (sumLeft > 0) {
+                            const payment = sumLeft / monthLeft + sumLeft * rate;
+                            payments.push(Math.round(payment));
+
+                            sumLeft -= payment;
+                            monthLeft--;
+                        }
+
+                        return payments;
+                    }
+
+                    const diffPayments = getDiffPayment(sum, rate, month);
+                    const lastDiffPayment = diffPayments[diffPayments.length - 1];
+
+                    // Аннуитетный (ann)
                     const getAnnPayment = (sum, rate, month) => {
                         return Math.round(sum * (rate * Math.pow(1 + rate, month)) / (Math.pow(1 + rate, month) - 1));
                     }
 
+                    const annPayment = getAnnPayment(sum, rate, month);
+
                     return {
                         diff: {
                             rate: rate * 100,
-                            payment: getAnnPayment(sum, rate, month)
+                            payment: lastDiffPayment,
+                            payments: diffPayments
                         },
                         ann: {
                             rate: rate * 100,
-                            payment: getAnnPayment(sum, rate, month)
+                            payment: annPayment
                         }
                     };
                 }
