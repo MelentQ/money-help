@@ -28,6 +28,7 @@ import sliders from './custom/sliders';
 import textOverflow from './custom/textOverflow';
 import city from './custom/city';
 import initMaps from './custom/initMaps';
+import cookie from './custom/cookie';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     textOverflow();
     city();
     initMaps();
+    cookie();
 });
 
 document.addEventListener('lazyloaded', () => {

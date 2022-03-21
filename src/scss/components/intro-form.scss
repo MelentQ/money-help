@@ -241,7 +241,7 @@
 
     img {
       height: 100%;
-      width: auto;
+      width: 35.71vw;
 
       object-fit: contain;
 
@@ -249,6 +249,7 @@
         height: 80%;
       }
       @include breakpoint(small-tablet) {
+        width: auto;
         height: 100%;
         max-height: 32rem;
         margin: 0 auto;

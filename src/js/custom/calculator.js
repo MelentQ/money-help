@@ -90,18 +90,63 @@ export default function calculator() {
         getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
       })
     }
+    const form = container.querySelector('form');
+    form.addEventListener('keydown', function(event) {
+      if(event.key === 'Enter') {
+        event.preventDefault();
+        if (form.sum) {
+          form.sum.blur();
+        }
+        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
+      }
+    });
   })
 }
 
+const tableModal = document.querySelector('.js-table');
+
 function getRes(name, sum, month, diffRateElem, diffPaymentElem, annRateElem, annPaymentElem) {
   const result = window.calculate(name, sum, month);
+
+  // Diff
   diffRateElem.textContent = `${result.diff.rate}%`;
   diffPaymentElem.textContent = `${result.diff.payment.toLocaleString('ru')} ₽`;
 
+  // Modal Diff
+  if (tableModal) {
+    const diffPayments = result.diff.payments;
+    tableModal.innerHTML = "";
+    const head = _getTemplateBySelector('#tableHead');
+
+    tableModal.append(head);
+
+    diffPayments.forEach((payment, i) => {
+      const row = _getTemplateBySelector('#tableRow');
+      const monthElement = row.querySelector('.modal__table-cell--month');
+      const paymentElement = row.querySelector('.modal__table-cell--payment');
+
+      monthElement.textContent = i + 1;
+      paymentElement.textContent = `${payment.toLocaleString('ru')} ₽`;
+      tableModal.append(row);
+    });
+  }
+
+  // Ann
   annRateElem.textContent = `${result.ann.rate}%`;
   annPaymentElem.textContent = `${result.ann.payment.toLocaleString('ru')} ₽`;
 }
 
 function setSize(input) {
   input.size = input.value.length || 1;
+  if (input.value.length > 8) {
+    input.size = 8;
+  }
+}
+
+function _getTemplateBySelector(templateSelector) {
+  return document
+  .querySelector(templateSelector)
+  .content
+  .children[0]
+  .cloneNode(true);
 }

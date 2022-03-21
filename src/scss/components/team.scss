@@ -210,6 +210,13 @@
       margin-bottom: 2rem;
     }
 
+    @include breakpoint(tablet) {
+      height: 2rem;
+    }
+    @include breakpoint(small-tablet) {
+      height: 17.8rem;
+    }
+
     img {
       position: absolute;
       top: 0;

@@ -16,7 +16,8 @@
   },
   "calc2": {
     "name": "Недвижимость",
-    "title": false
+    "title": false,
+    "select": true
   },
   "calc3": {
     "name": "Юр",

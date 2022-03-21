@@ -5,11 +5,11 @@
     {{/if}}
     <div class="calculator__cols">
 
-      <div class="calculator__range-block js-range-slider-container" id="sum-range" data-start="400000" data-min="80000" data-max="1000000" data-step="10000">
+      <div class="calculator__range-block js-range-slider-container" id="sum-range" data-start="100000" data-min="80000" data-max="1000000" data-step="10000">
         <div class="calculator__range-block-group">
           <span class="calculator__caption">Сумма займа</span>
           <div class="calculator__input-wrapper">
-            <input class="calculator__input js-range-input" type="text" name="sum" value="">
+            <input class="calculator__input js-range-input" type="text" name="sum" value="" autocomplete="off">
             <span class="calculator__input-label">₽</span>
           </div>
         </div>
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="calculator__range-block js-range-slider-container" id="month-range" data-start="6" data-min="2" data-max="12" data-step="1">
+      <div class="calculator__range-block js-range-slider-container" id="month-range" data-start="12" data-min="2" data-max="12" data-step="1">
         <input class="js-range-input" type="hidden" name="month">
         <div class="calculator__range-block-group">
           <span class="calculator__caption">Срок займа</span>
@@ -75,11 +75,12 @@
               <span class="calculator__result-value js-diff-rate-value"></span>
             </div>
             <div class="calculator__result-item">
-              <span class="calculator__result-label">Ежемесячный платеж</span>
-              <span class="calculator__result-value js-diff-payment-value"></span>
+              <span class="calculator__result-label">Ежемесячный платеж от</span>
+              <span class="calculator__result-value calculator__result-value--star js-diff-payment-value"></span>
             </div>
           </div>
           <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
+          <button class="calculator__mini-link" data-hystmodal="#table" type="button">* график платежей</button>
         </div>
       </div>
 

@@ -106,12 +106,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.4rem;
 
     border-bottom: 0.1rem solid $blue;
   }
 
   &__input {
+    padding: 0.4rem 0.4rem 0 0.4rem;
+    
     font-size: 3.4rem;
     line-height: 1.2;
     font-weight: 600;
@@ -127,6 +128,8 @@
   }
 
   &__input-label {
+    padding-top: 0.4rem;
+
     font-size: 3.4rem;
     line-height: 1.2;
     font-weight: 600;
@@ -383,6 +386,13 @@
     font-weight: 600;
     line-height: 1;
 
+    &--star {
+      &::after {
+        content: '*';
+        font-size: 4.2rem;
+      }
+    }
+
     @include breakpoint(laptop) {
       font-size: 3.2rem;
     }
@@ -407,20 +417,18 @@
     }
 
     &.button {
-      @include breakpoint(tablet) {
-        background: rgba(0,0,0,0);
-        color: $orange;
+      background: rgba(0,0,0,0);
+      color: $orange;
 
-        &:hover {
-          background-color: $orange;
-          color: $white;
-          border-color: $orange;
-        }
-        &:focus-visible {
-          background-color: $orange;
-          color: $white;
-          border-color: $orange;
-        }
+      &:hover {
+        background-color: $orange;
+        color: $white;
+        border-color: $orange;
+      }
+      &:focus-visible {
+        background-color: $orange;
+        color: $white;
+        border-color: $orange;
       }
     }
 
@@ -442,6 +450,18 @@
         border-color: $blue;
       }
     }
+  }
+
+  &__mini-link {
+    display: block;
+    margin: 1.4rem auto 0;
+
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #9397A3;
+
+    text-decoration: underline;
   }
 }
 

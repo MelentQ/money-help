@@ -29,12 +29,14 @@
     z-index: 1;
 
     max-height: 100%;
-    width: auto;
+    width: 35.71vw;
     height: auto;
 
     @include breakpoint(small-tablet) {
       position: static;
       transform: translateY(-2.4rem);
+
+      width: auto;
     }
   }
 

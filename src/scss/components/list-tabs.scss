@@ -11,6 +11,25 @@
     }
   }
 
+  &__title {
+    max-width: 80rem;
+    margin-bottom: 7rem;
+
+    font-size: 5.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @include breakpoint(desktop) {
+      margin-bottom: 4.8rem;
+      font-size: 3.2rem;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.6rem;
+      font-size: 2.4rem;
+    }
+  }
+
   &__tabs-wrapper {
     min-width: 0;
   }
@@ -33,7 +52,47 @@
   }
 
   &__tab-wrapper {
-    
+    @include breakpoint(tablet) {
+      position: relative;
+    }
+
+    &::before {
+      content: none;
+      position: absolute;
+      bottom: -0.8rem;
+
+      width: calc(100% + 2.4rem);
+      height: 0.1rem;
+
+      background-color: #E0E0E0;
+
+      @include breakpoint(tablet) {
+        content: '';
+      }
+
+      @include breakpoint(mobile) {
+        width: calc(100% + 1.4rem);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.8rem;
+
+      width: 100%;
+      height: 0.1rem;
+
+      background-color: $blue;
+
+      opacity: 0;
+
+      transition: opacity $btt $bte;
+    }
+
+    &.parent-active::after {
+      opacity: 1;
+    }
   }
 
   &__tab {
@@ -53,22 +112,14 @@
     transition: color $btt $bte, background-color $btt $bte, border-color $btt $bte;
 
     @include breakpoint(tablet) {
-      padding: 0.7rem 3rem 1rem;
-      border: 0.2rem solid $dark;
-      border-radius: 6rem;
+      padding-bottom: 0.8rem;
 
       font-size: 1.6rem;
-      color: $dark;
+      color: #9397A3;
     }
 
     &.active {
       color: $blue;
-
-      @include breakpoint(tablet) {
-        color: $white;
-        background-color: $blue;
-        border-color: $blue;
-      }
 
       svg {
         opacity: 1;

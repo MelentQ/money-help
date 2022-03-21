@@ -91,4 +91,47 @@
       gap: 2rem;
     }
   }
+
+  &__table {
+    display: block;
+    border-radius: 0.8rem;
+    border: 0.1rem solid $blue;
+    overflow: hidden;
+
+    tbody {
+      display: block;
+    }
+  }
+
+  &__table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-bottom: 0.1rem solid #F6F7F9;
+
+    &:first-of-type {
+      border: none;
+    }
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &__table-cell {
+    display: block;
+
+    padding: 1.4rem 2.4rem;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1;
+
+    &--head {
+      background-color: #F6F7F9;
+
+      font-weight: 600;
+      color: #9397A3;
+      text-transform: uppercase;
+    }
+  }
 }

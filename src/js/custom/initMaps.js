@@ -119,7 +119,6 @@ export default function initMaps() {
       if (window.matchMedia("(max-width: 640px)").matches) {
         // Сдвинем карту на 50 пикселей влево
         const position = map.getGlobalPixelCenter();
-        console.log(position);
         map.setGlobalPixelCenter([ position[0] + 100, position[1] ]);
       }
     });

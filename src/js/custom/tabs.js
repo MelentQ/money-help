@@ -10,9 +10,11 @@ export default function tabs() {
         btns.forEach((b, j) => {
           if (j == i) {
             b.classList.add('active');
+            b.parentElement.classList.add('parent-active');
             bodies[j].classList.add('active');
           } else {
             b.classList.remove('active');
+            b.parentElement.classList.remove('parent-active');
             bodies[j].classList.remove('active');
           }
         })

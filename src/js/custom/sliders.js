@@ -166,9 +166,9 @@ function casesSliders() {
 }
 
 function initSliderTabs() {
-  if (window.matchMedia("(max-width: 1024px)").matches) {
-    const containers = Array.from(document.querySelectorAll('.js-init-slider-tabs'));
-    containers.forEach(container => {
+  const containers = Array.from(document.querySelectorAll('.js-init-slider-tabs'));
+  containers.forEach(container => {
+    if (window.matchMedia("(max-width: 1024px)").matches || container.classList.contains('js-init-instant')) {
       const slider = new Swiper(container, {
         slidesPerView: 'auto',
         spaceBetween: 14,
@@ -188,6 +188,6 @@ function initSliderTabs() {
           slider.slideTo(i);
         })
       })
-    })
-  }
+    }
+  })
 }

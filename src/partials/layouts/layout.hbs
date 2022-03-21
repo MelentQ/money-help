@@ -56,6 +56,8 @@
         {{> modals/error id="error"}}
         {{> modals/map id="map"}}
         {{> modals/cardInfo id="cardInfo"}}
+        {{> modals/table id="table"}}
+        {{> cookie}}
         {{> ie-placeholder }}
         <script>
         // name - название калькулятора,
@@ -94,18 +96,42 @@
 
             const rate = getRate(sum);
 
+            // Дифференцированный (diff)
+            const getDiffPayment = (sum, rate, month) => {
+                let payments = [];
+                let sumLeft = sum; // оставшаяся сумма платежа
+                let monthLeft = month; // оставшееся количество месяцев до погашения
+
+                while (sumLeft > 0) {
+                    const payment = sumLeft / monthLeft + sumLeft * rate;
+                    payments.push(Math.round(payment));
+
+                    sumLeft -= payment;
+                    monthLeft--;
+                }
+
+                return payments;
+            }
+
+            const diffPayments = getDiffPayment(sum, rate, month);
+            const lastDiffPayment = diffPayments[diffPayments.length - 1];
+
+            // Аннуитетный (ann)
             const getAnnPayment = (sum, rate, month) => {
                 return Math.round(sum * (rate * Math.pow(1 + rate, month)) / (Math.pow(1 + rate, month) - 1));
             }
 
+            const annPayment = getAnnPayment(sum, rate, month);
+
             return {
                 diff: {
                     rate: rate * 100,
-                    payment: getAnnPayment(sum, rate, month)
+                    payment: lastDiffPayment,
+                    payments: diffPayments
                 },
                 ann: {
                     rate: rate * 100,
-                    payment: getAnnPayment(sum, rate, month)
+                    payment: annPayment
                 }
             };
         }

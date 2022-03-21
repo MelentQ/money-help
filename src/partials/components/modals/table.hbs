@@ -1,0 +1,25 @@
+{{#extend "modal"}}
+{{#content "content"}}
+  <h2 class="modal__title">График платежей</h2>
+  <table class="modal__table js-table">
+    <tr class="modal__table-row">
+      <th class="modal__table-cell modal__table-cell--head">Месяцы</th>
+      <th class="modal__table-cell modal__table-cell--head">Платеж</th>
+    </tr>
+  </table>
+
+  <template id="tableHead">
+    <tr class="modal__table-row">
+      <th class="modal__table-cell modal__table-cell--head">Месяцы</th>
+      <th class="modal__table-cell modal__table-cell--head">Платеж</th>
+    </tr>
+  </template>
+
+  <template id="tableRow">
+    <tr class="modal__table-row">
+      <td class="modal__table-cell modal__table-cell--month"></td>
+      <td class="modal__table-cell modal__table-cell--payment"></td>
+    </tr>
+  </template>
+{{/content}}
+{{/extend}}
