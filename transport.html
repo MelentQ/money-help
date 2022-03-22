@@ -308,7 +308,7 @@
                                             <div class="calculator__range-block-group">
                                                 <span class="calculator__caption">Сумма займа</span>
                                                 <div class="calculator__input-wrapper">
-                                                    <input class="calculator__input js-range-input" type="text" name="sum" value="" autocomplete="off">
+                                                    <input class="calculator__input js-range-input" type="text" name="sum" value="" autocomplete="off" maxlength="8">
                                                     <span class="calculator__input-label">₽</span>
                                                 </div>
                                             </div>
@@ -375,7 +375,7 @@
                                                     </div>
                                                 </div>
                                                 <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
-                                                <button class="calculator__mini-link" data-hystmodal="#table" type="button">* график платежей</button>
+                                                <button class="calculator__mini-link" data-hystmodal="#ПТС" type="button">* график платежей</button>
                                             </div>
                                         </div>
                                         <div class="calculator__result-block js-calculator-accordion active" data-close-other>
@@ -421,6 +421,36 @@
                                         </div>
                                     </div>
                                 </form>
+                                <div class="hystmodal modal" id="ПТС" aria-hidden="true">
+                                    <div class="hystmodal__wrap modal__wrapper">
+                                        <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                                            <button class="modal__close" data-hystclose type="button" title="Закрыть">
+                                                <svg>
+                                                    <use xlink:href="#close"></use>
+                                                </svg>
+                                            </button>
+                                            <h2 class="modal__title">График платежей</h2>
+                                            <table class="modal__table js-table">
+                                                <tr class="modal__table-row">
+                                                    <th class="modal__table-cell modal__table-cell--head">Месяцы</th>
+                                                    <th class="modal__table-cell modal__table-cell--head">Платеж</th>
+                                                </tr>
+                                            </table>
+                                            <template id="tableHead">
+                                                <tr class="modal__table-row">
+                                                    <th class="modal__table-cell modal__table-cell--head">Месяцы</th>
+                                                    <th class="modal__table-cell modal__table-cell--head">Платеж</th>
+                                                </tr>
+                                            </template>
+                                            <template id="tableRow">
+                                                <tr class="modal__table-row">
+                                                    <td class="modal__table-cell modal__table-cell--month"></td>
+                                                    <td class="modal__table-cell modal__table-cell--payment"></td>
+                                                </tr>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -1184,7 +1214,7 @@
                             </svg>
                         </button>
                         <h2 class="modal__title">Выберите город</h2>
-                        <div class="select js-accordion js-select-city" data-name="city">
+                        <div class="select js-accordion js-select-city" data-name="city" data-timer="2">
                             <button class="select__button js-accordion-btn">
                                 <span class="select__button-label">Москва</span>
                                 <svg>
@@ -1326,37 +1356,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hystmodal modal" id="table" aria-hidden="true">
-                <div class="hystmodal__wrap modal__wrapper">
-                    <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
-                        <button class="modal__close" data-hystclose type="button" title="Закрыть">
-                            <svg>
-                                <use xlink:href="#close"></use>
-                            </svg>
-                        </button>
-                        <h2 class="modal__title">График платежей</h2>
-                        <table class="modal__table js-table">
-                            <tr class="modal__table-row">
-                                <th class="modal__table-cell modal__table-cell--head">Месяцы</th>
-                                <th class="modal__table-cell modal__table-cell--head">Платеж</th>
-                            </tr>
-                        </table>
-                        <template id="tableHead">
-                            <tr class="modal__table-row">
-                                <th class="modal__table-cell modal__table-cell--head">Месяцы</th>
-                                <th class="modal__table-cell modal__table-cell--head">Платеж</th>
-                            </tr>
-                        </template>
-                        <template id="tableRow">
-                            <tr class="modal__table-row">
-                                <td class="modal__table-cell modal__table-cell--month"></td>
-                                <td class="modal__table-cell modal__table-cell--payment"></td>
-                            </tr>
-                        </template>
-                    </div>
-                </div>
-            </div>
-            <div class="cookie js-cookie">
+            <div class="cookie js-cookie" data-timer="5">
                 <p class="cookie__text">Используя данный сайт, вы даете согласие на использование <a href="#">файлов cookie</a>, помогающих нам сделать его удобнее для вас</p>
                 <button class="cookie__close">Принять и закрыть</button>
             </div>
@@ -1436,7 +1436,7 @@
                         let monthLeft = month; // оставшееся количество месяцев до погашения
 
                         while (sumLeft > 0) {
-                            const payment = sumLeft / monthLeft + sumLeft * rate;
+                            const payment = sum / month + sumLeft * rate;
                             payments.push(Math.round(payment));
 
                             sumLeft -= payment;
@@ -1447,7 +1447,7 @@
                     }
 
                     const diffPayments = getDiffPayment(sum, rate, month);
-                    const lastDiffPayment = diffPayments[diffPayments.length - 1];
+                    const minDiffPayment = Math.min.apply(Math, diffPayments);
 
                     // Аннуитетный (ann)
                     const getAnnPayment = (sum, rate, month) => {
@@ -1459,7 +1459,7 @@
                     return {
                         diff: {
                             rate: rate * 100,
-                            payment: lastDiffPayment,
+                            payment: minDiffPayment,
                             payments: diffPayments
                         },
                         ann: {
