@@ -82,12 +82,14 @@ export default function calculator() {
     })
 
     // Вывод результатов
+    const tableModal = container.querySelector('.js-table');
+
     if (sumRange && monthRange) {
       sumRange.on('update', (values) => {
-        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
+        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem, tableModal);
       })
       monthRange.on('update', (values) => {
-        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
+        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem, tableModal);
       })
     }
     const form = container.querySelector('form');
@@ -97,15 +99,13 @@ export default function calculator() {
         if (form.sum) {
           form.sum.blur();
         }
-        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem);
+        getRes(container.dataset.name, sumRange.get(), monthRange.get(), diffRateValueElem, diffPaymentValueElem, annRateValueElem, annPaymentValueElem, tableModal);
       }
     });
   })
 }
 
-const tableModal = document.querySelector('.js-table');
-
-function getRes(name, sum, month, diffRateElem, diffPaymentElem, annRateElem, annPaymentElem) {
+function getRes(name, sum, month, diffRateElem, diffPaymentElem, annRateElem, annPaymentElem, tableModal) {
   const result = window.calculate(name, sum, month);
 
   // Diff

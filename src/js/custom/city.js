@@ -3,6 +3,21 @@ export default function city() {
   const selectedsInHeader = Array.from(document.querySelectorAll('.js-city'));
 
   if (select && selectedsInHeader.length) {
+    const DELAY = Number(select.dataset.timer) * 1000 || 0;
+
+    if (!getCookie(select.dataset.name)) {
+      let timer;
+      timer = setTimeout(() => {
+        window.modalApi.open('#city');
+      }, DELAY);
+
+      selectedsInHeader.forEach(btn => {
+        btn.addEventListener('click', () => {
+          clearTimeout(timer);
+        })
+      })
+    }
+
     const options = Array.from(select.querySelectorAll('.select__item'));
     const btn = select.querySelector('.select__button');
     const btnLabel = btn.querySelector('.select__button-label');

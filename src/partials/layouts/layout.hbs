@@ -56,7 +56,6 @@
         {{> modals/error id="error"}}
         {{> modals/map id="map"}}
         {{> modals/cardInfo id="cardInfo"}}
-        {{> modals/table id="table"}}
         {{> cookie}}
         {{> ie-placeholder }}
         <script>
@@ -103,7 +102,7 @@
                 let monthLeft = month; // оставшееся количество месяцев до погашения
 
                 while (sumLeft > 0) {
-                    const payment = sumLeft / monthLeft + sumLeft * rate;
+                    const payment = sum / month + sumLeft * rate;
                     payments.push(Math.round(payment));
 
                     sumLeft -= payment;
@@ -114,7 +113,7 @@
             }
 
             const diffPayments = getDiffPayment(sum, rate, month);
-            const lastDiffPayment = diffPayments[diffPayments.length - 1];
+            const minDiffPayment = Math.min.apply(Math, diffPayments);
 
             // Аннуитетный (ann)
             const getAnnPayment = (sum, rate, month) => {
@@ -126,7 +125,7 @@
             return {
                 diff: {
                     rate: rate * 100,
-                    payment: lastDiffPayment,
+                    payment: minDiffPayment,
                     payments: diffPayments
                 },
                 ann: {

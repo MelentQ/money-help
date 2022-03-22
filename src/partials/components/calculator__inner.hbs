@@ -9,7 +9,7 @@
         <div class="calculator__range-block-group">
           <span class="calculator__caption">Сумма займа</span>
           <div class="calculator__input-wrapper">
-            <input class="calculator__input js-range-input" type="text" name="sum" value="" autocomplete="off">
+            <input class="calculator__input js-range-input" type="text" name="sum" value="" autocomplete="off" maxlength="8">
             <span class="calculator__input-label">₽</span>
           </div>
         </div>
@@ -80,7 +80,7 @@
             </div>
           </div>
           <button class="blue-btn calculator__button js-submit-button" id="diff" type="button">Оставить заявку</button>
-          <button class="calculator__mini-link" data-hystmodal="#table" type="button">* график платежей</button>
+          <button class="calculator__mini-link" data-hystmodal="#{{data.name}}" type="button">* график платежей</button>
         </div>
       </div>
 
@@ -112,9 +112,8 @@
           <button class="button calculator__button js-submit-button" id="ann" type="button">Оставить заявку</button>
         </div>
       </div>
-
-
-
     </div>
   </form>
+
+  {{> modals/table id=data.name}}
 </div>
