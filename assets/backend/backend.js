@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   formSubmitHandler();
   setCalculatorData();
-  // city(); // Автоопределение геолокации
+  city(); // Автоопределение геолокации
 });
 
 function formSubmitHandler() {
@@ -28,33 +28,37 @@ function formSubmitHandler() {
 
           if (response.ok) {
             if (messagesParent) {
-              const successMessage = messagesParent.querySelector('.js-form-success');
-              const formBlock = messagesParent.querySelector('.js-form-block');
+              // const successMessage = messagesParent.querySelector('.js-form-success');
+              // const formBlock = messagesParent.querySelector('.js-form-block');
 
-              successMessage.classList.add('opened');
-              formBlock.classList.add('hidden');
+              // successMessage.classList.add('opened');
+              // formBlock.classList.add('hidden');
+              // form.reset();
+
+              // setTimeout(() => {
+              //   successMessage.classList.remove('opened');
+              //   formBlock.classList.remove('hidden');
+              // }, 5000);
+              window.modalApi.open('#success');
               form.reset();
-
-              setTimeout(() => {
-                successMessage.classList.remove('opened');
-                formBlock.classList.remove('hidden');
-              }, 5000);
             } else {
               window.modalApi.open('#success');
               form.reset();
             }
           } else {
             if (messagesParent) {
-              const errorMessage = messagesParent.querySelector('.js-form-error');
-              const formBlock = messagesParent.querySelector('.js-form-block');
+              // const errorMessage = messagesParent.querySelector('.js-form-error');
+              // const formBlock = messagesParent.querySelector('.js-form-block');
 
-              errorMessage.classList.add('opened');
-              formBlock.classList.add('hidden');
+              // errorMessage.classList.add('opened');
+              // formBlock.classList.add('hidden');
 
-              setTimeout(() => {
-                errorMessage.classList.remove('opened');
-                formBlock.classList.remove('hidden');
-              }, 10000);
+              // setTimeout(() => {
+              //   errorMessage.classList.remove('opened');
+              //   formBlock.classList.remove('hidden');
+              // }, 10000);
+
+              window.modalApi.open('#error');
             } else {
               window.modalApi.open('#error');
             }
@@ -89,7 +93,10 @@ function setCalculatorData() {
           window.modalApi.open("#calc");
           const sum = sumInput.value;
           const month = monthInput.value;
-          const result = window.calculate(sum, month);
+          const calcName = container.dataset.name;
+          const result = window.calculate(calcName, Number(sum), Number(month));
+
+          console.log(calcName, Number(sum), Number(month));
 
           forms.forEach(form => {
             form["calcName"].value = container.dataset.name,
@@ -131,6 +138,11 @@ const pristineConfig = {
 function city() {
   // ### Автоопределение геолокации ###
 
+  const element = document.querySelector('.js-city');
+  if (element) {
+    window.setPostfixes(element.textContent);
+  }
+
   // Тут проверяем наличие куков,
   // чтобы каждый раз не перезаписывать выбор пользователя
   if (!getCookie("city")) {
@@ -139,7 +151,9 @@ function city() {
         fetch(`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
           .then(res => res.json())
           .then(data => {
-            setCity(data.address.city);
+            console.log(data);
+            setCity(data.address.city, element);
+            window.setPostfixes(data.address.city);
           })
           .catch(err => {
             console.warn(err);
@@ -151,8 +165,7 @@ function city() {
   }
 }
 
-function setCity(name) {
-  const element = document.querySelector('.js-city');
+function setCity(name, element) {
   if (element) {
     element.textContent = name;
   }

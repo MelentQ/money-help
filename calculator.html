@@ -27,6 +27,8 @@
     </head>
     <body class="no-touch" ontouchstart="">
         <div class="visually-hidden" id="mapUrl" data-url="https://api-maps.yandex.ru/2.1/?apikey=99155e03-fba1-47e8-8e51-62786c760fbc&lang=ru_RU"></div>
+        <div class="visually-hidden" id="postfixes" data-url="../assets/postfixes.json"></div>
+        <div class="visually-hidden" id="selectors" data-url="../assets/selectors.json"></div>
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <symbol viewBox="0 0 19 12" id="accordion-arrow" xmlns="http://www.w3.org/2000/svg">
@@ -987,7 +989,7 @@
                             </svg>
                         </button>
                         <h2 class="modal__title">Выберите город</h2>
-                        <div class="select js-accordion js-select-city" data-name="city" data-timer="2">
+                        <div class="select js-accordion js-select-city" data-name="city" data-timer="-1">
                             <button class="select__button js-accordion-btn">
                                 <span class="select__button-label">Москва</span>
                                 <svg>
