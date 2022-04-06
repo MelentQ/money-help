@@ -6,6 +6,18 @@ export default function tabs() {
     const bodies = Array.from(tabsContainer.querySelectorAll('.js-tab-body'));
 
     btns.forEach((btn, i) => {
+      if (i === 0) {
+        btn.classList.add('active');
+        btn.parentElement.classList.add('parent-active');
+        bodies[i].classList.add('active');
+      } else {
+        btn.classList.remove('active');
+        btn.parentElement.classList.remove('parent-active');
+        bodies[i].classList.remove('active');
+      }
+    })
+
+    btns.forEach((btn, i) => {
       btn.addEventListener('click', () => {
         btns.forEach((b, j) => {
           if (j == i) {

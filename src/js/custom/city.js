@@ -1,3 +1,5 @@
+import setPostfixes from "./setPostfixes";
+
 export default function city() {
   const select = document.querySelector('.js-select-city');
   const selectedsInHeader = Array.from(document.querySelectorAll('.js-city'));
@@ -5,17 +7,20 @@ export default function city() {
   if (select && selectedsInHeader.length) {
     const DELAY = Number(select.dataset.timer) * 1000 || 0;
 
-    if (!getCookie(select.dataset.name)) {
-      let timer;
-      timer = setTimeout(() => {
-        window.modalApi.open('#city');
-      }, DELAY);
+    if (DELAY != "-1000") {
+      // автооткрытие
+      if (!getCookie(select.dataset.name)) {
+        let timer;
+        timer = setTimeout(() => {
+          window.modalApi.open('#city');
+        }, DELAY);
 
-      selectedsInHeader.forEach(btn => {
-        btn.addEventListener('click', () => {
-          clearTimeout(timer);
+        selectedsInHeader.forEach(btn => {
+          btn.addEventListener('click', () => {
+            clearTimeout(timer);
+          })
         })
-      })
+      }
     }
 
     const options = Array.from(select.querySelectorAll('.select__item'));
@@ -50,6 +55,8 @@ export default function city() {
         content.style.height = "0";
 
         document.cookie = `city=${encodeURIComponent(option.textContent)}`;
+        console.log(option.textContent);
+        setPostfixes(option.textContent);
 
         options.forEach((o, j) => {
           if (j == i) {

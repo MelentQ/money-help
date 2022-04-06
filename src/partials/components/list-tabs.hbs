@@ -20,13 +20,15 @@
       <ul class="list-tabs__bodies">
         {{#each listTabs}}
           <li class="list-tabs__body-wrapper js-tab-body {{#if this.active}}active{{/if}}">
-            <ul class="list-tabs__body">
-              {{#each this.items}}
-              <li>
-                {{this.text}}
-              </li>
-              {{/each}}
-            </ul>
+            <div class="list-tabs__body">
+              <ul>
+                {{#each this.items}}
+                <li>
+                  {{this.text}}
+                </li>
+                {{/each}}
+              </ul>
+            </div>
           </li>
         {{/each}}
       </ul>
