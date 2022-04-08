@@ -20,6 +20,10 @@
 
   overflow: hidden;
 
+  @include breakpoint(large-desktop) {
+    font-size: 2rem;
+  }
+
   @include breakpoint(laptop) {
     font-size: 1.8rem;
   }
@@ -101,7 +105,7 @@
     align-items: flex-start;
     gap: 4rem;
 
-    width: 80%;
+    width: calc(100% - 13rem);
 
     @include breakpoint(tablet) {
       gap: 1.5rem;

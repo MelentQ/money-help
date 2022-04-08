@@ -84,6 +84,58 @@
       }
     }
   }
+  
+  &__city {
+    display: none;
+
+    color: #9699A0;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 400;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  &__select-city {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+
+    text-decoration: underline;
+
+    &:link,
+    &:visited {
+      color: #9699A0;
+    }
+
+    &:hover {
+      color: $dark;
+    }
+    &:focus-visible {
+      color: $dark;
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  &__selected-city {
+    position: relative;
+
+    display: block;
+
+    text-transform: capitalize;
+  }
 
   &__content {
     display: grid;

@@ -1,14 +1,4 @@
 .mini-text {
-
-  padding-bottom: 14rem;
-
-  @include breakpoint(tablet) {
-    padding-bottom: 6rem;
-  }
-  @include breakpoint(small-tablet) {
-    padding-bottom: 0;
-  }
-
   &__inner {
     position: relative;
 
@@ -53,7 +43,12 @@
         padding-bottom: 40%;
       }
       @include breakpoint(mobile) {
-        top: 0;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+
+        width: 200%;
+        padding-bottom: 100%;
       }
     }
   }

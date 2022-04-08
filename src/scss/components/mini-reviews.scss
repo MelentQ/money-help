@@ -215,6 +215,10 @@
 
       color: $orange;
 
+      @include breakpoint(large-desktop) {
+        max-width: 22rem;
+      }
+
       @include breakpoint(tablet) {
         top: 0;
         left: 37.3%;
@@ -237,6 +241,10 @@
 
         background-image: url('../img/content-icons/mini-review-4.svg');
 
+        @include breakpoint(large-desktop) {
+          top: -6.2rem;
+        }
+
         @include breakpoint(desktop) {
           top: -8rem;
           left: -6rem;
@@ -256,7 +264,7 @@
     font-weight: 500;
     line-height: 1.2;
 
-    @include breakpoint(desktop) {
+    @include breakpoint(large-desktop) {
       font-size: 2rem;
     }
     @include breakpoint(laptop) {

@@ -10,6 +10,13 @@
                   </button>
                 </div>
                 <div class="menu__content">
+                  <div class="menu__city">
+                    Ваш город
+                    <button class="menu__select-city" type="button" title="Выбрать город" data-hystmodal="#city">
+                        <svg><use xlink:href="#location"></svg>
+                        <span class="menu__selected-city js-city">Москва</span>
+                    </button>
+                  </div>
                   <nav class="menu__links">
                     <ul class="menu__links-list menu__links-list--accent">
                       {{#each menu1.subsections}}

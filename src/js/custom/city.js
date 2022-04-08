@@ -9,18 +9,29 @@ export default function city() {
 
     if (DELAY != "-1000") {
       // автооткрытие
-      if (!getCookie(select.dataset.name)) {
-        let timer;
-        timer = setTimeout(() => {
-          window.modalApi.open('#city');
-        }, DELAY);
+      // if (!getCookie(select.dataset.name)) {
+      //   const miniModal = document.querySelector('.js-mini-city-modal');
+      //   const acceptBtn = miniModal.querySelector('.js-accept');
+      //   const otherBtn = miniModal.querySelector('.js-other');
+      //   acceptBtn.addEventListener('click', () => {
+      //     miniModal.classList.remove('active');
+      //   });
+      //   otherBtn.addEventListener('click', () => {
+      //     miniModal.classList.remove('active');
+      //     window.modalApi.open('#calc');
+      //   });
 
-        selectedsInHeader.forEach(btn => {
-          btn.addEventListener('click', () => {
-            clearTimeout(timer);
-          })
-        })
-      }
+      //   let timer;
+      //   timer = setTimeout(() => {
+      //     miniModal.classList.add('active');
+      //   }, DELAY);
+
+      //   selectedsInHeader.forEach(btn => {
+      //     btn.addEventListener('click', () => {
+      //       clearTimeout(timer);
+      //     })
+      //   })
+      // }
     }
 
     const options = Array.from(select.querySelectorAll('.select__item'));
