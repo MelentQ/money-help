@@ -97,12 +97,21 @@
                             <a class="logo" href="./index.html" title="На главную">
                                 <img class="lazyload" src="img/logo.svg" alt="Logo">
                             </a>
-                            <button class="header__select-city" type="button" title="Выбрать город" data-hystmodal="#city">
-                                <svg>
-                                    <use xlink:href="#location"></use>
-                                </svg>
-                                <span class="header__selected-city js-city">Москва</span>
-                            </button>
+                            <div class="header__select-city-wrapper">
+                                <button class="header__select-city" type="button" title="Выбрать город" data-hystmodal="#city">
+                                    <svg>
+                                        <use xlink:href="#location"></use>
+                                    </svg>
+                                    <span class="header__selected-city js-city">Москва</span>
+                                </button>
+                                <div class="header__select-city-modal js-mini-city-modal">
+                                    <span class="header__select-city-modal-label">Ваш город Москва?</span>
+                                    <div class="header__select-city-modal-btns">
+                                        <button class="header__select-city-modal-button active js-accept" type="button">Верно</button>
+                                        <button class="header__select-city-modal-button js-other" type="button" data-hystmodal="#city">Выбрать другой</button>
+                                    </div>
+                                </div>
+                            </div>
                             <button class="header__open-menu" type="button" data-hystmodal="#menu" title="Меню">
                                 <svg>
                                     <use xlink:href="#burger"></use>
@@ -917,6 +926,13 @@
                                     </button>
                                 </div>
                                 <div class="menu__content">
+                                    <div class="menu__city">Ваш город <button class="menu__select-city" type="button" title="Выбрать город" data-hystmodal="#city">
+                                            <svg>
+                                                <use xlink:href="#location"></use>
+                                            </svg>
+                                            <span class="menu__selected-city js-city">Москва</span>
+                                        </button>
+                                    </div>
                                     <nav class="menu__links">
                                         <ul class="menu__links-list menu__links-list--accent">
                                             <li>
@@ -1006,7 +1022,7 @@
                             </svg>
                         </button>
                         <h2 class="modal__title">Выберите город</h2>
-                        <div class="select js-accordion js-select-city" data-name="city" data-timer="-1">
+                        <div class="select js-accordion js-select-city" data-name="city" data-timer="3">
                             <button class="select__button js-accordion-btn">
                                 <span class="select__button-label">Москва</span>
                                 <svg>

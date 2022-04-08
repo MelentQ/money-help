@@ -142,6 +142,20 @@ function city() {
   if (element) {
     window.setPostfixes(element.textContent);
   }
+  const select = document.querySelector('.js-select-city');
+  const DELAY = Number(select.dataset.timer) * 1000 || 0;
+  const selectedsInHeader = Array.from(document.querySelectorAll('.js-city'));
+  const miniModal = document.querySelector('.js-mini-city-modal');
+  const miniModalText = miniModal.querySelector('.header__select-city-modal-label')
+  const acceptBtn = miniModal.querySelector('.js-accept');
+  const otherBtn = miniModal.querySelector('.js-other');
+  acceptBtn.addEventListener('click', () => {
+    miniModal.classList.remove('active');
+  });
+  otherBtn.addEventListener('click', () => {
+    miniModal.classList.remove('active');
+    window.modalApi.open('#calc');
+  });
 
   // Тут проверяем наличие куков,
   // чтобы каждый раз не перезаписывать выбор пользователя
@@ -151,13 +165,28 @@ function city() {
         fetch(`https://nominatim.openstreetmap.org/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
           .then(res => res.json())
           .then(data => {
-            console.log(data);
             setCity(data.address.city, element);
             window.setPostfixes(data.address.city);
+            
+            if (DELAY != -1000) {
+              miniModalText.textContent = `Ваш город ${data.address.city}?`
+              let timer;
+              timer = setTimeout(() => {
+                miniModal.classList.add('active');
+              }, DELAY);
+
+              selectedsInHeader.forEach(btn => {
+                btn.addEventListener('click', () => {
+                  clearTimeout(timer);
+                })
+              })
+            }
           })
           .catch(err => {
             console.warn(err);
           })
+      }, function (PositionError) {
+        console.warn(`Geolocation Error: ${PositionError.message}`);
       });
     } else {
       console.warn('Не удалось определить геолокацию');
